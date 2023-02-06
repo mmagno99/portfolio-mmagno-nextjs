@@ -4,7 +4,9 @@ import React from 'react';
 import EmailIcon from '@material-ui/icons/Email';
 import GithubIcon from '@material-ui/icons/GitHub';
 
-import CV from '@material-ui/icons/CloudDownload'
+import CV from '@material-ui/icons/CloudDownload';
+
+import Curriculum from '../assets/cv/Marcos_Gonzalez_CV.pdf';
 
 
 
@@ -18,7 +20,7 @@ function Inicio() {
         <div className="prompt"> 
           <p> Desarrollador Web Jr con pasión por aprender y crear</p>
           <a href={"mailto:contacto.marcosgr@gmail.com"} ><EmailIcon/></a>
-          <a href={"../assets/cv/Marcos_Gonzalez_CV.pdf"} download={"CV_Marcos_2023"}><CV/></a>
+          <a href={Curriculum} download={"CV_Marcos_2023"}><CV/></a>
           <a href={"https://github.com/mmagno99"} target={"blank"}><GithubIcon/></a>
         </div>
         </div>
