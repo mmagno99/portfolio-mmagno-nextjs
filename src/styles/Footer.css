@@ -58,4 +58,9 @@
     .footer svg {
       font-size: 50px;
     }
+
+    .footer p{
+      text-align: center;
+      margin: 0 15px 20px 15px;
+    }
   }

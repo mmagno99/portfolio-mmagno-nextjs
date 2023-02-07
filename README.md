@@ -1,3 +1,14 @@
+# Manual para hacer deploy en la app de React Js
+
+# 1.- Hacer un: git add .
+# 2.- Hacer un: git commit -m 'escribe el identificador del mensaje'
+# 3.- Hacer un: firebase logout
+# 4.- Hacer un: firebase login | Debera iniciar con: contacto.marcosgr@gmail.com
+# 5.- En la terminal poner: yarn build | Para colocar todos los cambios nuevos en la carpeta build
+# 6.- Por ultimo poner: firebase deploy --only hosting
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

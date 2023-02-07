@@ -53,3 +53,10 @@
   .liveDemo{
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 600px) {
+    .project img {
+      width: auto;
+      height: auto;
+    }
+  }
