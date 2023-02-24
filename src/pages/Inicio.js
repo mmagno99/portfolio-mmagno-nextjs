@@ -16,7 +16,7 @@ function Inicio() {
   return (
     <div className="home">
       <div className="about">
-        <h2 className=""> Bienvenido a Mmagno</h2>
+        <h2 className=""> Bienvenido a <span>M</span>magno</h2>
         <div className="prompt"> 
           <p> Desarrollador Web Jr con pasión por aprender y crear</p>
           <a href={"mailto:contacto.marcosgr@gmail.com"} ><EmailIcon/></a>

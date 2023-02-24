@@ -1,6 +1,26 @@
 :root{
-  --color-footer:#111111;
-  --secondary-color:#2cd3d9;
+  --primary-font-poppins: 'Poppins', sans-serif; ;
+  --secondary-font-firacode:  'Fira Code', monospace;
+
+  --bg-body: #040d18;
+  --bg-body-light: #041224;
+
+  --bg-color-second: #121016;
+--primary-color:#5333ed;
+--secondary-color:#2cd3d9;
+--color-paragraph:#ccd6f6;
+}
+
+.heart {
+  color: red;
+  line-height: .5;
+  animation: pulse .5s infinite alternate
+}
+
+@keyframes pulse {
+  to {
+      transform: scale(1.2)
+  }
 }
 
 .linkHome{
@@ -22,7 +42,7 @@
 .footer {
     width: 100%;
     height: 200px;
-    background: var(--color-footer);
+    background: var(--bg-body);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +81,6 @@
 
     .footer p{
       text-align: center;
-      margin: 0 15px 20px 15px;
+      margin: 0 10px 10px 10px;
     }
   }

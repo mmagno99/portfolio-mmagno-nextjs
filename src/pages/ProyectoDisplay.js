@@ -19,7 +19,7 @@ function ProyectoDisplay() {
       <h1>{proyecto.name}</h1>
       <img src={proyecto.image} alt="" />
 
-      <p>
+      <p className='paragraphDisplay'>
         <b>Skills:</b> {proyecto.skills}
       </p>
 

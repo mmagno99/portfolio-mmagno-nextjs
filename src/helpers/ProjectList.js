@@ -1,6 +1,6 @@
-import Proj1 from "../assets/dgenerador.png";
-import Proj2 from "../assets/magnosocial1.png";
-import Proj3 from "../assets/dineout1.png";
+import Proj1 from "../assets/proyectos/dgenerador.png";
+import Proj2 from "../assets/proyectos/magnosocial1.png";
+import Proj3 from "../assets/proyectos/dineout1.png";
 
 
 export const ProjectList = [
@@ -33,5 +33,7 @@ export const ProjectList = [
       alert('Estamos trabajando en eso...');
     }
   },
+
+  
   
 ];

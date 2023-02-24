@@ -7,17 +7,20 @@
   --primary-font-poppins: 'Poppins', sans-serif; ;
   --secondary-font-firacode:  'Fira Code', monospace;
 
-  --bg-color: #111111;
+  --bg-body: #040d18;
+  --bg-body-light: #041224;
+
+  --bg-color-second: #121016;
 --primary-color:#5333ed;
 --secondary-color:#2cd3d9;
---color-paragraph:#6E7076;
+--color-paragraph:#ccd6f6;
 
 }
 
 .home {
     width: 100%;
     align-items: center;
-    color: var(--bg-color);
+    /* color: var(--bg-color-primary); */
   }
   
   .about {
@@ -28,7 +31,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: var(--bg-body);
     color: #f0f0f0;
   }
   
@@ -36,9 +39,11 @@
     font-family: var(--secondary-font-firacode);
     
     font-size: 80px;
-    color: var(--secondary-color);
+    color: var(--color-paragraph--);
     height: 50px;
   }
+
+  .about h2 span{color: var(--secondary-color);}
   
   .about .prompt {
     width: 40%;
