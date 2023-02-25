@@ -14,7 +14,10 @@
 .heart {
   color: red;
   line-height: .5;
-  animation: pulse .5s infinite alternate
+  animation: pulse .5s infinite alternate;
+  -webkit-animation: pulse .5s infinite alternate;
+  height: 1em;
+  width: 1em;
 }
 
 @keyframes pulse {
@@ -82,5 +85,11 @@
     .footer p{
       text-align: center;
       margin: 0 10px 10px 10px;
+    }
+
+    .heart
+    {
+      height:.9em;
+      width: .9em;
     }
   }
