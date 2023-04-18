@@ -25,7 +25,8 @@ function ProyectoDisplay() {
 
       <div className="iconsDisplay">
         <a href={proyecto.repository} target={"blank"}><GitHubIcon/></a>
-        <LiveDemoIcon onClick={proyecto.livedemo} className='liveDemo'/>
+        <a href={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
+        {/* <LiveDemoIcon onClick={proyecto.livedemo} className='liveDemo'/> */}
 
       </div>
     </div>

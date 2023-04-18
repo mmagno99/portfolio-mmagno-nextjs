@@ -10,6 +10,8 @@ import Curriculum from '../assets/cv/Marcos_Gonzalez_CV.pdf';
 
 
 
+
+
 import '../styles/Inicio.css';
 
 function Inicio() {

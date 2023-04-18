@@ -3,6 +3,8 @@ import React from 'react'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import SpotifyIcon from '@material-ui/icons/MusicNoteOutlined';
+
 
 import {Link} from 'react-router-dom';
 
@@ -24,6 +26,7 @@ function Footer() {
           <a href={"https://www.facebook.com/marco.magno19799/"} target={"blank"} ><FacebookIcon /></a>
             <a href={"https://www.instagram.com/mmagno99/"} target={"blank"}><InstagramIcon/></a>
             <a href={"https://www.linkedin.com/in/mmagnodev"} target={"blank"}><LinkedInIcon/></a>
+            <a href={"https://open.spotify.com/user/31zgllklazvk5evbtaa3ogwgo6my"} target={"blank"} ><SpotifyIcon /> </a>
         </div>
 
        

@@ -1,6 +1,7 @@
 import Proj1 from "../assets/proyectos/dgenerador.png";
 import Proj2 from "../assets/proyectos/magnosocial1.png";
 import Proj3 from "../assets/proyectos/dineout1.png";
+import Proj4 from "../assets/proyectos/sassMusic.png";
 
 
 export const ProjectList = [
@@ -9,9 +10,7 @@ export const ProjectList = [
     image: Proj1,
     skills: "Django, Python, Bootstrap",
     repository: 'https://github.com/mmagno99/django-password-generator',
-    livedemo: function(){
-      alert('Estamos trabajando en eso...');
-    }
+    livedemo: 'https://django-password-generator-production.up.railway.app/'
   },
   {
     name: "MagnoSocial",
@@ -32,6 +31,16 @@ export const ProjectList = [
     {
       alert('Estamos trabajando en eso...');
     }
+  },
+  {
+    name: "SassMusic",
+    image: Proj4,
+    skills: "HTML, CSS, JS",
+    repository: function()
+    {
+      alert('No existe el repositorio');
+    },
+    livedemo: "https://sassmusic-2dedb.web.app/"
   },
 
   
