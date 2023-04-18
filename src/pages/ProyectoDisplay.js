@@ -24,9 +24,10 @@ function ProyectoDisplay() {
       </p>
 
       <div className="iconsDisplay">
-        <a href={proyecto.repository} target={"blank"}><GitHubIcon/></a>
-        <a href={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
-        {/* <LiveDemoIcon onClick={proyecto.livedemo} className='liveDemo'/> */}
+        <a href={proyecto.repository} onClick={proyecto.repository} target={"blank"}><GitHubIcon/></a>
+        {/* Con el evento onClick dispara un alert desde las funciones si es que tienen */}
+        <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
+        
 
       </div>
     </div>
