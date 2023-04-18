@@ -28,7 +28,6 @@ function ProyectoDisplay() {
         {/* Con el evento onClick dispara un alert desde las funciones si es que tienen */}
         <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
         
-
       </div>
     </div>
   )
