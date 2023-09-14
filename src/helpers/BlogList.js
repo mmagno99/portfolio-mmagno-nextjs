@@ -1,16 +1,16 @@
-import imgBlog1 from '../assets/blog/post-ig-wordpress.png';
-import imgBlog2 from '../assets/blog/post-ig-1.png';
+import imgBlog1 from '../assets/blog/cat-dev.jpg';
+import imgBlog2 from '../assets/blog/stack-front.jpg';
 
 export const BlogList = [
     {
-        name: 'Como obtener un certificado SSL gratis',
+        name: '¿Que hace un Front-end Developer?',
         image: imgBlog1,
-        paragraph: 'para obtener un certificado debes hacer lo siguiente...'
-
+        paragraph: `Un front-end developer es el encargado de llevar acabo la programación del navegador de una web, en si, es el responsable de que una web sea atractiva y funcione de manera correcta. Asi como tambien adaptar el diseño a distintos dispositivos, mejorar la interacción de los usuarios con la web y crear webs accesibles.`
+      
     },
     {
-        name: 'Como mejorar el SEO de tu página web',
+        name: 'Skills que un front-end debe de tener',
         image: imgBlog2,
-        paragraph: 'Para mejorar el SEO de tu página web haz lo siguiente'
+        paragraph: 'Todos los desarrolladores frontend deben tener conocimientos de HTML, CSS y JavaScript. Esos tres lenguajes son la base de casi todo lo que harás. De ahí podrias subir de nivel con los frameworks como: Angular, React Js o Vue. Como un plus tambien es recomendable saber Boostrap responsive design, node js y entrando en otros temas SEO Basico'
     }
 ];

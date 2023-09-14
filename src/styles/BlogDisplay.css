@@ -45,6 +45,10 @@
     font-size: 1.3em;
 }
 
+.blog .contenedor > .paragraphBlog{
+    max-width: 50em;
+}
+
 @media only screen and (max-width: 600px) {
     .blog h1{
         font-size: 30px;

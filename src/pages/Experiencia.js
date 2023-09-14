@@ -33,8 +33,16 @@ function Experiencia() {
         icon={<WorkIcon/>}
         >
 
-          <h3 className="vertical-timeline-element-title">Trabajo como freelance</h3>
-          <p className='paragraph'>Maquetación de paginas informativas con HTML, CSS Y JS, Tambien con Wordpress</p>
+          <h3 className="vertical-timeline-element-title">Freelance/ Maquetador web</h3>
+          <p className='paragraph'>
+            <ul>
+              <li>Maquetaciones Web con Bootstrap</li>
+              <li>Maquetaciones Web con Elementor y Divi</li>
+              <li>Configuracion de servidores</li>
+              <li>Aplicaciones Web con HTML, CSS & JS</li>
+              <li>Soporte técnico</li>
+            </ul>
+          </p>
 
         </VerticalTimelineElement>
 
@@ -45,7 +53,7 @@ function Experiencia() {
         icon={<SchoolIcon/>}
         >
 
-          <h3 className="vertical-timeline-element-title">Universidad interamericana</h3>
+          <h3 className="vertical-timeline-element-title">Universidad interamericana/ UNIT</h3>
           <p className='paragraph'>Licenciatura en ingenieria informatica</p>
 
         </VerticalTimelineElement>
@@ -57,8 +65,16 @@ function Experiencia() {
         icon={<WorkIcon/>}
         >
 
-          <h3 className="vertical-timeline-element-title">Front-End Jr - Balabox Inc</h3>
-          <p className='paragraph'>Maquetación de paginas informativas con HTML, CSS Y JS, Tambien con Wordpress</p>
+          <h3 className="vertical-timeline-element-title">Balabox Inc/ Front-End Jr</h3>
+          <p className='paragraph'>
+
+            <ul>
+              <li>Desarrollo web front-end</li>
+              <li>Maquetaciones web - WordPress</li>
+              <li>Desarrollo de tiendas en línea</li>
+            </ul>
+
+          </p>
 
         </VerticalTimelineElement>
 

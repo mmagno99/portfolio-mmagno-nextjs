@@ -6,7 +6,7 @@ import GithubIcon from '@material-ui/icons/GitHub';
 
 import CV from '@material-ui/icons/CloudDownload';
 
-import Curriculum from '../assets/cv/Marcos_Gonzalez_CV.pdf';
+import Curriculum from '../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf';
 
 
 
@@ -22,7 +22,7 @@ function Inicio() {
         <div className="prompt"> 
           <p> Desarrollador Web Jr con pasión por aprender y crear</p>
           <a href={"mailto:contacto.marcosgr@gmail.com"} ><EmailIcon/></a>
-          <a href={Curriculum} download={"CV_Marcos_2023"}><CV/></a>
+          <a href={Curriculum} download={"CV Marcos Gonzalez Ingeniero informatico"}><CV/></a>
           <a href={"https://github.com/mmagno99"} target={"blank"}><GithubIcon/></a>
         </div>
         </div>
@@ -43,6 +43,15 @@ function Inicio() {
             <li className="item">
               <h2>Lenguajes</h2>
               <span>JavaScript, C++, Java, PHP, SQL</span>
+            </li>
+
+            <li className="item">
+              <h2>Soporte Técnico</h2>
+              <span>Niveles 1 y 2</span>
+            </li>
+
+            <li className="item">
+              <h2>Redes/Ciberseguridad</h2>
             </li>
           </ol>
         </div>
