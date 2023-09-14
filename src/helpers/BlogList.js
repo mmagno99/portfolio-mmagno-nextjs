@@ -1,7 +1,14 @@
+import imgTest from '../assets/blog/test.jpg'
 import imgBlog1 from '../assets/blog/cat-dev.jpg';
 import imgBlog2 from '../assets/blog/stack-front.jpg';
 
 export const BlogList = [
+    {
+        name: 'Test',
+        image: imgTest,
+        paragraph: 'test'
+
+    },
     {
         name: '¿Que hace un Front-end Developer?',
         image: imgBlog1,

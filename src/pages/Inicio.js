@@ -51,8 +51,9 @@ function Inicio() {
             </li>
 
             <li className="item">
-              <h2>Redes/Ciberseguridad</h2>
+              <h2>Redes | Ciberseguridad</h2>
             </li>
+
           </ol>
         </div>
       </div>

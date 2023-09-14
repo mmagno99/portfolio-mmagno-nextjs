@@ -1,6 +1,6 @@
 # Manual para hacer deploy en la app de React Js
 
-# 1.- Hacer un: git add .
+# 1.- Hacer un: git add . 
 # 2.- Hacer un: git commit -m 'escribe el identificador del mensaje'
 # 3.- Hacer un: firebase logout
 # 4.- Hacer un: firebase login | Debera iniciar con: contacto.marcosgr@gmail.com
