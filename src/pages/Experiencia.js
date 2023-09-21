@@ -6,6 +6,8 @@ import 'react-vertical-timeline-component/style.min.css'
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work'
 
+import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf';
+
 import '../styles/Experience.css'
 
 function Experiencia() {
@@ -72,6 +74,7 @@ function Experiencia() {
               <li>Desarrollo web front-end</li>
               <li>Maquetaciones web - WordPress</li>
               <li>Desarrollo de tiendas en línea</li>
+              <li><a className='cartabbx' href={cartaBalabox} target={'blank'}>VER CARTA DE RECOMENDACIÓN</a></li>
             </ul>
 
           </p>

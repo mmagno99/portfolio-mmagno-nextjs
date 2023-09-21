@@ -11,3 +11,8 @@
 .paragraph{
     font-family: var(--secondary-font-firacode);
 }
+
+.paragraph ul li .cartabbx{
+  text-decoration: none;
+  color:#5333ed;
+}
