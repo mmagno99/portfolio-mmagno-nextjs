@@ -9,12 +9,12 @@ import Book  from '../assets/book-portfolio/Book-portfolio-wordpress-2023.pdf';
 
 function ProyectosLaborales(){
     return (
-        <div className="projects">
-          <h1 className="projectTitle">Proyectos laborales</h1>
-          <div className="projectList">
-            {LaboralList.map((project, idx) => {
+        <div className="projectsLaboral">
+          <h1 className="projectTitleLaboral">Proyectos laborales</h1>
+          <div className="projectListLaboral">
+            {LaboralList.map((projectLaboral, idx) => {
               return (
-                <LaboralItem id={idx} name={project.name} image={project.image} />
+                <LaboralItem id={idx} name={projectLaboral.name} image={projectLaboral.image} />
               );
             })}
           </div>
@@ -24,6 +24,8 @@ function ProyectosLaborales(){
           </div>
 
         </div>
+
+        
       );
 }
 

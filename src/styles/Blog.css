@@ -84,12 +84,12 @@
     }
 
     .blogItem{
-        width: 70%;
+        width: 300px;
         height: 300px;
     }
 
     .blogs .blogTitle{
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .blogs .temporalImage{

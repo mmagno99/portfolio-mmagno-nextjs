@@ -12,19 +12,25 @@ function OptionCards() {
 
       <div className="cardList">
 
-        <Link to="/proyectos">
+        
             <div className="cardItem">
-                <div className="bgImage"></div>
-            <h1>Proyectos Personales</h1>
-            </div>
-        </Link>
+              <Link to="/proyectos">
+                  <div className="bgImage"></div>
 
-        <Link to="/laborales">
+            <h1>Proyectos Personales</h1>
+            </Link>
+            </div>
+       
+
+        
         <div className="cardItem">
+        <Link to="/laborales">
             <div className="bgImage2"></div>
+        
           <h1>Proyectos Laborales</h1>
+          </Link>
         </div>
-        </Link>
+        
 
       </div>
     </div>

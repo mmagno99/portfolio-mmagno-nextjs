@@ -6,7 +6,7 @@ function LaboralItem({image, name, id})
 
     const navigate = useNavigate();
     return (
-      <div className="projectItem" onClick={() => {navigate('/laboral/' + id)}}>
+      <div className="projectItemLaboral" onClick={() => {navigate('/laboral/' + id)}}>
           <div style={{backgroundImage: `url(${image})`}} className="bgImage"/>
           <h1>{name}</h1>
       </div>

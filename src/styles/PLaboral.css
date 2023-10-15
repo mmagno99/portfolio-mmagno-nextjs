@@ -14,23 +14,24 @@
   --bg-body-light: #041224;
 }
 
-.projects {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    flex-direction: column;
+.projectsLaboral {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: column;
     
   }
-  .projects .projectTitle {
+
+  .projectsLaboral .projectTitleLaboral {
     text-align: center;
     color: var(--primary-color);
     font-size: 60px;
     font-weight: bolder;
   }
   
-  .projectList {
+  .projectListLaboral {
     width: auto;
     height: auto;
     display: grid;
@@ -40,7 +41,7 @@
   
   /* MENU ITEM STYLING */
   
-  .projectItem {
+  .projectItemLaboral {
     border-radius: 15px;
     width: 300px;
     height: 300px;
@@ -50,12 +51,12 @@
     text-align: center;
     
   }
-  .projectItem:hover {
+  .projectItemLaboral:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     cursor: pointer;
   }
   
-  .projectItem .bgImage {
+  .projectItemLaboral .bgImage {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
@@ -65,7 +66,7 @@
     background-size: cover;
   }
   
-  .projectItem h1 {
+  .projectItemLaboral h1 {
     font-family:var(--secondary-font-firacode);
     font-size: 20px;
   }
@@ -91,31 +92,37 @@
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;}
 
+  .CTA {
+    padding-top: 50px;
+  }
+
   
   
   @media only screen and (max-width: 1300px) {
-    .projectList {
+    .projectListLaboral {
       grid-template-columns: 1fr 1fr;
     }
   }
   
   @media only screen and (max-width: 800px) {
-    .projectList {
+    .projectListLaboral {
       grid-template-columns: 1fr;
     }
   }
   
   @media only screen and (max-width: 600px) {
-    .projectList {
+    .projectListLaboral {
       width: auto;
     }
 
-    .projectItem {
-      width: 100%;
+    .projectItemLaboral {
+      width: 300px;
       height: 300px;
     }
 
-    .projects .projectTitle {
+    .projectsLaboral .projectTitleLaboral {
       font-size: 45px;
     }
+
+    
   }
