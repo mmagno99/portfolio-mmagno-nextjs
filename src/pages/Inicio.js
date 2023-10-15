@@ -20,7 +20,7 @@ function Inicio() {
       <div className="about">
         <h2 className=""> Bienvenido a <span>M</span>magno</h2>
         <div className="prompt"> 
-          <p> Desarrollador Web Jr con pasión por aprender y crear</p>
+          <p> Desarrollador Web con pasión por aprender y crear</p>
           <a href={"mailto:contacto.marcosgr@gmail.com"} ><EmailIcon/></a>
           <a href={Curriculum} download={"CV Marcos Gonzalez Ingeniero informatico"}><CV/></a>
           <a href={"https://github.com/mmagno99"} target={"blank"}><GithubIcon/></a>
@@ -33,16 +33,17 @@ function Inicio() {
             <li className="item">
               <h2>Front-End</h2>
               <span>HTML5, CSS3, JavaScript, Bootstrap, SASS, React Js, WordPress </span>
+              <span>Figma, Elementor, Divi, WP-Bakery</span>
             </li>
 
             <li className="item">
               <h2>Back-End</h2>
-              <span>Python, MySql, PHP</span>
+              <span>Python, PHP, MySQL, SQL</span>
             </li>
 
             <li className="item">
               <h2>Lenguajes</h2>
-              <span>JavaScript, C++, Java, PHP, SQL</span>
+              <span>JavaScript, C++, Java, PHP</span>
             </li>
 
             <li className="item">

@@ -9,6 +9,10 @@ import Footer from './components/Footer';
 import ProjectDisplay from './pages/ProyectoDisplay';
 import BlogDisplay from './pages/BlogDisplay';
 
+import OptionCards from './pages/OptionCard';
+import ProyectosLaborales from './pages/PLaboral';
+import LaboralDisplay from './pages/LaboralDisplay';
+
 function App() {
   return (
     <div className="App">
@@ -19,11 +23,17 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Inicio />} />
+
             <Route path="/proyectos" element={<Proyectos />} />
             <Route path="/proyecto/:id" element={<ProjectDisplay />} />
+
+            <Route path="/laborales" element={<ProyectosLaborales />} />
+            <Route path="/laboral/:id" element={<LaboralDisplay />} />
+
             <Route path="/experiencia" element={<Experiencia />} />
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/blog/:id" element={<BlogDisplay />} />
+            <Route path="/opciones" element={<OptionCards />} />
 
           </Routes>
 

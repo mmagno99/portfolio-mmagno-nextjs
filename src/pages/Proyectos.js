@@ -1,7 +1,8 @@
 import React from "react";
 
-import ProjectItem from "../components/ProjectItem";
 import "../styles/Projects.css";
+
+import ProjectItem from "../components/ProjectItem";
 import { ProjectList } from "../helpers/ProjectList";
 
 function Proyectos() {
