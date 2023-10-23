@@ -25,7 +25,7 @@ function Footer() {
         <div className="socialMedia">
           <a href={"https://www.facebook.com/marco.magno19799/"} target={"blank"} ><FacebookIcon /></a>
             <a href={"https://www.instagram.com/mmagno99/"} target={"blank"}><InstagramIcon/></a>
-            <a href={"https://www.linkedin.com/in/mmagnodev"} target={"blank"}><LinkedInIcon/></a>
+            <a href={"https://www.linkedin.com/in/mmagno99/"} target={"blank"}><LinkedInIcon/></a>
             <a href={"https://open.spotify.com/user/31zgllklazvk5evbtaa3ogwgo6my"} target={"blank"} ><SpotifyIcon /> </a>
         </div>
 

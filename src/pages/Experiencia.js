@@ -5,8 +5,10 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css'
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work'
+import Certificate from '@material-ui/icons/EmojiEvents'
 
 import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf';
+import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf';
 
 import '../styles/Experience.css'
 
@@ -43,6 +45,24 @@ function Experiencia() {
               <li>Configuracion de servidores</li>
               <li>Aplicaciones Web con HTML, CSS & JS</li>
               <li>Soporte técnico</li>
+              <li><a className='cartasah' href={cartaSah} target={'blank'}>VER CARTA DE RECOMENDACIÓN</a></li>
+            </ul>
+          </p>
+
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement 
+        className='vertical-timeline-element--education' 
+        date='Octubre - 2021'
+        iconStyle={{background: "#111111",color:"#fff"}}
+        icon={<Certificate/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Udemy - Universidad Desarrollo Web</h3>
+          <p className='paragraph'>
+            <ul>
+      
+              <li><a className='certificate' href={'https://udemy.com/certificate/UC-31b96167-5a80-453c-a2dc-94c845a2c522/'} target={'blank'}>VER CERTIFICADO</a></li>
             </ul>
           </p>
 
@@ -51,7 +71,7 @@ function Experiencia() {
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
         date='2018 - 2022'
-        iconStyle={{background: "#111111",color:"#fff"}}
+        iconStyle={{background: "#5333ed",color:"#fff"}}
         icon={<SchoolIcon/>}
         >
 
@@ -63,7 +83,7 @@ function Experiencia() {
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
         date='2022 - 2023'
-        iconStyle={{background: "#5333ed",color:"#fff"}}
+        iconStyle={{background: "#111111",color:"#fff"}}
         icon={<WorkIcon/>}
         >
 
@@ -77,6 +97,23 @@ function Experiencia() {
               <li><a className='cartabbx' href={cartaBalabox} target={'blank'}>VER CARTA DE RECOMENDACIÓN</a></li>
             </ul>
 
+          </p>
+
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement 
+        className='vertical-timeline-element--education' 
+        date='Octubre - 2023'
+        iconStyle={{background: "#5333ed",color:"#fff"}}
+        icon={<Certificate/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Udemy - Universidad Javascript</h3>
+          <p className='paragraph'>
+            <ul>
+      
+              <li><a className='certificate' href={'https://www.udemy.com/certificate/UC-e7e1f977-a76c-461c-be45-b940bd8642df/'} target={'blank'}>VER CERTIFICADO</a></li>
+            </ul>
           </p>
 
         </VerticalTimelineElement>

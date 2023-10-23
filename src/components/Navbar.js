@@ -23,11 +23,13 @@ function Navbar() {
         
         <div className="toggleButton">
 
-        
-        <div className="logoName">
-        <h2> <span>M</span>m{`>`}gno.dev</h2>
-
-        </div>
+       
+            <div className="logoName">
+            
+                <h2> <span>M</span>m{`>`}gno.dev</h2>
+           
+            </div>
+       
         
             <button 
             onClick={() => {

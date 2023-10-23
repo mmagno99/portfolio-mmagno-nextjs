@@ -12,7 +12,7 @@
     font-family: var(--secondary-font-firacode);
 }
 
-.paragraph ul li .cartabbx{
+.paragraph ul li .cartabbx, .certificate, .cartasah{
   text-decoration: none;
   color:#5333ed;
 }

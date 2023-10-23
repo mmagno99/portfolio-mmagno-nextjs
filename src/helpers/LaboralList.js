@@ -8,6 +8,7 @@ import CyA from '../assets/laboral/CyA.png';
 import perfectcare from '../assets/laboral/perfectcare.png';
 import ROCA from '../assets/laboral/roca.png';
 import Neo from '../assets/laboral/neoinvesting.png';
+import SAH from '../assets/laboral/sah-desktop-project.png';
 
 export const LaboralList = [
 
@@ -70,6 +71,12 @@ export const LaboralList = [
         image: Neo,
         skills: "WordPress, Plantilla, Divi",
         livedemo: "https://neoinvesting.com.mx/"
+    },
+    {
+        name: "Sistema Aguas Huixquilucan - SAH",
+        image: SAH,
+        skills: "PHP, JS, CSS",
+        livedemo: "https://sah.gob.mx/"
     },
 
 
