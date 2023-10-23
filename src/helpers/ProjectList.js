@@ -1,7 +1,7 @@
 import Proj1 from "../assets/proyectos/dgenerador.png";
 import Proj2 from "../assets/proyectos/magnosocial1.png";
 import Proj3 from "../assets/proyectos/dineout1.png";
-import Proj4 from "../assets/proyectos/spotify-concept-mobile.png";
+import Proj4 from "../assets/proyectos/spotify-concept-desktop.png";
 
 
 export const ProjectList = [
