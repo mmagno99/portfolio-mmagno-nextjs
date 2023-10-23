@@ -1,7 +1,7 @@
 import Proj1 from "../assets/proyectos/dgenerador.png";
 import Proj2 from "../assets/proyectos/magnosocial1.png";
 import Proj3 from "../assets/proyectos/dineout1.png";
-import Proj4 from "../assets/proyectos/sassMusic.png";
+import Proj4 from "../assets/proyectos/spotify-concept-mobile.png";
 
 
 export const ProjectList = [
@@ -33,14 +33,14 @@ export const ProjectList = [
     }
   },
   {
-    name: "SassMusic",
+    name: "Spotify Concept",
     image: Proj4,
     skills: "HTML, CSS, JS",
     repository: function()
     {
       alert('No existe el repositorio');
     },
-    livedemo: "https://sassmusic-2dedb.web.app/"
+    livedemo: "https://spotify-concept-2023.web.app/"
   },
 
   
