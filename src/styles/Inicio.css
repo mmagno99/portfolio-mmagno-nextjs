@@ -22,6 +22,8 @@
     align-items: center;
     /* color: var(--bg-color-primary); */
   }
+
+  .anuncio .txt{color:var(--primary-color);}
   
   .about {
     width: 100%;

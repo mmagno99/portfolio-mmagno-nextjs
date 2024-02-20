@@ -10,7 +10,7 @@ import Book  from '../assets/book-portfolio/Book-portfolio-wordpress-2023.pdf';
 function ProyectosLaborales(){
     return (
         <div className="projectsLaboral">
-          <h1 className="projectTitleLaboral">Proyectos laborales</h1>
+          <h1 className="projectTitleLaboral">Proyectos en balabox</h1>
           <div className="projectListLaboral">
             {LaboralList.map((projectLaboral, idx) => {
               return (

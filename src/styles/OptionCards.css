@@ -32,6 +32,8 @@
     background-image: url('../assets/options/balabox.png');
 }
 
+.bgImage3{ background-image: url('../assets/options/Logo TDI.jpg');}
+
 .cards .cardsTitle
 {
     text-align: center;
@@ -44,7 +46,7 @@
 .cardList
 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: auto;
     place-items: center;
     width: auto;
@@ -76,7 +78,8 @@
 }
 
 .cardItem .bgImage,
-.cardItem .bgImage2{
+.cardItem .bgImage2,
+.cardItem .bgImage3{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;

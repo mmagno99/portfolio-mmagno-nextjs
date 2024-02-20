@@ -118,6 +118,33 @@ function Experiencia() {
 
         </VerticalTimelineElement>
 
+
+        <VerticalTimelineElement
+        className='vertical-timeline-element--education'
+        date='Octubre 2023 - Act 2024'
+        iconStyle={{background: "#111111", color:"#ffffff"}}
+        icon={<WorkIcon/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Tierra de ideas/ Front-End Middle</h3>
+
+          <p className='paragraph'>
+
+            <ul>
+              <li>Desarrollo Web</li>
+              <li>Diseño Web UI/UX</li>
+              <li>Google Analytics</li>
+              <li>SEO Search Console</li>
+              <li>Seguridad Web</li>
+
+            </ul>
+
+
+          </p>
+
+
+        </VerticalTimelineElement>
+
       </VerticalTimeline>
 
     </div>
