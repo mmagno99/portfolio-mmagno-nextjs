@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {LaboralList} from '../helpers/LaboralList';
 import '../styles/ProyectoDisplay.css';
 
-import LiveDemoIcon from '@material-ui/icons/LiveTv';
+import LiveDemoIcon from '@mui/icons-material/LiveTv';
 
 function LaboralDisplay()
 {

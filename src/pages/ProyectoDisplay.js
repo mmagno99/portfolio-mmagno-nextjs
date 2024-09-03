@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import {ProjectList} from '../helpers/ProjectList';
 import '../styles/ProyectoDisplay.css';
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LiveDemoIcon from '@material-ui/icons/LiveTv';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LiveDemoIcon from '@mui/icons-material/LiveTv';
 
 
 

@@ -3,9 +3,9 @@ import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import 'react-vertical-timeline-component/style.min.css'
-import SchoolIcon from '@material-ui/icons/School';
-import WorkIcon from '@material-ui/icons/Work'
-import Certificate from '@material-ui/icons/EmojiEvents'
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from '@mui/icons-material/Work'
+import Certificate from '@mui/icons-material/EmojiEvents'
 
 import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf';
 import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf';
@@ -144,7 +144,6 @@ function Experiencia() {
 
 
         </VerticalTimelineElement>
-
       </VerticalTimeline>
 
     </div>

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {Link, useLocation} from 'react-router-dom';
 
 import '../styles/Navbar.css';
-import ReorderIcon from '@material-ui/icons/Reorder';
-import ExitIcon from '@material-ui/icons/CloseRounded'
+import ReorderIcon from '@mui/icons-material/Reorder';
+import ExitIcon from '@mui/icons-material/CloseRounded'
 
 function Navbar() {
 
