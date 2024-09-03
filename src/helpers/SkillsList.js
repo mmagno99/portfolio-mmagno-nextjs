@@ -17,6 +17,11 @@
               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
           },
           {
+            name: "TypeScript",
+            image:
+              "https://cdn.svgporn.com/logos/typescript-icon.svg",
+          },
+          {
             name: "Bootstrap",
             image:
               "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
