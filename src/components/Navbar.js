@@ -26,7 +26,7 @@ function Navbar() {
        
             <div className="logoName">
             
-                <h2> <span>M</span>m{`>`}gno.dev</h2>
+                <h2> <span>M</span>m{`>`}gno</h2>
            
             </div>
        

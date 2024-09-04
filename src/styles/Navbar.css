@@ -23,11 +23,8 @@
   font-weight: normal;
 }
 
-.navbar .toggleButton .logoName span{
-  
-  color: var(--secondary-color);
-}
-
+.navbar .toggleButton .logoName span{color: var(--secondary-color);transition: 0.3s ease-in;}
+.navbar .toggleButton .logoName span:hover{color:var(--primary-color);}
 .navbar {
     width: 100%;
     height: 100px;

@@ -45,7 +45,8 @@
     height: 50px;
   }
 
-  .about h2 span{color: var(--secondary-color);}
+  .about h2 span{color: var(--secondary-color);transition: 0.3s ease-in;}
+  .about h2 span:hover{color:var(--primary-color);}
   
   .about .prompt {
     width: 40%;

@@ -104,7 +104,7 @@ function Inicio() {
       <div className="about">
         <h2 className="">
           {" "}
-          Bienvenido a <span>M</span>magno
+          {"Bienvendo a "}<span>M</span>{"m>gno"}
         </h2>
         <div className="prompt">
           <p> Desarrollador Web apasionado, que ama desarrollar proyectos innovadores.</p>
