@@ -3,11 +3,11 @@
       title: "Frontend",
       skills: [
         {
-            name: "HTML",
+            name: "HTML5",
             image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
           },
           {
-            name: "CSS",
+            name: "CSS3",
             image:
               "https://cdn.svgporn.com/logos/css-3.svg",
           },
@@ -57,11 +57,6 @@
         {
           name: "MySQL",
           image: "https://cdn.svgporn.com/logos/mysql.svg",
-        },
-        {
-          name: "SQL",
-          image:
-            "https://cdn.svgporn.com/logos/mysql-icon.svg",
         },
         {
           name: "Firebase",

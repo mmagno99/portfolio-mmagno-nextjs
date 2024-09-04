@@ -11,50 +11,7 @@ import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pd
 
 import "../styles/Inicio.css";
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-`
-
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
-
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
-  }
-`;
-
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
-`;
+/* Estilos para los componentes */
 
 const SkillsContainer = styled.div`
   width: 100%;
@@ -67,26 +24,31 @@ const SkillsContainer = styled.div`
 `
 
 const Skill = styled.div`
-  width: 100%;
-  max-width: 500px;
-  background-color:#040d18;
-  border: 1px solid #2cd3d9;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 14px 34px;
-  border-radius: 16px;
-  
-  color:white;
+  width: 450px;
+  background-color:transparent;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in;
+  border-radius: 15px;
+  color:#040d18;
   padding: 18px 36px;
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
   }
   @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
+  max-width:250px;
+    padding: auto;
   }
 
+  &:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #5333ed;
+    cursor: pointer;
+    }
 
-`
+
+`;
+
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -116,8 +78,8 @@ const SkillItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #5333ed;
-  
+  border: 1px solid #2cd3d9;
+  background-color:#040d18;
   color:white;
   
   gap: 8px;
@@ -145,7 +107,8 @@ function Inicio() {
           Bienvenido a <span>M</span>magno
         </h2>
         <div className="prompt">
-          <p> Desarrollador Web con pasión por aprender y crear</p>
+          <p> Desarrollador Web apasionado, que ama desarrollar proyectos innovadores.</p>
+
           <a href={"mailto:contacto.marcosgr@gmail.com"}>
             <EmailIcon />
           </a>

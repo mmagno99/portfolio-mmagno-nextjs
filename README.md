@@ -2,7 +2,7 @@
 
 # 1.- Hacer un: git add . 
 # 2.- Hacer un: git commit -m 'escribe el identificador del mensaje'
-# 3.- Hacer un: firebase logout
+# 3.- Hacer un: firebase logoutfire
 # 4.- Hacer un: firebase login | Debera iniciar con: contacto.marcosgr@gmail.com
 # 5.- En la terminal poner: yarn build | Para colocar todos los cambios nuevos en la carpeta build
 # 6.- Por ultimo poner: firebase deploy --only hosting
