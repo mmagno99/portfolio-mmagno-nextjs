@@ -19,7 +19,7 @@ function Experiencia() {
 
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
-        date='2015 - 2018'
+        date='Agosto 2015 - Julio 2018'
         iconStyle={{background: "#111111",color:"#fff"}}
         icon={<SchoolIcon/>}
         >
@@ -32,7 +32,7 @@ function Experiencia() {
 
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
-        date='2019 - 2021'
+        date='Marzo 2019 - Julio 2021'
         iconStyle={{background: "#5333ed",color:"#fff"}}
         icon={<WorkIcon/>}
         >
@@ -82,7 +82,7 @@ function Experiencia() {
 
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
-        date='2022 - 2023'
+        date='Febrero 2022 - Septiembre 2023'
         iconStyle={{background: "#111111",color:"#fff"}}
         icon={<WorkIcon/>}
         >
@@ -121,7 +121,7 @@ function Experiencia() {
 
         <VerticalTimelineElement
         className='vertical-timeline-element--education'
-        date='Octubre 2023 - Act 2024'
+        date='Octubre 2023 - En activo (2024)'
         iconStyle={{background: "#111111", color:"#ffffff"}}
         icon={<WorkIcon/>}
         >
