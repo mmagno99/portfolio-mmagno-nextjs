@@ -28,6 +28,10 @@
     font-weight: bolder;
   }
 
+  .paragraphBlog{
+    text-align: justify;
+  }
+
   .blogList{
     width: auto;
     height: auto;

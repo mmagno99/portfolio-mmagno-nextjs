@@ -42,7 +42,6 @@ const Skill = styled.div`
 
   &:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  border: 1px solid #5333ed;
     cursor: pointer;
     }
 
@@ -78,7 +77,7 @@ const SkillItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #2cd3d9;
+  border: 1px solid #5333ed;
   background-color:#040d18;
   color:white;
   

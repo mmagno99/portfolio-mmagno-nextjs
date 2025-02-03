@@ -12,13 +12,8 @@ import {Link} from 'react-router-dom';
 import '../styles/Footer.css';
 
 
-  //Funcion que retorna el año actual
-  function anoActual()
-  {
-    const fecha = new Date();
-    return fecha.getFullYear();
-  }
-
+//Funcion que retorna el año actual
+function anoActual(){ return new Date().getFullYear(); }
 
 function Footer() {
   return (

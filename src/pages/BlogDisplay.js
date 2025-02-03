@@ -13,6 +13,7 @@ function BlogDisplay()
     return(
 
         <div className="blog">
+            <img style={{ backgroundImage: `url(${blog.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className='blogImages'/>
             <h1>{blog.name}</h1>
            
            <div className="contenedor">
@@ -20,7 +21,7 @@ function BlogDisplay()
            </div>
            
 
-            <img src={blog.image} alt="" />
+            
         </div>
 
     )

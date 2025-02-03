@@ -5,7 +5,7 @@ function BlogItem({image, name, id})
 {
     const navigate = useNavigate();
     return (
-        <div className="blogItem" onClick={() => {navigate('/blog/' + id)}}>
+        <div className="blogItem" onClick={() => {navigate(`/blog/${id}`)}}>
 
             <div style={{backgroundImage: `url(${image})`}} className='bgImageBlog' />
             <h1>{name}</h1>
@@ -14,4 +14,4 @@ function BlogItem({image, name, id})
     )
 }
 
-export default BlogItem
+export default BlogItem;

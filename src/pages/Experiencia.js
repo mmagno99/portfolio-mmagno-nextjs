@@ -10,7 +10,10 @@ import Certificate from '@mui/icons-material/EmojiEvents'
 import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf';
 import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf';
 
-import '../styles/Experience.css'
+import '../styles/Experience.css';
+
+//Funcion que retorna el año actual
+function anoActual() { return new Date().getFullYear(); }
 
 function Experiencia() {
   return (
@@ -121,7 +124,7 @@ function Experiencia() {
 
         <VerticalTimelineElement
         className='vertical-timeline-element--education'
-        date='Octubre 2023 - En activo (2024)'
+        date={`Octubre 2023 - En activo  ${anoActual()}`}
         iconStyle={{background: "#111111", color:"#ffffff"}}
         icon={<WorkIcon/>}
         >
@@ -144,6 +147,59 @@ function Experiencia() {
 
 
         </VerticalTimelineElement>
+
+        <VerticalTimelineElement 
+        className='vertical-timeline-element--education' 
+        date='Noviembre - 2024'
+        iconStyle={{background: "#5333ed",color:"#fff"}}
+        icon={<Certificate/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Platzi - Fundamentos de Ingeniería de Software</h3>
+          <p className='paragraph'>
+            <ul>
+      
+              <li><a className='certificate' href={'https://platzi.com/p/mmagno.dev/curso/1098-ingenieria/diploma/detalle/'} target={'blank'}>VER CERTIFICADO</a></li>
+            </ul>
+          </p>
+
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement 
+        className='vertical-timeline-element--education' 
+        date='Diciembre - 2024'
+        iconStyle={{background: "#5333ed",color:"#fff"}}
+        icon={<Certificate/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Platzi - Curso de Pensamiento Lógico (3/3)</h3>
+          <p className='paragraph'>
+            <ul>
+      
+              <li><a className='certificate' href={'https://platzi.com/p/mmagno.dev/curso/3221-pensamiento-logico/diploma/detalle/'} target={'blank'}>VER CERTIFICADO</a></li>
+            </ul>
+          </p>
+
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement 
+        className='vertical-timeline-element--education' 
+        date='Enero - En curso 2025'
+        iconStyle={{background: "#5333ed",color:"#fff"}}
+        icon={<Certificate/>}
+        >
+
+          <h3 className="vertical-timeline-element-title">Platzi - Programación Básica</h3>
+          <p className='paragraph'>
+            <ul>
+      
+              <li><a className='certificate' href={'#'}>VER CERTIFICADO</a></li>
+            </ul>
+          </p>
+
+        </VerticalTimelineElement>
+
+        
       </VerticalTimeline>
 
     </div>

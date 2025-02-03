@@ -29,10 +29,6 @@
     text-align: center;
 }
 
-.blog img{
-    width: 400px;
-    border-radius: 10px;
-}
 
 .blog p{
     font-family: var(--secondary-font-firacode);
@@ -41,8 +37,14 @@
     text-align: center;
 }
 
+.blog > .blogImages{
+    width: 100%;
+    height: 400px;
+}
+
 .blog .paragraphBlog{
     font-size: 1.3em;
+    text-align: justify;
 }
 
 .blog .contenedor > .paragraphBlog{
