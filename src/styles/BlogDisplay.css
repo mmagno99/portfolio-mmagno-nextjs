@@ -22,6 +22,10 @@
     flex-direction: column;
 }
 
+.contenedor{
+    margin-top: 100px;
+}
+
 
 .blog p{
     font-family: var(--secondary-font-firacode);
@@ -30,17 +34,18 @@
     text-align: center;
 }
 
-.blog > .blogImages{
+.blog .blogImages{
     width: 100%;
     height: 400px;
 }
 
 .blog .paragraphBlog{
-    font-size: 1.3em;
-    text-align: justify;
+    font-size: 1.14em;
+    text-align: left;
+    line-height: 1.5em;
 }
 
-.blog .contenedor > .paragraphBlog{
+.blog .contenedor .paragraphBlog{
     max-width: 50em;
 }
 
@@ -84,4 +89,8 @@
     }
 
     .blog p{font-size: 30px;}
+
+    .contenedor{
+        margin: 50px 20px 0 20px;
+    }
 }

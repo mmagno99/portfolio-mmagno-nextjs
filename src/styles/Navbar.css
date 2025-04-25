@@ -4,14 +4,12 @@
 :root{
   --primary-font-poppins: 'Poppins', sans-serif; ;
   --secondary-font-firacode:  'Fira Code', monospace;
-
   --bg-body: #040d18;
   --bg-body-light: #041224;
-
   --bg-color-second: #121016;
---primary-color:#5333ed;
---secondary-color:#2cd3d9;
---color-paragraph:#ccd6f6;
+  --primary-color:#5333ed;
+  --secondary-color:#2cd3d9;
+  --color-paragraph:#ccd6f6;
 }
 
 .navbar .toggleButton .logoName{

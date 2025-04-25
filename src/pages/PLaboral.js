@@ -11,6 +11,7 @@ function ProyectosLaborales(){
     return (
         <div className="projectsLaboral">
           <h1 className="projectTitleLaboral">Proyectos en balabox</h1>
+          <h3 style={{ textAlign: 'center' }}>Probablemente <br/>algunos esten inactivos 😭</h3>
           <div className="projectListLaboral">
             {LaboralList.map((projectLaboral, idx) => {
               return (

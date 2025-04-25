@@ -9,6 +9,7 @@ function Proyectos() {
   return (
     <div className="projects">
       <h1 className="projectTitle">Mis proyectos personales</h1>
+      <h3>Me hace falta agregar más 😓</h3>
       <div className="projectList">
         {ProjectList.map((project, idx) => {
           return (

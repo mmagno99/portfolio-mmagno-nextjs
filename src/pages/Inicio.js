@@ -112,10 +112,10 @@ function Inicio() {
           <p>
             <Typed
               strings={[
-                'Desarrollador Web apasionado, que ama crear proyectos innovadores.',
-                'Especialista en React, creando interfaces modernas y fluidas.',
-                'Experto en WordPress Full Stack, llevando ideas a producción.',
-                'Tu socio digital para soluciones web funcionales y escalables.'
+                'Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵',
+                'Especialista en React, creando interfaces modernas y fluidas. 😏',
+                'Experto en WordPress Full Stack, llevando ideas a producción. 😎',
+                'Tu socio digital para soluciones web funcionales y escalables. 🥸'
               ]}
               typeSpeed={50}
               backSpeed={30}
