@@ -3,7 +3,7 @@ import {Link, useLocation} from 'react-router-dom';
 
 import '../styles/Navbar.css';
 import ReorderIcon from '@mui/icons-material/Reorder';
-import ExitIcon from '@mui/icons-material/CloseRounded'
+import ExitIcon from '@mui/icons-material/CloseRounded';
 
 function Navbar() {
 
@@ -45,15 +45,24 @@ function Navbar() {
             </div>
        
         
-            <button 
+            {/* <button 
             onClick={() => {
                 setExpandNavbar((prev) => !prev);
                 }}
                 
-                //Hacemos una condicion con operador ternario, si se abrio el navbar que cambie de icono
+                Hacemos una condicion con operador ternario, si se abrio el navbar que cambie de icono
                 >
                 {expandNavbar ? <ExitIcon /> :  <ReorderIcon/> }
                 
+            </button> */}
+
+            <button 
+            className={`hamburger ${expandNavbar ? 'active' : ''}`}
+            onClick={() => setExpandNavbar((prev) => !prev)}
+            >
+            <span></span>
+            <span></span>
+            <span></span>
             </button>
 
           
