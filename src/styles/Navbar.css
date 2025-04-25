@@ -23,12 +23,34 @@
 
 .navbar .toggleButton .logoName span{color: var(--secondary-color);transition: 0.3s ease-in;}
 .navbar .toggleButton .logoName span:hover{color:var(--primary-color);}
+/* Menu sticky */
+
 .navbar {
-    width: 100%;
-    height: 100px;
-    border-bottom:1px solid var(--primary-color);
-    background: var(--bg-body-light);
-  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /*height: 100px;
+  */background: var(--bg-body-light);
+  border-bottom: 1px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: transform 0.3s ease, background-color 0.3s ease;
+  -moz-transition: transform 0.3s ease, background-color 0.3s ease;
+  -ms-transition: transform 0.3s ease, background-color 0.3s ease;
+  -o-transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Sticky behavior */
+.navbar.hide {
+  transform: translateY(-120%);
+}
+
+.navbar.show {
+  transform: translateY(0);
+}
+
   
   .links {
     width: 100%;
@@ -169,6 +191,8 @@
     transform: rotate(-45deg);
     top: 50%;
   }
+
+  
   
   
   @media only screen and (max-width: 900px) {

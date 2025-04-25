@@ -2,38 +2,57 @@ import React, { useEffect, useState } from 'react'
 import {Link, useLocation} from 'react-router-dom';
 
 import '../styles/Navbar.css';
-import ReorderIcon from '@mui/icons-material/Reorder';
-import ExitIcon from '@mui/icons-material/CloseRounded';
 
 function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const location = useLocation();
 
+  // 1️⃣ Cierra el menú si cambias de ruta
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
 
-    const [expandNavbar, setExpandNavbar] = useState(false);
-    const location = useLocation();
+  // 2️⃣ Evita scroll en fondo si el menú hamburguesa está abierto
+  useEffect(() => {
+    if (expandNavbar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
 
-    useEffect(() => {
-        setExpandNavbar(false);
-    },[location])
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [expandNavbar]);
 
-    useEffect(() => {
-        if (expandNavbar) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-      
-        // Limpieza por si acaso
-        return () => {
-          document.body.style.overflow = 'auto';
-        };
-      }, [expandNavbar]);
-      
+  // 3️⃣ Navbar sticky que desaparece al hacer scroll (pero no cuando el menú está abierto)
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
 
+    const handleScroll = () => {
+      if (expandNavbar) return; // ⛔️ No escondas el navbar si está expandido
+
+      if (window.scrollY === 0) {
+        setShowNavbar(true);
+      } else if (window.scrollY > lastScrollY) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [expandNavbar]); // 👈 Lo agregamos aquí también
 
   return (
 
-    <div className='navbar' id={expandNavbar ? 'open' : 'close' }>
-
+    <div className={`navbar ${showNavbar ? 'show' : 'hide'}`} id={expandNavbar ? 'open' : 'close'}>
         
         <div className="toggleButton">
 
@@ -44,18 +63,7 @@ function Navbar() {
            
             </div>
        
-        
-            {/* <button 
-            onClick={() => {
-                setExpandNavbar((prev) => !prev);
-                }}
-                
-                Hacemos una condicion con operador ternario, si se abrio el navbar que cambie de icono
-                >
-                {expandNavbar ? <ExitIcon /> :  <ReorderIcon/> }
-                
-            </button> */}
-
+      
             <button 
             className={`hamburger ${expandNavbar ? 'active' : ''}`}
             onClick={() => setExpandNavbar((prev) => !prev)}
