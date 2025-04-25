@@ -12,16 +12,26 @@ function BlogDisplay()
     
     return(
 
-        <div className="blog">
-            <img style={{ backgroundImage: `url(${blog.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className='blogImages'/>
-            <h1>{blog.name}</h1>
+        // <div className="blog">
+        //     <div className="contenedor-imagen">
+        //         <img style={{ backgroundImage: `url(${blog.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} className='blogImages'/>
+        //         <h1>{blog.name}</h1>
+        //     </div>
            
-           <div className="contenedor">
-            <p className='paragraphBlog'>{blog.paragraph}</p>
-           </div>
-           
+        //    <div className="contenedor">
+        //     <p className='paragraphBlog'>{blog.paragraph}</p>
+        //    </div>
+                       
+        // </div>
 
-            
+        <div className="blog">
+            <div className="blogImages contenedor-imagen" style={{ backgroundImage: `url(${blog.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+                <h1 className="titulo-banner">{blog.name}</h1>
+            </div>
+
+            <div className="contenedor">
+                <p className="paragraphBlog">{blog.paragraph}</p>
+            </div>
         </div>
 
     )

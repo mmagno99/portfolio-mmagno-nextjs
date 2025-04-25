@@ -15,6 +15,20 @@ function Navbar() {
         setExpandNavbar(false);
     },[location])
 
+    useEffect(() => {
+        if (expandNavbar) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      
+        // Limpieza por si acaso
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [expandNavbar]);
+      
+
 
   return (
 

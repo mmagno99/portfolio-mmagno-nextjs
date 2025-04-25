@@ -1,5 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
+import { ReactTyped as Typed } from 'react-typed';
+
 import {skills} from '../helpers/SkillsList.js';
 
 import EmailIcon from "@mui/icons-material/Email";
@@ -105,8 +107,21 @@ function Inicio() {
           {" "}
           {"Bienvendo a "}<span>M</span>{"m>gno"}
         </h2>
+
         <div className="prompt">
-          <p> Desarrollador Web apasionado, que ama desarrollar proyectos innovadores.</p>
+          <p>
+            <Typed
+              strings={[
+                'Desarrollador Web apasionado, que ama crear proyectos innovadores.',
+                'Especialista en React, creando interfaces modernas y fluidas.',
+                'Experto en WordPress Full Stack, llevando ideas a producción.',
+                'Tu socio digital para soluciones web funcionales y escalables.'
+              ]}
+              typeSpeed={50}
+              backSpeed={30}
+              loop
+            />
+          </p>
 
           <a href={"mailto:contacto.marcosgr@gmail.com"}>
             <EmailIcon />
@@ -121,6 +136,8 @@ function Inicio() {
             <GithubIcon />
           </a>
         </div>
+
+        
       </div>
 
       <div className="skills">

@@ -90,7 +90,7 @@ function Experiencia() {
         icon={<WorkIcon/>}
         >
 
-          <h3 className="vertical-timeline-element-title">Balabox Inc/ Front-End Jr</h3>
+          <h3 className="vertical-timeline-element-title">Balabox Inc/ Front-End</h3>
           <p className='paragraph'>
 
             <ul>
@@ -124,21 +124,26 @@ function Experiencia() {
 
         <VerticalTimelineElement
         className='vertical-timeline-element--education'
-        date={`Octubre 2023 - En activo  ${anoActual()}`}
+        date={
+          // Contenedor vacio para que acepte jsx llamado - dangerouslySetInnerHTML
+          <>
+            Desde Octubre 2023 - <span className="active">En activo {anoActual()}</span>
+          </>
+          
+        }
         iconStyle={{background: "#111111", color:"#ffffff"}}
         icon={<WorkIcon/>}
         >
 
-          <h3 className="vertical-timeline-element-title">Tierra de ideas/ Front-End Middle</h3>
+          <h3 className="vertical-timeline-element-title">Tierra de ideas/ Full Stack WordPress</h3>
 
           <p className='paragraph'>
 
             <ul>
-              <li>Desarrollo Web</li>
-              <li>Diseño Web UI/UX</li>
-              <li>Google Analytics</li>
-              <li>SEO Search Console</li>
+              <li>Desarrollo Web UI/UX</li>
               <li>Seguridad Web</li>
+              <li>Escalabilidad Web</li>
+              <li>Desarrollo de plugins</li>
 
             </ul>
 
@@ -184,7 +189,7 @@ function Experiencia() {
 
         <VerticalTimelineElement 
         className='vertical-timeline-element--education' 
-        date='Enero - En curso 2025'
+        date='Abril - 2025'
         iconStyle={{background: "#5333ed",color:"#fff"}}
         icon={<Certificate/>}
         >
@@ -193,7 +198,7 @@ function Experiencia() {
           <p className='paragraph'>
             <ul>
       
-              <li><a className='certificate' href={'#'}>VER CERTIFICADO</a></li>
+              <li><a className='certificate' href={'https://platzi.com/p/mmagno.dev/curso/3208-programacion-basica/diploma/detalle/'} target={'blank'}>VER CERTIFICADO</a></li>
             </ul>
           </p>
 

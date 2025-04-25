@@ -6,6 +6,7 @@
 :root{
   --primary-font-poppins: 'Poppins', sans-serif; ;
   --secondary-font-firacode:  'Fira Code', monospace;
+  --primary-color:#5333ed;
 }
 
 .paragraph{
@@ -14,5 +15,7 @@
 
 .paragraph ul li .cartabbx, .certificate, .cartasah{
   text-decoration: none;
-  color:#5333ed;
+  color:var(--primary-color);
 }
+
+.active{ color:var(--primary-color); font-weight: bold; }
