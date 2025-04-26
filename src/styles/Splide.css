@@ -49,12 +49,12 @@
   .slider-container {
     width: 100%;
     margin: auto;
-    padding: 0 10px; /* Padding lateral para móvil */
+    padding: 0; /* Padding lateral para móvil */
   }
   
-    .slider-container {
+    /* .slider-container {
       padding: 10px;
-    }
+    } */
     
     /* .splide__arrow {
       opacity: 1 !important; 
