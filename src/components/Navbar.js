@@ -4,65 +4,66 @@ import {Link, useLocation} from 'react-router-dom';
 import '../styles/Navbar.css';
 
 function Navbar() {
-  const [expandNavbar, setExpandNavbar] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const location = useLocation();
 
-  // 1️⃣ Cierra el menú si cambias de ruta
-  useEffect(() => {
-    setExpandNavbar(false);
-  }, [location]);
 
-  // 2️⃣ Evita scroll en fondo si el menú hamburguesa está abierto
-  useEffect(() => {
-    if (expandNavbar) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    const [expandNavbar, setExpandNavbar] = useState(false);
 
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [expandNavbar]);
+    const location = useLocation();
 
-  // 3️⃣ Navbar sticky que desaparece al hacer scroll (pero no cuando el menú está abierto)
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
+    useEffect(() => {
+        setExpandNavbar(false);
+    },[location])
 
-    const handleScroll = () => {
-      if (expandNavbar) return; // ⛔️ No escondas el navbar si está expandido
+    useEffect(() => {
+        if (expandNavbar) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+      
+        // Limpieza por si acaso
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [expandNavbar]);
 
-      if (window.scrollY === 0) {
-        setShowNavbar(true);
-      } else if (window.scrollY > lastScrollY) {
-        setShowNavbar(false); // scrolling down
-      } else {
-        setShowNavbar(true); // scrolling up
-      }
-      lastScrollY = window.scrollY;
-    };
+      // Tercer useeffect
 
-    window.addEventListener('scroll', handleScroll);
+      useEffect(() => {
+        let lastScrollY = window.scrollY;
+      
+        const handleScroll = () => {
+          if (window.scrollY === 0) {
+            setShowNavbar(true);
+          } else if (window.scrollY > lastScrollY) {
+            // Scrolling down
+            setShowNavbar(false);
+          } else {
+            // Scrolling up
+            setShowNavbar(true);
+          }
+          lastScrollY = window.scrollY;
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+      
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+      
+      
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [expandNavbar]); // 👈 Lo agregamos aquí también
 
   return (
 
-    <div className={`navbar ${showNavbar ? 'show' : 'hide'}`} id={expandNavbar ? 'open' : 'close'}>
+    <div className='navbar' id={expandNavbar ? 'open' : 'close' }>
         
         <div className="toggleButton">
 
-       
             <div className="logoName">
-            
-                <h2> <span>M</span>m{`>`}gno</h2>
-           
+                <h2> <span>M</span>m{`>`}gno </h2>
             </div>
-       
       
             <button 
             className={`hamburger ${expandNavbar ? 'active' : ''}`}
@@ -72,8 +73,6 @@ function Navbar() {
             <span></span>
             <span></span>
             </button>
-
-          
 
         </div>
         

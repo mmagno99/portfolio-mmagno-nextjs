@@ -26,29 +26,10 @@
 /* Menu sticky */
 
 .navbar {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  /*height: 100px;
-  */background: var(--bg-body-light);
+  height: 100px;
+  background: var(--bg-body-light);
   border-bottom: 1px solid var(--primary-color);
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  -webkit-transition: transform 0.3s ease, background-color 0.3s ease;
-  -moz-transition: transform 0.3s ease, background-color 0.3s ease;
-  -ms-transition: transform 0.3s ease, background-color 0.3s ease;
-  -o-transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Sticky behavior */
-.navbar.hide {
-  transform: translateY(-120%);
-}
-
-.navbar.show {
-  transform: translateY(0);
 }
 
   
@@ -99,7 +80,7 @@
 }
 
   .navbar a:hover:after{
-    width: 100%;    
+    width: 100%;
     left: 0;
     
     /* quitar el left 0 */
@@ -111,6 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color);
   }
   
   .toggleButton svg {
@@ -197,8 +179,19 @@
   
   @media only screen and (max-width: 900px) {
     .navbar a {
-      width: 70px;
+      width: auto;
     }
+
+    .navbar a:after {
+      left: 0;
+      margin: auto;
+    }
+
+    .navbar a:hover:after{
+      width: 50%;
+      margin: auto;
+    }
+    
   }
   
   @media only screen and (max-width: 800px) {
@@ -208,6 +201,8 @@
     #close a {
       display: none;
     }
+
+    
   }
   
   @media only screen and (min-width: 600px) {
@@ -230,4 +225,6 @@
     #open .links {
       flex-direction: row;
     }
+
+    
   }

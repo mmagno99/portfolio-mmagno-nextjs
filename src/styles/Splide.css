@@ -1,0 +1,95 @@
+/* Contenedor principal del slider */
+.slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Ajustes para las cards */
+  .splide__slide {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .slide-inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Flechas de navegación */
+  .splide__arrow {
+    transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+  }
+  
+  .splide__arrow:active {
+    transform: scale(0.8) !important;
+  }
+  /* Efecto smooth en el movimiento del slider */
+  .splide__track {
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .splide__arrow svg {
+    fill: white;
+  }
+  
+  .splide__arrow--prev {
+    left: -1em;
+  }
+  
+  .splide__arrow--next {
+    right: -1em;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+  
+    /* Asegura que el contenedor no se salga en móvil */
+  .slider-container {
+    width: 100%;
+    margin: auto;
+    padding: 0 10px; /* Padding lateral para móvil */
+  }
+  
+    .slider-container {
+      padding: 10px;
+    }
+    
+    /* .splide__arrow {
+      opacity: 1 !important; 
+      width: auto;
+      height: auto;
+    } */
+  }
+  
+  /* Tablet (2 slides) */
+  @media (max-width: 900px) {
+    .splide__slide {
+      padding: 5px; /* Reduce espacio entre cards */
+    }
+  
+    .splide__arrow {
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* Móvil (1 slide) */
+  @media (max-width: 600px) {
+    .splide__slide {
+      padding: 0; /* Sin padding extra */
+    }
+    
+    /* Opcional: centrar la card en móvil */
+    .slide-inner {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .splide__arrow--prev {
+      left: 0.5em; /* Más cerca del borde */
+    }
+    .splide__arrow--next {
+      right: 0.5em;
+    }
+  }

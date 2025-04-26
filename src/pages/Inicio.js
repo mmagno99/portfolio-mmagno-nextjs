@@ -105,7 +105,7 @@ function Inicio() {
       <div className="about">
         <h2 className="">
           {" "}
-          {"Bienvendo a "}<span>M</span>{"m>gno"}
+          {"Bienvenido a "}<span>M</span>{"m>gno"}
         </h2>
 
         <div className="prompt">
@@ -117,8 +117,8 @@ function Inicio() {
                 'Experto en WordPress Full Stack, llevando ideas a producción. 😎',
                 'Tu socio digital para soluciones web funcionales y escalables. 🥸'
               ]}
-              typeSpeed={50}
-              backSpeed={30}
+              typeSpeed={80}
+              backSpeed={70}
               loop
             />
           </p>
