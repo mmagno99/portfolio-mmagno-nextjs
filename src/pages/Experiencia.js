@@ -12,6 +12,8 @@ import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILU
 
 import '../styles/Experience.css';
 
+import BackToTop from '../components/BackToTop.js';
+
 //Funcion que retorna el año actual
 function anoActual() { return new Date().getFullYear(); }
 
@@ -206,7 +208,7 @@ function Experiencia() {
 
         
       </VerticalTimeline>
-
+      <BackToTop/>
     </div>
   )
 }

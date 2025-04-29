@@ -4,6 +4,8 @@ import { ReactTyped as Typed } from 'react-typed';
 
 import {skills} from '../helpers/SkillsList.js';
 
+import BackToTop from '../components/BackToTop.js';
+
 // import EmailIcon from "@mui/icons-material/Email";
 // import GithubIcon from "@mui/icons-material/GitHub";
 // import CV from "@mui/icons-material/CloudDownload";
@@ -165,6 +167,8 @@ function Inicio() {
         </SkillsContainer>
       
       </div>
+
+    <BackToTop/>
     </div>
   );
 }

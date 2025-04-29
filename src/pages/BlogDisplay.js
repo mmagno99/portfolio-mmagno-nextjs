@@ -3,6 +3,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { BlogList } from '../helpers/BlogList';
 import '../styles/BlogDisplay.css';
+import BackToTop from '../components/BackToTop.js';
+
 
 function BlogDisplay()
 {
@@ -32,6 +34,8 @@ function BlogDisplay()
             <div className="contenedor">
                 <p className="paragraphBlog">{blog.paragraph}</p>
             </div>
+
+            <BackToTop/>
         </div>
 
     )

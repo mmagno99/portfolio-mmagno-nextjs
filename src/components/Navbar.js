@@ -82,7 +82,9 @@ function Navbar() {
         <Link to="/experiencia">Experience</Link>
         <Link to="/blog">Blog</Link>
       </div>
+
     </div>
+
   );
 }
 

@@ -9,6 +9,8 @@ import '@splidejs/react-splide/css';
 import ProjectItem from "../components/ProjectItem";
 import { ProjectList } from "../helpers/ProjectList";
 
+import BackToTop from '../components/BackToTop.js';
+
 function Proyectos() {
   return (
     <div className="projects">
