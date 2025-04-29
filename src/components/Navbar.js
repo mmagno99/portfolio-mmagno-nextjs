@@ -1,89 +1,89 @@
-import React, { useEffect, useState } from 'react'
-import {Link, useLocation} from 'react-router-dom';
-
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 function Navbar() {
+  const [expandNavbar, setExpandNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
 
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
 
-    const [expandNavbar, setExpandNavbar] = useState(false);
+  useEffect(() => {
+    if (expandNavbar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
 
-    const location = useLocation();
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [expandNavbar]);
 
-    useEffect(() => {
-        setExpandNavbar(false);
-    },[location])
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
 
-    useEffect(() => {
-        if (expandNavbar) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-      
-        // Limpieza por si acaso
-        return () => {
-          document.body.style.overflow = 'auto';
-        };
-      }, [expandNavbar]);
+      // Si el menú está abierto, no modificar el navbar
+      if (expandNavbar) {
+        return;
+      }
 
-      // Tercer useeffect
+      if (currentScrollY === 0) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
+        setShowNavbar(false);
+      } else if (currentScrollY < lastScrollY) {
+        setShowNavbar(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
 
-      useEffect(() => {
-        let lastScrollY = window.scrollY;
-      
-        const handleScroll = () => {
-          if (window.scrollY === 0) {
-            setShowNavbar(true);
-          } else if (window.scrollY > lastScrollY) {
-            // Scrolling down
-            setShowNavbar(false);
-          } else {
-            // Scrolling up
-            setShowNavbar(true);
-          }
-          lastScrollY = window.scrollY;
-        };
-      
-        window.addEventListener('scroll', handleScroll);
-      
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-      
-      
+    window.addEventListener('scroll', controlNavbar, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY, expandNavbar]); // Agregado expandNavbar
 
+  const toggleMenu = () => {
+    setExpandNavbar((prev) => !prev);
+  };
 
   return (
-
-    <div className='navbar' id={expandNavbar ? 'open' : 'close' }>
-        
-        <div className="toggleButton">
-
+    <div className={`navbar ${!showNavbar ? 'hidden' : ''}`} id={expandNavbar ? 'open' : 'close'}>
+      <div className="toggleButton">
+        <div className="logoContainer">
+          <Link to="/" className="logoLink">
             <div className="logoName">
-                <h2> <span>M</span>m{`>`}gno </h2>
+              <h2><span>M</span>m{`>`}gno</h2>
             </div>
-      
-            <button 
-            className={`hamburger ${expandNavbar ? 'active' : ''}`}
-            onClick={() => setExpandNavbar((prev) => !prev)}
-            >
-            <span></span>
-            <span></span>
-            <span></span>
-            </button>
+          </Link>
+        </div>
 
-        </div>
-        
-        <div className="links">
-            <Link to="/"> Inicio </Link>
-            <Link to="/opciones"> Proyectos </Link>
-            <Link to="/experiencia"> Experiencia </Link>
-            <Link to="/blog"> Blog </Link>
-        </div>
+        <button 
+          className={`hamburger ${expandNavbar ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Menu"
+          aria-expanded={expandNavbar}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/opciones">Projects</Link>
+        <Link to="/experiencia">Experience</Link>
+        <Link to="/blog">Blog</Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

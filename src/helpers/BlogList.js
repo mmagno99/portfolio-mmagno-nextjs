@@ -1,60 +1,126 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 import catFrontEnd from "../assets/blog/catFrontEnd.jpg";
 import catBackEnd from "../assets/blog/catBackEnd.jpg";
 import developerJr from "../assets/blog/developer.jpg";
 
-
 export const BlogList = [
   {
     name: "¿Qué hace un Front-end Developer?",
-    image: catFrontEnd,
-    paragraph: 
-    <>
-      <p className="paragraphBlog">Un Front-end Developer es el encargado de desarrollar la parte visual y la experiencia de usuario de una aplicación web.<br/>
-    Su trabajo consiste en traducir diseños en código utilizando tecnologías como HTML, CSS y JavaScript.<br/>
-    También se encarga de optimizar el rendimiento, hacer que la web sea accesible y asegurar que funcione en distintos dispositivos y navegadores.<br/>
-    Es fundamental que un Front-end Developer tenga conocimientos en frameworks y bibliotecas como React, Vue o Angular, además de estar en constante aprendizaje para adaptarse a las tendencias del desarrollo web.</p>
-    </>,
+    image: catFrontEnd, // Imagen pro online
+    paragraph: (
+      <>
+        <p className="paragraphBlog">
+          Un <strong>Front-end Developer</strong> es quien se encarga de construir toda la parte visual e interactiva de un sitio web o aplicación.<br/><br/>
+          Utiliza tecnologías esenciales como <strong>HTML, CSS y JavaScript</strong> para transformar un diseño en algo funcional y agradable para el usuario.<br/><br/>
+          Además de estas tecnologías, suele trabajar con frameworks modernos como <strong>React, Vue o Angular</strong> para construir interfaces dinámicas y eficientes.<br/><br/>
+          A continuación, te muestro una estructura básica que todo front-end debe dominar:
+        </p>
+        <SyntaxHighlighter language="html" style={oneDark} showLineNumbers>
+{`<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera página</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Hola Mundo!</h1>
+  <p>Esta es mi primera página web.</p>
+</body>
+</html>`}
+        </SyntaxHighlighter>
+        <p className="paragraphBlog">
+          <br/>
+          Un Front-end Developer no solo debe escribir código, también debe asegurarse de que su trabajo sea accesible, rápido, optimizado para SEO y adaptable a todos los dispositivos.
+        </p>
+      </>
+    ),
   },
   {
-    name: "Mejorar tu perfil como developer",
+    name: "Mejorar tu perfil como Developer",
     image: developerJr,
-    paragraph: 
-    <>
-    <p className="paragraphBlog">
-    Darte a conocer como desarrollador es esencial para destacar en la industria tecnológica.<br/>
-    Algunas recomendaciones para mejorar tu perfil como dev son:<br/><br/>
-    <ul>
-      <li>LinkedIn: Mantén tu perfil actualizado con tus habilidades, proyectos y experiencia laboral.</li>
-      <li>GitHub: Publica tus proyectos y contribuye en repositorios de código abierto.</li>
-      <li>Portafolio: Crea una página web donde muestres tus mejores trabajos y experiencia.</li>
-      <li>Blog: Comparte conocimientos y escribe sobre lo que aprendes.</li>
-      <li>Networking: Participa en eventos, meetups y comunidades para conectar con otros desarrolladores.</li>
-    </ul>
-    <br/>
-    La clave está en la constancia y la mejora continua para construir una marca personal sólida.
-    </p>
-    </>,
+    paragraph: (
+      <>
+        <p className="paragraphBlog">
+          Para sobresalir en el mundo del desarrollo, debes construir y potenciar tu presencia profesional en línea.<br/><br/>
+          Aquí tienes algunos consejos esenciales:
+        </p>
+        <ul className="paragraphBlog">
+          <li><strong>LinkedIn:</strong> Mantén tu perfil actualizado con proyectos, certificaciones y experiencia.</li>
+          <li><strong>GitHub:</strong> Publica tus repositorios, contribuye a proyectos de código abierto y documenta bien tus proyectos.</li>
+          <li><strong>Portafolio Web:</strong> Diseña una página donde muestres tus mejores trabajos con detalles técnicos.</li>
+          <li><strong>Blog Técnico:</strong> Comparte aprendizajes, experiencias, tutoriales y proyectos personales.</li>
+          <li><strong>Networking:</strong> Asiste a eventos, webinars y meetups para expandir tus conexiones profesionales.</li>
+        </ul>
+        <p className="paragraphBlog">
+          <br/>
+          Recuerda que tu marca personal será una gran diferencia entre pasar desapercibido o captar oportunidades laborales.<br/><br/>
+          Aquí tienes un ejemplo rápido de cómo un portafolio podría estructurarse:
+        </p>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
+{`const portfolio = {
+  name: "Juan Pérez",
+  role: "Front-end Developer",
+  skills: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+  projects: [
+    { name: "Tienda Online", url: "https://mi-tienda.com" },
+    { name: "Blog Personal", url: "https://mi-blog.com" }
+  ]
+};`}
+        </SyntaxHighlighter>
+      </>
+    ),
   },
   {
     name: "¿Qué hace un Back-end Developer?",
     image: catBackEnd,
-    paragraph: 
-    <>
-    <p className="paragraphBlog">
-    Un Back-end Developer es el encargado de desarrollar la lógica y el funcionamiento interno de una aplicación web o sistema.<br/>
-    Se centra en el procesamiento de datos, la seguridad, la autenticación de usuarios y la integración con bases de datos.<br/><br/>
-    Utiliza tecnologías como:
-    <ul>
-      <li>Node.js</li>
-      <li>Python (Django, Flask)</li>
-      <li>Java (Spring Boot)</li>
-      <li>Ruby on Rails</li>
-      <li>Bases de datos como MySQL, PostgreSQL o MongoDB.</li>
-    </ul>
-    <br/>
-    Y además, un Back-end Developer debe conocer sobre APIs REST, GraphQL, arquitectura de software y seguridad informática.<br/>
-    Su rol es crucial para que la información fluya correctamente entre el servidor y el cliente, garantizando la eficiencia y escalabilidad de las aplicaciones.
-    </p>
-    </>,
+    paragraph: (
+      <>
+        <p className="paragraphBlog">
+          Un <strong>Back-end Developer</strong> se encarga de que todo lo que ocurre detrás de la interfaz gráfica funcione correctamente.<br/><br/>
+          Su trabajo abarca desde la gestión de bases de datos, servidores, APIs, hasta la seguridad de la aplicación.<br/><br/>
+          Algunas tecnologías populares incluyen:
+        </p>
+        <ul className="paragraphBlog">
+          <li><strong>Node.js:</strong> Para construir servidores rápidos y escalables con JavaScript.</li>
+          <li><strong>Python:</strong> Usando frameworks como Django o Flask para APIs robustas.</li>
+          <li><strong>Java:</strong> Muy usado en aplicaciones empresariales mediante Spring Boot.</li>
+          <li><strong>Ruby on Rails:</strong> Ideal para startups que buscan agilidad.</li>
+          <li><strong>Bases de datos:</strong> MySQL, PostgreSQL y MongoDB son esenciales en su stack.</li>
+        </ul>
+        <p className="paragraphBlog">
+          <br/>
+          Un ejemplo básico de un servidor en Node.js sería:
+        </p>
+        <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers>
+{`const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('¡Hola desde el servidor!');
+});
+
+app.listen(PORT, () => {
+  console.log(\`Servidor corriendo en http://localhost:\${PORT}\`);
+});`}
+        </SyntaxHighlighter>
+        <p className="paragraphBlog">
+          <br/>
+          Su rol es indispensable para garantizar que toda la infraestructura de la aplicación funcione de manera estable, segura y eficiente.
+        </p>
+      </>
+    ),
   },
 ];

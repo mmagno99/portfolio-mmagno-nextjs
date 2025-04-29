@@ -1,230 +1,235 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-
-:root{
-  --primary-font-poppins: 'Poppins', sans-serif; ;
-  --secondary-font-firacode:  'Fira Code', monospace;
+:root {
+  --primary-font-poppins: 'Poppins', sans-serif;
+  --secondary-font-firacode: 'Fira Code', monospace;
   --bg-body: #040d18;
   --bg-body-light: #041224;
   --bg-color-second: #121016;
-  --primary-color:#5333ed;
-  --secondary-color:#2cd3d9;
-  --color-paragraph:#ccd6f6;
+  --primary-color: #5333ed;
+  --secondary-color: #2cd3d9;
+  --color-paragraph: #ccd6f6;
 }
 
-.navbar .toggleButton .logoName{
-  visibility: 0;
-  color: white;
-  text-align: left;
-  margin-left: 15px;
-  font-family: var(--secondary-font-firacode);
-  font-weight: normal;
-}
-
-.navbar .toggleButton .logoName span{color: var(--secondary-color);transition: 0.3s ease-in;}
-.navbar .toggleButton .logoName span:hover{color:var(--primary-color);}
-/* Menu sticky */
-
+/* ======== BASE NAVBAR STYLES ======== */
 .navbar {
   width: 100%;
   height: 100px;
   background: var(--bg-body-light);
   border-bottom: 1px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
 }
 
-  
-  .links {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
-  
-  .navbar a {
-    position: relative;
-    color: #a0a0a0;
-    text-decoration: none;
-    margin: 20px;
-    font-size: 25px;
-    padding: 0 10px;
-    transition: 0.8s;
-    -webkit-transition: 0.8s ease-out;
-    -moz-transition: 0.8s;
-    -ms-transition: 0.8s;
-    -o-transition: 0.8s;
-    
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
-  .navbar a:after {
-    content: '';
-    position: absolute;
-    background-color: var(--secondary-color);
-    height: 3px;
-    width: 0;
-    right: 0;
-    bottom: -5px;
-    transition: 0.8s ease-out;
-    -webkit-transition: 0.8s ease-out;
-    -moz-transition: 0.8s ease-out;
-    -ms-transition: 0.8s ease-out;
-    -o-transition: 0.8s ease-out;
-    
+.toggleButton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-color);
 }
 
-.navbar a:hover{
-  color:white;
-  
-  
+.logoContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
 }
 
-  .navbar a:hover:after{
-    width: 100%;
-    left: 0;
-    
-    /* quitar el left 0 */
-  }
-  
+.logoLink {
+  text-decoration: none;
+}
+
+.logoName {
+  color: white;
+  margin-left: 20px;
+  font-family: var(--secondary-font-firacode);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoName h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.logoName span {
+  color: var(--secondary-color);
+  transition: 0.3s ease-in;
+}
+
+.logoName:hover span {
+  color: var(--primary-color);
+}
+
+.links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.navbar .links a {
+  position: relative;
+  color: #a0a0a0;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 25px;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.navbar .links a:after {
+  content: '';
+  position: absolute;
+  background-color: var(--secondary-color);
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  transition: 0.3s ease-out;
+}
+
+.navbar .links a:hover {
+  color: white;
+}
+
+.navbar .links a:hover:after {
+  width: 100%;
+}
+
+/* ======== MENU EXPANDIDO ======== */
+#open {
+  height: 100vh;
+}
+
+#open .links {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* ← Centramos los enlaces */
+  margin-top: 100px;
+}
+
+#open .links a {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ======== HAMBURGER BUTTON ======== */
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 20px; /* Nuevo margen a la derecha */
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Líneas específicas */
+.hamburger span:nth-child(1) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+}
+
+.hamburger span:nth-child(3) {
+  top: calc(100% - 8px);
+}
+
+/* Estado activo (X) */
+.hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media only screen and (max-width: 1024px) {
   .toggleButton {
-    width: 100%;
-    height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--primary-color);
-  }
-  
-  .toggleButton svg {
-    font-size: 50px;
-  }
-  .toggleButton button {
-    margin-right: 20px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #open {
-    height: 100vh;
-  }
-  
-  #open .links {
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 100px;
-  }
-  
-  #open a {
-    width: 100%;
-    text-align: center;
   }
 
-  /* Navbar mobiles */
+  #close .links {
+    display: none;
+  }
+
+  .navbar .links a {
+    margin: 0;
+  }
+
+  .logoContainer {
+    position: inherit;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .toggleButton {
+    width: auto;
+    border-bottom: none;
+  }
+
+  .logoName {
+    margin-left: 40px;
+  }
+
+  #open {
+    height: 100px;
+  }
+
+  #open .links {
+    flex-direction: row;
+    margin-top: 0;
+  }
 
   .hamburger {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
+    display: none;
   }
-  
-  .hamburger span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-  }
-  
-  /* Top line */
-  .hamburger span:nth-child(1) {
-    top: 8px;
-  }
-  
-  /* Middle line */
-  .hamburger span:nth-child(2) {
-    top: 50%;
-  }
-  
-  /* Bottom line */
-  .hamburger span:nth-child(3) {
-    top: calc(100% - 8px);
-  }
-  
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 50%;
-  }
-  
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 50%;
-  }
-
-  
-  
-  
-  @media only screen and (max-width: 900px) {
-    .navbar a {
-      width: auto;
-    }
-
-    .navbar a:after {
-      left: 0;
-      margin: auto;
-    }
-
-    .navbar a:hover:after{
-      width: 50%;
-      margin: auto;
-    }
-    
-  }
-  
-  @media only screen and (max-width: 800px) {
-    .toggleButton {
-      display: flex;
-    }
-    #close a {
-      display: none;
-    }
-
-    
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar .toggleButton .logoName{
-      visibility: 1;
-    }
-
-    .toggleButton {
-      display: none;
-    }
-  
-    .hiddenLinks {
-      display: none;
-    }
-  
-    #open {
-      height: 100px;
-    }
-  
-    #open .links {
-      flex-direction: row;
-    }
-
-    
-  }
+}

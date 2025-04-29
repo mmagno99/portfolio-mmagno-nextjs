@@ -4,10 +4,15 @@ import { ReactTyped as Typed } from 'react-typed';
 
 import {skills} from '../helpers/SkillsList.js';
 
-import EmailIcon from "@mui/icons-material/Email";
-import GithubIcon from "@mui/icons-material/GitHub";
+// import EmailIcon from "@mui/icons-material/Email";
+// import GithubIcon from "@mui/icons-material/GitHub";
+// import CV from "@mui/icons-material/CloudDownload";
 
-import CV from "@mui/icons-material/CloudDownload";
+import {
+  GithubLogo,
+  EnvelopeSimple,
+  DownloadSimple
+} from "@phosphor-icons/react";
 
 import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf";
 
@@ -124,16 +129,16 @@ function Inicio() {
           </p>
 
           <a href={"mailto:contacto.marcosgr@gmail.com"}>
-            <EmailIcon />
+          <EnvelopeSimple size={40} weight="regular" />
           </a>
           <a
             href={Curriculum}
             download={"CV Marcos Gonzalez Ingeniero informatico"}
           >
-            <CV />
+            <DownloadSimple size={40} weight="regular" />
           </a>
           <a href={"https://github.com/mmagno99"} target={"blank"}>
-            <GithubIcon />
+          <GithubLogo size={40} weight="regular" />
           </a>
         </div>
 

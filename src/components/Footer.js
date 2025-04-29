@@ -11,6 +11,12 @@ import {Link} from 'react-router-dom';
 
 import '../styles/Footer.css';
 
+import {
+  LinkedinLogo,
+  InstagramLogo,
+  SpotifyLogo,
+} from "@phosphor-icons/react";
+
 
 //Funcion que retorna el año actual
 function anoActual(){ return new Date().getFullYear(); }
@@ -19,10 +25,10 @@ function Footer() {
   return (
     <div className="footer">
         <div className="socialMedia">
-          <a href={"https://www.facebook.com/marco.magno19799/"} target={"blank"} ><FacebookIcon /></a>
-            <a href={"https://www.instagram.com/mmagno99/"} target={"blank"}><InstagramIcon/></a>
-            <a href={"https://www.linkedin.com/in/mmagno99/"} target={"blank"}><LinkedInIcon/></a>
-            <a href={"https://open.spotify.com/user/31zgllklazvk5evbtaa3ogwgo6my"} target={"blank"} ><SpotifyIcon /> </a>
+          {/* <a href={"https://www.facebook.com/marco.magno19799/"} target={"blank"} ><FacebookIcon /></a> */}
+            <a href={"https://www.instagram.com/mmagno99/"} target={"blank"}><InstagramLogo size={40} weight="regular" /></a>
+            <a href={"https://www.linkedin.com/in/mmagno99/"} target={"blank"}><LinkedinLogo size={40} weight="regular" /></a>
+            <a href={"https://open.spotify.com/user/31zgllklazvk5evbtaa3ogwgo6my"} target={"blank"} ><SpotifyLogo size={40} weight="regular" /></a>
         </div>
 
        

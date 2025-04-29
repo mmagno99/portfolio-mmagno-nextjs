@@ -94,3 +94,73 @@
         margin: 50px 20px 0 20px;
     }
 }
+
+/* Responsividad general para móviles y tabletas (<=1024px) */
+@media only screen and (max-width: 1024px) {
+
+  
+    .blog .contenedor {
+      margin-top: 50px;
+      padding: 0;
+      width: 100%;
+    }
+  
+    .blog .contenedor .paragraphBlog {
+      max-width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+      font-size: 1em;
+      line-height: 1.6em;
+    }
+  
+    .blog .titulo-banner {
+      font-size: 2rem;
+      margin-top: 30px;
+      padding: 0 10px;
+      text-align: center;
+    }
+  
+    .blog .blogImages {
+      height: 240px;
+    }
+  
+    /* Ajuste para listas */
+    .blog ul.paragraphBlog {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 1em;
+    }
+  
+    /* Código responsivo con scroll horizontal */
+    pre {
+      overflow-x: auto;
+      background-color: #282c34;
+      border-radius: 8px;
+      padding: 1em;
+      font-size: 0.85em;
+      margin: 20px 10px;
+    }
+  
+    pre code {
+      font-family: var(--secondary-font-firacode);
+      white-space: pre;
+      display: block;
+      line-height: 1.5em;
+    }
+  
+    /* Scroll visual */
+    pre::-webkit-scrollbar {
+      height: 8px;
+    }
+  
+    pre::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 4px;
+    }
+  
+    pre::-webkit-scrollbar-track {
+      background: #1e1e1e;
+    }
+  
+  }
+  
