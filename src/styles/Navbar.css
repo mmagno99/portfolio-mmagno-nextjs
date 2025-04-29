@@ -1,15 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --primary-font-poppins: 'Poppins', sans-serif;
-  --secondary-font-firacode: 'Fira Code', monospace;
-  --bg-body: #040d18;
-  --bg-body-light: #041224;
-  --bg-color-second: #121016;
-  --primary-color: #5333ed;
-  --secondary-color: #2cd3d9;
-  --color-paragraph: #ccd6f6;
-}
+@import url('../styles/Global.css');
 
 /* ======== BASE NAVBAR STYLES ======== */
 .navbar {
@@ -52,7 +41,7 @@
 }
 
 .logoName {
-  color: white;
+  color: var(--white);
   margin-left: 20px;
   font-family: var(--secondary-font-firacode);
   display: flex;
@@ -82,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
 }
 
 .navbar .links a {

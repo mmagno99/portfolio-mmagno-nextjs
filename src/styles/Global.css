@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+.container-mmagno {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font-poppins);
+  background-color: #f0f0f0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary-font-poppins: 'Poppins', sans-serif; ;
+  --secondary-font-firacode:  'Fira Code', monospace;
+  --bg-body: #040d18;
+  --bg-body-light: #041224;
+  --bg-color-second: #121016;
+  --primary-color:#5333ed;
+  --secondary-color:#2cd3d9;
+  --color-paragraph:#ccd6f6;
+  --white: white;
+}

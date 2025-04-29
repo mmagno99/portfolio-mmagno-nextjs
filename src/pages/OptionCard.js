@@ -13,7 +13,7 @@ function OptionCards() {
 
   return (
     <div className="cards">
-      <h1 className="cardsTitle">Elige una categoria</h1>
+      <h1 className="cardsTitle">Escoge el tipo de proyecto</h1>
 
       <div className="cardList">
         <div className="cardItem">

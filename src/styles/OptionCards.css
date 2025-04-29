@@ -1,17 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
-
-:root{
-  --primary-font-poppins: 'Poppins', sans-serif; ;
-  --secondary-font-firacode:  'Fira Code', monospace;
-
-  --bg-color: #111111;
-  --primary-color:#5333ed;
-  --secondary-color:#2cd3d9;
-  --color-paragraph:#6E7076;
-}
+@import url('../styles/Global.css');
 
 .cards
 {
@@ -26,13 +13,22 @@
 
 .bgImage{
     background-image: url('../assets/options/freelance2.jpg');
+    transition: transform 0.3s ease;
 }
 
 .bgImage2{
     background-image: url('../assets/options/balabox.png');
+    transition: transform 0.3s ease;
 }
 
-.bgImage3{ background-image: url('../assets/options/Logo TDI.jpg');}
+.bgImage3{ 
+    background-image: url('../assets/options/Logo TDI.jpg');
+    transition: transform 0.3s ease;
+}
+
+.bgImage:hover,
+.bgImage2:hover,
+.bgImage3:hover{transform: scale(1.05); }
 
 .cards .cardsTitle
 {
@@ -49,9 +45,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     height: auto;
     place-items: center;
-    width: auto;
-    
-    
+    width: auto;   
 }
 
 .cardList a{
@@ -60,26 +54,31 @@
 
 .cardItem
 {
+    overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     width: 300px;
     height: 300px;
     margin: 40px;
-    
     transition: 0.3s ease-in;
     text-align: center;
-   
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
 }
 
 .cardItem:hover
 {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    transform: translateY(-8px);
 }
 
 .cardItem .bgImage,
 .cardItem .bgImage2,
 .cardItem .bgImage3{
+    
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;

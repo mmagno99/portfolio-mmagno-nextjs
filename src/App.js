@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/Global.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Proyectos from './pages/Proyectos';
@@ -15,7 +15,7 @@ import LaboralDisplay from './pages/LaboralDisplay';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container-mmagno">
       {}
       <Router>
         <Navbar/>

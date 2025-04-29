@@ -6,6 +6,9 @@ import {skills} from '../helpers/SkillsList.js';
 
 import BackToTop from '../components/BackToTop.js';
 
+import { motion } from "framer-motion";
+
+
 // import EmailIcon from "@mui/icons-material/Email";
 // import GithubIcon from "@mui/icons-material/GitHub";
 // import CV from "@mui/icons-material/CloudDownload";
@@ -109,11 +112,20 @@ const SkillImage = styled.img`
 function Inicio() {
   return (
     <div className="home">
+     
       <div className="about">
+      <motion.h1
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
+        viewport={{ once: false, amount: 0.6 }}
+        className="text-4xl font-bold text-gray-900"
+      >
         <h2 className="">
           {" "}
           {"Bienvenido a "}<span>M</span>{"m>gno"}
         </h2>
+        </motion.h1>
 
         <div className="prompt">
           <p>
@@ -149,6 +161,13 @@ function Inicio() {
 
       <div className="skills">
         <h1>Habilidades</h1>
+
+        <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: false, amount: 0.3 }} //repite la animación
+    >
         <SkillsContainer >
           {skills.map((skill) => (
             <Skill>
@@ -165,7 +184,7 @@ function Inicio() {
           ))}
 
         </SkillsContainer>
-      
+        </motion.div>
       </div>
 
     <BackToTop/>

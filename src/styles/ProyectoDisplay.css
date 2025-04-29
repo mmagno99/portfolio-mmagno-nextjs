@@ -1,17 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
-
-:root{
-  --primary-font-poppins: 'Poppins', sans-serif; ;
-  --secondary-font-firacode:  'Fira Code', monospace;
-
-  --bg-color: #111111;
-  --primary-color:#5333ed;
-  --secondary-color:#2cd3d9;
-  --color-paragraph:#6E7076;
-}
+@import url('../styles/Global.css');
 
 .project {
     width: 100%;
