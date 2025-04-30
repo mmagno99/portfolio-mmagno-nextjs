@@ -17,7 +17,7 @@ import BackToTop from '../components/BackToTop.js';
 import {
   LinkedinLogo,
   InstagramLogo,
-  SpotifyLogo,
+  SpotifyLogo
 } from "@phosphor-icons/react";
 
 

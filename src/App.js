@@ -24,16 +24,16 @@ function App() {
 
             <Route path="/" element={<Inicio />} />
 
-            <Route path="/proyectos" element={<Proyectos />} />
-            <Route path="/proyecto/:id" element={<ProjectDisplay />} />
+            <Route path="/personal-projects" element={<Proyectos />} />
+            <Route path="/personal-project/:id" element={<ProjectDisplay />} />
 
-            <Route path="/bbx" element={<ProyectosLaborales />} />
-            <Route path="/bbxs/:id" element={<LaboralDisplay />} />
+            <Route path="/projects-bbxs" element={<ProyectosLaborales />} />
+            <Route path="/project-bbx/:id" element={<LaboralDisplay />} />
 
-            <Route path="/experiencia" element={<Experiencia />} />
+            <Route path="/experience" element={<Experiencia />} />
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/blog/:id" element={<BlogDisplay />} />
-            <Route path="/opciones" element={<OptionCards />} />
+            <Route path="/projects" element={<OptionCards />} />
 
           </Routes>
 

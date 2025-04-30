@@ -17,7 +17,7 @@ function OptionCards() {
 
       <div className="cardList">
         <div className="cardItem">
-          <Link to="/proyectos">
+          <Link to="/personal-projects">
             <div className="bgImage"></div>
 
             <h1>Proyectos Personales</h1>
@@ -25,7 +25,7 @@ function OptionCards() {
         </div>
 
         <div className="cardItem">
-          <Link to="/bbx">
+          <Link to="/projects-bbxs">
             <div className="bgImage2"></div>
 
             <h1>Proyectos BBX</h1>
