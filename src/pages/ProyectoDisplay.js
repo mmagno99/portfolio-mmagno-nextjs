@@ -7,7 +7,7 @@ import '../styles/ProyectoDisplay.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LiveDemoIcon from '@mui/icons-material/LiveTv';
 
-
+import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react";
 
 
 function ProyectoDisplay() {
@@ -24,9 +24,9 @@ function ProyectoDisplay() {
       </p>
 
       <div className="iconsDisplay">
-        <a href={proyecto.repository} onClick={proyecto.repository} target={"blank"}><GitHubIcon/></a>
+        <a href={proyecto.repository} onClick={proyecto.repository} target={"blank"}><GithubLogo/></a>
         {/* Con el evento onClick dispara un alert desde las funciones si es que tienen */}
-        <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
+        <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><ArrowSquareOut/></a>
         
       </div>
     </div>

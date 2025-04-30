@@ -23,13 +23,13 @@
   
   .project p {
     font-family: var(--secondary-font-firacode);
-    font-size: 40px;
+    font-size: 25px;
     color: var(--bg-color);
     text-align: center;
   }
   
   .project .iconsDisplay svg {
-    font-size: 60px;
+    font-size: 30px;
     color: var(--primary-color);
   }
 

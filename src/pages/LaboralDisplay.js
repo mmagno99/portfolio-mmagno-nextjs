@@ -6,6 +6,8 @@ import '../styles/ProyectoDisplay.css';
 
 import LiveDemoIcon from '@mui/icons-material/LiveTv';
 
+import { ArrowSquareOut } from "@phosphor-icons/react";
+
 function LaboralDisplay()
 {
     const { id } = useParams();
@@ -22,7 +24,7 @@ function LaboralDisplay()
     
           <div className="iconsDisplay">
             {/* Con el evento onClick dispara un alert desde las funciones si es que tienen */}
-            <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><LiveDemoIcon/></a>
+            <a href={proyecto.livedemo} onClick={proyecto.livedemo} target={"blank"}><ArrowSquareOut/></a>
             
           </div>
         </div>
