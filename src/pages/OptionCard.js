@@ -3,13 +3,7 @@ import "../styles/OptionCards.css";
 
 import { Link } from "react-router-dom";
 
-
-
-
 function OptionCards() {
-
-  
-
 
   return (
     <div className="cards">

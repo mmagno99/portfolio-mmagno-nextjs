@@ -1,12 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
 import { ReactTyped as Typed } from 'react-typed';
-
 import {skills} from '../helpers/SkillsList.js';
-
 import BackToTop from '../components/BackToTop.js';
-
 import { motion } from "framer-motion";
+import "../styles/Inicio.css";
 
 
 // import EmailIcon from "@mui/icons-material/Email";
@@ -21,7 +19,7 @@ import {
 
 import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf";
 
-import "../styles/Inicio.css";
+
 
 /* Estilos para los componentes */
 
@@ -37,11 +35,11 @@ const SkillsContainer = styled.div`
 
 const Skill = styled.div`
   width: 450px;
-  background-color:transparent;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color:var(--card-bg);
+  box-shadow: var(--shadow-elevation);
   transition: 0.3s ease-in;
   border-radius: .5rem;
-  color:#040d18;
+  color: var(--color-subtitle);
   padding: 18px 36px;
   @media (max-width: 768px) {
     max-width: 400px;
@@ -53,7 +51,7 @@ const Skill = styled.div`
   }
 
   &:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-elevation-hover);
     cursor: pointer;
     }
 
@@ -89,7 +87,7 @@ const SkillItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #5333ed;
+  border: 1px solid var(--primary-color);
   background-color:#040d18;
   color:white;
   

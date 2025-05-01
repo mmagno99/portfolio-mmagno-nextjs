@@ -11,7 +11,7 @@
   }
   .projects .projectTitle {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--color-title);
     font-size: 60px;
     font-weight: bolder;
   }
@@ -20,19 +20,20 @@
     width: auto;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     place-items: center;
   }
   
   /* MENU ITEM STYLING */
   
   .projectItem {
+    background-color: var(--card-bg);
     overflow: hidden;
     border-radius: .5rem;
     width: 300px;
     height: 300px;
     margin: 40px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-elevation);
     transition: 0.3s ease-in;
     text-align: center;
     -webkit-border-radius: .5rem;
@@ -41,7 +42,7 @@
     -o-border-radius: .5rem;
 }
   .projectItem:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-elevation-hover);
     cursor: pointer;
     transform: translateY(-8px);
   }

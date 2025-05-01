@@ -1,15 +1,25 @@
 @import url('../styles/Global.css');
 
+/* ======== TOGGLE BUTTON DARKMODE LIGHT MODE ========*/
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+
 /* ======== BASE NAVBAR STYLES ======== */
 .navbar {
   width: 100%;
   height: 100px;
-  background: var(--bg-body-light);
+  background-color: var(--navbar-bg);
+  color: var(--color-paragraph);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
   border-bottom: 1px solid var(--primary-color);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
   transform: translateY(0);
   display: flex;
   flex-direction: column;
@@ -41,7 +51,7 @@
 }
 
 .logoName {
-  color: var(--white);
+  color: var(--color-paragraph);
   margin-left: 20px;
   font-family: var(--secondary-font-firacode);
   display: flex;
@@ -62,7 +72,7 @@
 }
 
 .logoName:hover span {
-  color: var(--primary-color);
+  color: var(--secondary-hover);
 }
 
 .links {
@@ -71,12 +81,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
 }
 
 .navbar .links a {
   position: relative;
-  color: #a0a0a0;
+  color: var(--navbar-text);
   text-decoration: none;
   margin: 0 20px;
   font-size: 25px;
@@ -84,10 +93,14 @@
   transition: 0.3s;
 }
 
+.navbar .links a:hover {
+  color: var(--navbar-text-hover);
+}
+
 .navbar .links a:after {
   content: '';
   position: absolute;
-  background-color: var(--secondary-color);
+  background-color: var(--navbar-underline);
   height: 2px;
   width: 0;
   left: 50%;
@@ -96,9 +109,7 @@
   transition: 0.3s ease-out;
 }
 
-.navbar .links a:hover {
-  color: white;
-}
+
 
 .navbar .links a:hover:after {
   width: 100%;
@@ -141,7 +152,7 @@
   top: 50%;
   width: 100%;
   height: 3px;
-  background-color: white;
+  background-color: var(--icon-primary);
   border-radius: 3px;
   transform: translateY(-50%);
   transition: all 0.3s ease;

@@ -7,8 +7,8 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  font-family: var(--primary-font-poppins);
-  background-color: #f0f0f0;
+  font-family: var(--primary-font-poppins); 
+  background-color: var(--bg-body);
 }
 
 body {
@@ -16,14 +16,99 @@ body {
   margin: 0;
 }
 
-:root{
-  --primary-font-poppins: 'Poppins', sans-serif; ;
-  --secondary-font-firacode:  'Fira Code', monospace;
-  --bg-body: #040d18;
-  --bg-body-light: #041224;
-  --bg-color-second: #121016;
-  --primary-color:#5333ed;
-  --secondary-color:#2cd3d9;
-  --color-paragraph:#ccd6f6;
-  --white: white;
+:root {
+  /* Fuentes */
+  --primary-font-poppins: 'Poppins', sans-serif;
+  --secondary-font-firacode: 'Fira Code', monospace;
+  
+  /* Transiciones */
+  --transition-theme: all 0.3s ease;
+}
+
+/* ========== DARK MODE ========== */
+html.dark {
+  /* Fondos */
+  --bg-body: #020617;
+  --bg-hero: #0f172a;
+  --card-bg: #1e293b;
+  
+  /* Textos */
+  --color-title: #f8fafc;
+  --color-subtitle: #e2e8f0;
+  --color-paragraph: #94a3b8;
+  --color-muted: #64748b;
+  
+  /* Colores acento */
+  --primary-color: #818cf8;
+  --primary-hover: #6366f1;
+  --secondary-color: #22d3ee;
+  --secondary-hover: #0d9488;
+  
+  /* UI */
+  --white: #ffffff;
+  --border-color: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-elevation: 0px 3px 15px rgba(226, 232, 240, 0.15); /* Base */
+  --shadow-elevation-hover: 0px 3px 15px rgba(226, 232, 240, 0.4); /* Hover */
+
+  /* Navbar */
+  --navbar-bg: #0f172a;
+  --navbar-text: #f8fafc;
+  --navbar-text-hover: #22d3ee;
+  --navbar-underline: #22d3ee;
+
+  /* Footer */
+  --footer-bg: #0f172a;
+  --footer-text: #94a3b8;
+  --footer-border: #1e293b;
+
+  /* Iconos */
+  --icon-primary: #f8fafc;
+  --icon-secondary: #94a3b8;
+  --icon-accent: #818cf8;
+  --icon-hover: #22d3ee;
+}
+
+/* ========== LIGHT MODE ========== */
+html.light {
+  /* Fondos */
+  --bg-body: #f8fafc;
+  --bg-hero: #ffffff;
+  --card-bg: #ffffff;
+  
+  /* Textos */
+  --color-title: #020617;
+  --color-subtitle: #1e293b;
+  --color-paragraph: #334155;
+  --color-muted: #64748b;
+  
+  /* Colores acento */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-color: #0284c7;
+  --secondary-hover: #0369a1;
+  
+  /* UI */
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-elevation: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  --shadow-elevation-hover: 0px 3px 15px rgba(0, 0, 0, 0.5);
+
+  /* Navbar */
+  --navbar-bg: #ffffff;
+  --navbar-text: #1e293b;
+  --navbar-text-hover: #2563eb;
+  --navbar-underline: #2563eb;
+
+  /* Footer */
+  --footer-bg: #ffffff;
+  --footer-text: #64748b;
+  --footer-border: #e2e8f0;
+
+  /* Iconos */
+  --icon-primary: #1e293b;
+  --icon-secondary: #64748b;
+  --icon-accent: #2563eb;
+  --icon-hover: #0284c7;
 }

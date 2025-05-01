@@ -16,20 +16,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-body);
-    color: #f0f0f0;
+    background-color: var(--bg-hero);
+    color: var(--color-paragraph);
   }
   
   .about h2 {
     font-family: var(--secondary-font-firacode);
-    
     font-size: 80px;
-    color: var(--color-paragraph--);
+    color: var(--color-subtitle);
     height: 50px;
   }
 
-  .about h2 span{color: var(--secondary-color);transition: 0.3s ease-in;}
-  .about h2 span:hover{color:var(--primary-color);}
+  .about h2 span{color: var(--primary-color);transition: 0.3s ease-in;}
+  .about h2 span:hover{color:var(--secondary-color);}
   
   .about .prompt {
     width: 40%;
@@ -43,7 +42,7 @@
   .prompt svg {
     font-size: 60px;
     margin: 5px;
-    color: white;
+    color: var(--color-paragraph);
     transition: .3s;
     -webkit-transition: .3s;
     -moz-transition: .3s;
@@ -52,7 +51,7 @@
 }
 
 .prompt svg:hover{
-  color:var(--secondary-color);
+  color:var(--primary-color);
 }
   
   .skills {
@@ -69,7 +68,7 @@
   }
   
   .skills h1 {
-    color: var(--primary-color);
+    color: var(--color-paragraph);
   }
   
   .skills .list {

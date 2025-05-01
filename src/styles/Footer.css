@@ -17,7 +17,7 @@
 
 .linkHome{
   text-decoration: none;
-  color: white;
+  color:var(--primary-color);
   font-weight:bold;
   transition: .3s;
   -webkit-transition: .3s;
@@ -34,7 +34,7 @@
 .footer {
     width: 100%;
     height: 200px;
-    background: var(--bg-body);
+    background: var(--footer-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,18 +52,18 @@
 }
 
 .footer svg:hover{
-  color:var(--secondary-color);
+  color:var(--icon-hover);
 }
   
   .socialMedia svg {
-    color: white;
+    color: var(--icon-primary);
     margin: 20px;
     font-size: 70px;
     cursor: pointer;
   }
   
   .footer p {
-    color: white;
+    color: var(--color-paragraph);
   }
   
   @media only screen and (max-width: 600px) {

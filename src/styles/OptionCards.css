@@ -33,7 +33,7 @@
 .cards .cardsTitle
 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--color-title);
     font-size: 60px;
     font-weight: bolder;
     
@@ -42,7 +42,7 @@
 .cardList
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     height: auto;
     place-items: center;
     width: auto;   
@@ -56,12 +56,13 @@
 {
     overflow: hidden;
     border-radius: .5rem;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-elevation);
     width: 300px;
     height: 300px;
     margin: 40px;
     transition: 0.3s ease-in;
     text-align: center;
+    background-color: var(--card-bg);
     -webkit-transition: 0.3s ease-in;
     -moz-transition: 0.3s ease-in;
     -ms-transition: 0.3s ease-in;
@@ -74,15 +75,14 @@
 
 .cardItem:hover
 {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    box-shadow: var(--shadow-elevation-hover);
     transform: translateY(-8px);
 }
 
 .cardItem .bgImage,
 .cardItem .bgImage2,
 .cardItem .bgImage3{
-    
+    cursor: pointer;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     width: 100%;
@@ -95,7 +95,7 @@
 .cardItem h1{
     font-family: var(--secondary-font-firacode);
     font-size: 20px;
-    color: black;
+    color: var(--color-subtitle);
 }
 
 /*Responsive*/
@@ -103,7 +103,7 @@
 @media only screen and (max-width: 1300px) 
 {
     .cardList{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -129,6 +129,6 @@
 
     .cards .cardsTitle
     {
-        font-size: 45px;
+        font-size: 35px;
     }
 }

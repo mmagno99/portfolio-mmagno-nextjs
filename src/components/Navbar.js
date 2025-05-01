@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
+import { useTheme } from 'next-themes';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Para evitar errores de hidratación al renderizar el tema
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setExpandNavbar(false);
@@ -47,11 +57,22 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
-  }, [lastScrollY, expandNavbar]); // Agregado expandNavbar
+  }, [lastScrollY, expandNavbar]);
 
-  const toggleMenu = () => {
-    setExpandNavbar((prev) => !prev);
+  // Determinar si el tema actual es oscuro
+  const isDark = theme === 'dark';
+
+  // Manejar el cambio de tema
+  const toggleTheme = () => {
+    setTheme(isDark ? 'light' : 'dark');
   };
+
+  // Función para toggle del menú hamburguesa
+  const toggleMenu = () => {
+    setExpandNavbar(prev => !prev);
+  };
+
+  if (!mounted) return null;
 
   return (
     <div className={`navbar ${!showNavbar ? 'hidden' : ''}`} id={expandNavbar ? 'open' : 'close'}>
@@ -81,10 +102,19 @@ function Navbar() {
         <Link to="/projects">Proyectos</Link>
         <Link to="/experience">Experiencia</Link>
         <Link to="/blog">Blog</Link>
+
+        {/* Botón de cambio de tema */}
+        <div className="theme-switch">
+          <DarkModeSwitch
+            checked={isDark}
+            onChange={toggleTheme}
+            size={30}
+            sunColor="#facc15"
+            moonColor={isDark ? "#6366f1" : "#1e3a8a"}
+          />
+        </div>
       </div>
-
     </div>
-
   );
 }
 
