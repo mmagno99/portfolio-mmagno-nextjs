@@ -1,15 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
 import { ReactTyped as Typed } from 'react-typed';
-import {skills} from '../helpers/SkillsList.js';
+import { skills } from '../helpers/SkillsList.js';
 import BackToTop from '../components/BackToTop.js';
 import { motion } from "framer-motion";
 import "../styles/Inicio.css";
-
-
-// import EmailIcon from "@mui/icons-material/Email";
-// import GithubIcon from "@mui/icons-material/GitHub";
-// import CV from "@mui/icons-material/CloudDownload";
 
 import {
   GithubLogo,
@@ -19,10 +14,7 @@ import {
 
 import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf";
 
-
-
 /* Estilos para los componentes */
-
 const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
@@ -30,34 +22,31 @@ const SkillsContainer = styled.div`
   margin-top: 30px;
   gap: 30px;
   justify-content: center;
-  
-`
+`;
 
 const Skill = styled.div`
   width: 450px;
-  background-color:var(--card-bg);
+  background-color: var(--card-bg);
   box-shadow: var(--shadow-elevation);
   transition: 0.3s ease-in;
   border-radius: .5rem;
   color: var(--color-subtitle);
   padding: 18px 36px;
+
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
   }
   @media (max-width: 500px) {
-  max-width:250px;
+    max-width: 250px;
     padding: auto;
   }
 
   &:hover {
-  box-shadow: var(--shadow-elevation-hover);
+    box-shadow: var(--shadow-elevation-hover);
     cursor: pointer;
-    }
-
-
+  }
 `;
-
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -65,17 +54,15 @@ const SkillTitle = styled.h2`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 20px;
   text-align: center;
-`
+`;
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
-  
-  
-`
+`;
 
 const SkillItem = styled.div`
   font-size: 16px;
@@ -88,10 +75,10 @@ const SkillItem = styled.div`
   align-items: center;
   justify-content: center;
   border: 1px solid var(--primary-color);
-  background-color:#040d18;
-  color:white;
-  
+  background-color: #040d18;
+  color: white;
   gap: 8px;
+
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;
@@ -100,29 +87,43 @@ const SkillItem = styled.div`
     font-size: 14px;
     padding: 6px 12px;
   }
-`
+`;
 
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
-`
+`;
 
 function Inicio() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // ejecuta al inicio
+    window.addEventListener("resize", handleResize); // actualiza si cambia el tamaño
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="home">
-     
       <div className="about">
-      <motion.h1
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
-        viewport={{ once: false, amount: 0.6 }}
-        className="text-4xl font-bold text-gray-900"
-      >
-        <h2 className="">
-          {" "}
-          {"Bienvenido a "}<span>M</span>{"m>gno"}
-        </h2>
+        <motion.h1
+          initial={{ opacity: 0, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
+          viewport={{ once: false, amount: 0.6 }}
+          className="text-4xl font-bold text-gray-900"
+        >
+          <h2>
+            {" "}
+            {"Bienvenido a "}<span>M</span>{"m>gno"}
+          </h2>
         </motion.h1>
 
         <div className="prompt">
@@ -141,7 +142,7 @@ function Inicio() {
           </p>
 
           <a href={"mailto:contacto.marcosgr@gmail.com"}>
-          <EnvelopeSimple size={40} weight="regular" />
+            <EnvelopeSimple size={40} weight="regular" />
           </a>
           <a
             href={Curriculum}
@@ -150,42 +151,39 @@ function Inicio() {
             <DownloadSimple size={40} weight="regular" />
           </a>
           <a href={"https://github.com/mmagno99"} target={"blank"}>
-          <GithubLogo size={40} weight="regular" />
+            <GithubLogo size={40} weight="regular" />
           </a>
         </div>
-
-        
       </div>
 
       <div className="skills">
         <h1>Habilidades</h1>
 
         <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.3 }} //repite la animación
-    >
-        <SkillsContainer >
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
-                    {item.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
-          ))}
-
-        </SkillsContainer>
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: isMobile, amount: 0.3 }}
+        >
+          <SkillsContainer>
+            {skills.map((skill) => (
+              <Skill key={skill.title}>
+                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillList>
+                  {skill.skills.map((item) => (
+                    <SkillItem key={item.name}>
+                      <SkillImage src={item.image} />
+                      {item.name}
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </Skill>
+            ))}
+          </SkillsContainer>
         </motion.div>
       </div>
 
-    <BackToTop/>
+      <BackToTop />
     </div>
   );
 }
