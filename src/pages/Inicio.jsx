@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
 import { ReactTyped as Typed } from 'react-typed';
-import { skills } from '../helpers/SkillsList.js';
-import BackToTop from '../components/BackToTop.js';
+import { skills } from '../helpers/SkillsList.jsx';
+import BackToTop from '../components/BackToTop.jsx';
 import { motion } from "framer-motion";
 import "../styles/Inicio.css";
 

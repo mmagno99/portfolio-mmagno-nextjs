@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes'
 import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf'
 import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf'
 import '../styles/Experience.css'
-import BackToTop from '../components/BackToTop.js'
+import BackToTop from '../components/BackToTop.jsx'
 
 function Experiencia() {
   const { theme } = useTheme()

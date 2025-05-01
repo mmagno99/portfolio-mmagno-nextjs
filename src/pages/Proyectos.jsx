@@ -6,10 +6,10 @@ import "../styles/Splide.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
-import ProjectItem from "../components/ProjectItem";
-import { ProjectList } from "../helpers/ProjectList";
+import ProjectItem from "../components/ProjectItem.jsx";
+import { ProjectList } from "../helpers/ProjectList.jsx";
 
-import BackToTop from '../components/BackToTop.js';
+import BackToTop from '../components/BackToTop.jsx';
 
 function Proyectos() {
   return (

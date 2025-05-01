@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { useParams } from 'react-router-dom';
-import { BlogList } from '../helpers/BlogList';
+import { BlogList } from '../helpers/BlogList.jsx';
 import '../styles/BlogDisplay.css';
-import BackToTop from '../components/BackToTop.js';
+import BackToTop from '../components/BackToTop.jsx';
 
 
 function BlogDisplay()

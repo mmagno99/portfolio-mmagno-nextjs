@@ -1,8 +1,8 @@
 import React from "react";
 
-import BlogItem from '../components/BlogItem.js';
+import BlogItem from '../components/BlogItem.jsx';
 import '../styles/Blog.css';
-import { BlogList } from '../helpers/BlogList.js'
+import { BlogList } from '../helpers/BlogList.jsx'
 
 
 function Blog()

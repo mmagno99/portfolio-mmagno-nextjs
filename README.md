@@ -1,5 +1,5 @@
 # Manual para hacer deploy en la app de React Js
-
+# 1.1 - Para ejecutar el proyecto es con yarn dev
 # 1.- Hacer un: git add . 
 # 2.- Hacer un: git commit -m 'escribe el identificador del mensaje'
 # 3.- Hacer un: firebase logoutfire
@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
