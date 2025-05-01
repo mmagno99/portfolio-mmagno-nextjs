@@ -40,7 +40,7 @@ const Skill = styled.div`
   background-color:transparent;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease-in;
-  border-radius: 15px;
+  border-radius: .5rem;
   color:#040d18;
   padding: 18px 36px;
   @media (max-width: 768px) {
