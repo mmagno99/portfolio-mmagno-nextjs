@@ -14,6 +14,10 @@ import {
 
 import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf";
 
+// Detecta si es móvil o tablet REAL
+const isMobileDevice = typeof window !== 'undefined' &&
+  /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+
 /* Estilos para los componentes */
 const SkillsContainer = styled.div`
   width: 100%;
@@ -95,21 +99,6 @@ const SkillImage = styled.img`
 `;
 
 function Inicio() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize(); // ejecuta al inicio
-    window.addEventListener("resize", handleResize); // actualiza si cambia el tamaño
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div className="home">
       <div className="about">
@@ -117,7 +106,7 @@ function Inicio() {
           initial={{ opacity: 0, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: isMobileDevice, amount: 0.6 }}
           className="text-4xl font-bold text-gray-900"
         >
           <h2>
@@ -163,7 +152,7 @@ function Inicio() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: isMobile, amount: 0.3 }}
+          viewport={{ once: isMobileDevice, amount: 0.3 }}
         >
           <SkillsContainer>
             {skills.map((skill) => (
