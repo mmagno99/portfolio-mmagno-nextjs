@@ -7,7 +7,7 @@ import { ThemeProvider } from 'next-themes';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
       <App />
     </ThemeProvider>
   </React.StrictMode>

@@ -10,10 +10,10 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme(); // ← usamos resolvedTheme
   const [mounted, setMounted] = useState(false);
 
-  // Para evitar errores de hidratación al renderizar el tema
+  // Evitar errores de hidratación
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -38,10 +38,7 @@ function Navbar() {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
 
-      // Si el menú está abierto, no modificar el navbar
-      if (expandNavbar) {
-        return;
-      }
+      if (expandNavbar) return;
 
       if (currentScrollY === 0) {
         setShowNavbar(true);
@@ -59,15 +56,12 @@ function Navbar() {
     };
   }, [lastScrollY, expandNavbar]);
 
-  // Determinar si el tema actual es oscuro
-  const isDark = theme === 'dark';
+  const isDark = resolvedTheme === 'dark';
 
-  // Manejar el cambio de tema
   const toggleTheme = () => {
     setTheme(isDark ? 'light' : 'dark');
   };
 
-  // Función para toggle del menú hamburguesa
   const toggleMenu = () => {
     setExpandNavbar(prev => !prev);
   };

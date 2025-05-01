@@ -203,6 +203,10 @@
   .logoContainer {
     position: inherit;
   }
+
+  .theme-switch {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -231,5 +235,9 @@
 
   .hamburger {
     display: none;
+  }
+
+  .theme-switch {
+    margin-left: 0;
   }
 }
