@@ -29,15 +29,13 @@ function ProyectosLaborales() {
             speed: 800, // Duración de la animación en ms (más lento para el efecto)
             easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Curva de animación personalizada
             breakpoints: {
-              900: { 
-                perPage: 2,
-               
+              1024: {   // Tabletas (1024px o menos)
+                perPage: 2,  // Muestra 2 slides
                 arrows: true,
               },
-              600: { 
-                perPage: 1,
-                
-                arrows: true, // Flechas SIEMPRE activas
+              600: {    // Móviles (600px o menos)
+                perPage: 1,  // Muestra 1 slide
+                arrows: true,
               },
             },
           }}

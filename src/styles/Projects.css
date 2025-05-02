@@ -64,29 +64,39 @@
 
   
   
-  @media only screen and (max-width: 1300px) {
-    .projectList {
-      grid-template-columns: 1fr 1fr;
-    }
+ /* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espaciado ligeramente reducido */
   }
-  
-  @media only screen and (max-width: 800px) {
-    .projectList {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .projectList {
-      width: auto;
-    }
+}
 
-    .projectItem {
-      width: 300px;
-      height: 300px;
-    }
-
-    .projects .projectTitle {
-      font-size: 45px;
-    }
+/* Tabletas pequeñas (800px → 601px) - 1 columna */
+@media only screen and (max-width: 800px) {
+  .projectList {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px; /* Padding lateral para no pegarse a los bordes */
   }
+}
+
+/* Móviles (≤ 600px) - Ajustes específicos */
+@media only screen and (max-width: 600px) {
+  .projectList {
+    width: auto;
+    gap: 12px;
+    padding: 0 10px; /* Padding más ajustado */
+  }
+
+  .projectItem {
+    width: 300px !important;  /* !important para sobrescribir otros estilos */
+    height: 300px !important;
+  }
+
+  .projects .projectTitle {
+    font-size: 35px !important; /* Tamaño de fuente específico */
+    text-align: center; /* Opcional: centrado en móvil */
+    margin: 15px 0; /* Espaciado vertical */
+  }
+}

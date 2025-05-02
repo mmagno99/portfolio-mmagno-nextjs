@@ -69,34 +69,47 @@
     font-size: 20px;
   }
 
-  @media only screen and (max-width: 1300px) {
-    .blogList{
-      grid-template-columns: 1fr 1fr;
-    }
+  /* ============ RESPONSIVE ============ */
+
+/* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+  .blogList {
+    grid-template-columns: repeat(2, 1fr); /* Uso de repeat() como en tus otros componentes */
+    gap: 20px; /* Añadido para consistencia */
+  }
+}
+
+/* Tabletas pequeñas (800px → 601px) - 1 columna */
+@media only screen and (max-width: 800px) {
+  .blogList {
+    grid-template-columns: 1fr;
+    gap: 15px; /* Espaciado reducido */
+    padding: 0 20px; /* Padding lateral añadido */
+  }
+}
+
+/* Móviles (≤ 600px) - Ajustes específicos */
+@media only screen and (max-width: 600px) {
+  .blogList {
+    width: auto;
+    gap: 12px; /* Espaciado móvil */
+    padding: 0 15px; /* Padding lateral reducido */
   }
 
-  @media only screen and (max-width: 800px) {
-    .blogList{
-      grid-template-columns: 1fr;
-    }
+  .blogItem {
+    width: 300px !important;  /* !important para sobrescribir otros estilos */
+    height: 300px !important;
+    
   }
 
-  @media only screen and (max-width: 600px) {
-    .blogList{
-        width: auto;
-    }
-
-    .blogItem{
-        width: 300px;
-        height: 300px;
-    }
-
-    .blogs .blogTitle{
-        font-size: 40px;
-    }
-
-    .blogs .temporalImage{
-      max-width: 70%;
-    }
-
+  .blogs .blogTitle {
+    font-size: 40px !important;
+    text-align: center; /* Añadido para consistencia */
   }
+
+  .blogs .temporalImage {
+    max-width: 70% !important;
+    margin: 0 auto; /* Centrado añadido */
+    display: block; /* Comportamiento responsive */
+  }
+}

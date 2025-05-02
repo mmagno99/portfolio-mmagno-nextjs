@@ -16,7 +16,7 @@ function Proyectos() {
   return (
     <div className="projects">
       <h1 className="projectTitle">{t("projects.personalProjects.title")}</h1>
-      <h3>{t("projects.personalProjects.desc")}</h3>
+      <h3>{t("projects.personalProjects.title")}</h3>
 
       {/* <div className="projectList">
         {ProjectList.map((project, idx) => {
@@ -38,15 +38,13 @@ function Proyectos() {
             speed: 800, // Duración de la animación en ms (más lento para el efecto)
             easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Curva de animación personalizada
             breakpoints: {
-              900: { 
-                perPage: 2,
-               
+              1024: {   // Tabletas (1024px o menos)
+                perPage: 2,  // Muestra 2 slides
                 arrows: true,
               },
-              600: { 
-                perPage: 1,
-                
-                arrows: true, // Flechas SIEMPRE activas
+              600: {    // Móviles (600px o menos)
+                perPage: 1,  // Muestra 1 slide
+                arrows: true,
               },
             },
           }}

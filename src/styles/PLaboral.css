@@ -90,31 +90,40 @@
 
   
   
-  @media only screen and (max-width: 1300px) {
-    .projectListLaboral {
-      grid-template-columns: repeat(2,1fr);
-    }
+/* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+  .projectListLaboral {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px; /* Espaciado ligeramente reducido */
   }
-  
-  @media only screen and (max-width: 800px) {
-    .projectListLaboral {
-      grid-template-columns: 1fr;
-    }
+
+}
+
+/* Tabletas pequeñas (800px → 601px) - 1 columna */
+@media only screen and (max-width: 800px) {
+  .projectListLaboral {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px; /* Evita pegado a bordes */
   }
-  
-  @media only screen and (max-width: 600px) {
-    .projectListLaboral {
-      width: auto;
-    }
+}
 
-    .projectItemLaboral {
-      width: 300px;
-      height: 300px;
-    }
-
-    .projectsLaboral .projectTitleLaboral {
-      font-size: 38px;
-    }
-
-    
+/* Móviles (≤ 600px) - Ajustes específicos */
+@media only screen and (max-width: 600px) {
+  .projectListLaboral {
+    width: auto;
+    gap: 12px;
+    padding: 0 10px; /* Más ajustado en móviles pequeños */
   }
+
+  .projectItemLaboral {
+    width: 300px !important;  /* !important para sobrescribir otros estilos */
+    height: 300px !important;
+  }
+
+  .projectsLaboral .projectTitleLaboral {
+    font-size: 35px !important; /* Legibilidad en móvil */
+    text-align: center; /* Opcional: centrado */
+    margin: 10px 0; /* Espaciado vertical */
+  }
+}

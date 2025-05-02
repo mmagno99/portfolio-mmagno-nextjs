@@ -100,35 +100,34 @@
 
 /*Responsive*/
 
-@media only screen and (max-width: 1300px) 
-{
-    .cardList{
-        grid-template-columns: repeat(2, 1fr);
+/* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+    .cardList {
+      grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media only screen and (max-width: 800px) 
-{
-    .cardList{
-        grid-template-columns: 1fr;
+  }
+  
+  /* Tabletas pequeñas (800px → 601px) - 1 columna */
+  @media only screen and (max-width: 800px) {
+    .cardList {
+      grid-template-columns: 1fr;
     }
-}
-
-@media only screen and (max-width: 600px) 
-{
-
-    .cardList{
-        
-        width: auto;
+  }
+  
+  /* Móviles (≤ 600px) - Ajustes específicos */
+  @media only screen and (max-width: 600px) {
+    .cardList {
+      width: auto; /* Elimina anchos fijos si existen */
+      gap: 15px; /* Espaciado más ajustado para móvil */
     }
-
-    .cardItem{
-        height: 300px;
-        width: 100%;
+  
+    .cardItem {
+        width: 300px !important;  /* !important para sobrescribir otros estilos */
+        height: 300px !important;
     }
-
-    .cards .cardsTitle
-    {
-        font-size: 35px;
+  
+    .cards .cardsTitle {
+      font-size: 35px !important; /* Tamaño fijo para móvil */
+      text-align: center; /* Opcional: centrado en móvil */
     }
-}
+  }
