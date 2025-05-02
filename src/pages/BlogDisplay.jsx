@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 import { BlogList } from '../helpers/BlogList.jsx';
 import '../styles/BlogDisplay.css';
 import BackToTop from '../components/BackToTop.jsx';
+import { useTranslation } from 'react-i18next';
 
-
-function BlogDisplay()
-{
+function BlogDisplay() {
+    const { t } = useTranslation();
 
     const { id } = useParams();
     const blog = BlogList[id];
@@ -28,7 +28,7 @@ function BlogDisplay()
 
         <div className="blog">
             <div className="blogImages contenedor-imagen" style={{ backgroundImage: `url(${blog.image})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
-                <h1 className="titulo-banner">{blog.name}</h1>
+                <h1 className="titulo-banner">{t(blog.name)}</h1>
             </div>
 
             <div className="contenedor">

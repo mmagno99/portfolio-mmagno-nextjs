@@ -3,14 +3,14 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import {ProjectList} from '../helpers/ProjectList';
 import '../styles/ProyectoDisplay.css';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LiveDemoIcon from '@mui/icons-material/LiveTv';
-
 import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react";
 
+import { useTranslation } from 'react-i18next';
 
 function ProyectoDisplay() {
+
+  const { t } = useTranslation();
+
   const { id } = useParams();
   const proyecto = ProjectList[id];
 
@@ -20,7 +20,7 @@ function ProyectoDisplay() {
       <img src={proyecto.image} alt="" />
 
       <p className='paragraphDisplay'>
-        <b>Skills:</b> {proyecto.skills}
+        <b>{t("projects.project.paragraph")}</b> {proyecto.skills}
       </p>
 
       <div className="iconsDisplay">

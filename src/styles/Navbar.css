@@ -1,6 +1,27 @@
 @import url('../styles/Global.css');
 
-/* ======== TOGGLE BUTTON DARKMODE LIGHT MODE ========*/
+/* CONTENEDOR DE BOTONES PARA ESCRITORIO */
+.desktopButtonsContainer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* CONTENEDOR DE BOTONES PARA MÓVIL */
+.mobileButtonsContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* TOGGLE DARK/LIGHT MODE */
 .theme-switch {
   display: flex;
   align-items: center;
@@ -8,8 +29,7 @@
   margin-left: 1rem;
 }
 
-
-/* ======== BASE NAVBAR STYLES ======== */
+/* NAVBAR BASE */
 .navbar {
   width: 100%;
   height: 100px;
@@ -109,13 +129,11 @@
   transition: 0.3s ease-out;
 }
 
-
-
 .navbar .links a:hover:after {
   width: 100%;
 }
 
-/* ======== MENU EXPANDIDO ======== */
+/* MENU EXPANDIDO */
 #open {
   height: 100vh;
 }
@@ -123,7 +141,7 @@
 #open .links {
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; /* ← Centramos los enlaces */
+  align-items: center;
   margin-top: 100px;
 }
 
@@ -134,7 +152,11 @@
   margin: 0;
 }
 
-/* ======== HAMBURGER BUTTON ======== */
+#open .mobileButtonsContainer {
+  display: flex;
+}
+
+/* BOTÓN HAMBURGUESA */
 .hamburger {
   position: relative;
   width: 30px;
@@ -143,7 +165,7 @@
   border: none;
   cursor: pointer;
   z-index: 1001;
-  margin-right: 20px; /* Nuevo margen a la derecha */
+  margin-right: 20px;
 }
 
 .hamburger span {
@@ -158,7 +180,6 @@
   transition: all 0.3s ease;
 }
 
-/* Líneas específicas */
 .hamburger span:nth-child(1) {
   top: 8px;
 }
@@ -171,7 +192,6 @@
   top: calc(100% - 8px);
 }
 
-/* Estado activo (X) */
 .hamburger.active span:nth-child(1) {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
@@ -186,7 +206,7 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-/* ======== RESPONSIVE DESIGN ======== */
+/* RESPONSIVE */
 @media only screen and (max-width: 1024px) {
   .toggleButton {
     display: flex;
@@ -206,6 +226,10 @@
 
   .theme-switch {
     margin-left: 0;
+  }
+
+  .desktopButtonsContainer {
+    display: none;
   }
 }
 
@@ -231,6 +255,10 @@
   #open .links {
     flex-direction: row;
     margin-top: 0;
+  }
+
+  #open .mobileButtonsContainer {
+    display: none;
   }
 
   .hamburger {

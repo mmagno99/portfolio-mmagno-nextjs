@@ -3,17 +3,18 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 import { useTheme } from 'next-themes';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import LanguageSelector from "../components/LanguageSelector";
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
+  const { t } = useTranslation();
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
-
-  const { resolvedTheme, setTheme } = useTheme(); // ← usamos resolvedTheme
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Evitar errores de hidratación
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -28,7 +29,6 @@ function Navbar() {
     } else {
       document.body.style.overflow = 'auto';
     }
-
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -37,9 +37,7 @@ function Navbar() {
   useEffect(() => {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
-
       if (expandNavbar) return;
-
       if (currentScrollY === 0) {
         setShowNavbar(true);
       } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
@@ -49,7 +47,6 @@ function Navbar() {
       }
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener('scroll', controlNavbar, { passive: true });
     return () => {
       window.removeEventListener('scroll', controlNavbar);
@@ -57,11 +54,9 @@ function Navbar() {
   }, [lastScrollY, expandNavbar]);
 
   const isDark = resolvedTheme === 'dark';
-
   const toggleTheme = () => {
     setTheme(isDark ? 'light' : 'dark');
   };
-
   const toggleMenu = () => {
     setExpandNavbar(prev => !prev);
   };
@@ -78,7 +73,6 @@ function Navbar() {
             </div>
           </Link>
         </div>
-
         <button 
           className={`hamburger ${expandNavbar ? 'active' : ''}`}
           onClick={toggleMenu}
@@ -92,12 +86,26 @@ function Navbar() {
       </div>
 
       <div className="links">
-        <Link to="/">Inicio</Link>
-        <Link to="/projects">Proyectos</Link>
-        <Link to="/experience">Experiencia</Link>
-        <Link to="/blog">Blog</Link>
+        <Link to="/">{t("navbar.nav1")}</Link>
+        <Link to="/projects">{t("navbar.nav2")}</Link>
+        <Link to="/experience">{t("navbar.nav3")}</Link>
+        <Link to="/blog">{t("navbar.nav4")}</Link>
+        
+        <div className="mobileButtonsContainer">
+          <div className="theme-switch">
+            <DarkModeSwitch
+              checked={isDark}
+              onChange={toggleTheme}
+              size={30}
+              sunColor="#facc15"
+              moonColor={isDark ? "#6366f1" : "#1e3a8a"}
+            />
+          </div>
+          <LanguageSelector />
+        </div>
+      </div>
 
-        {/* Botón de cambio de tema */}
+      <div className="desktopButtonsContainer">
         <div className="theme-switch">
           <DarkModeSwitch
             checked={isDark}
@@ -107,6 +115,7 @@ function Navbar() {
             moonColor={isDark ? "#6366f1" : "#1e3a8a"}
           />
         </div>
+        <LanguageSelector />
       </div>
     </div>
   );

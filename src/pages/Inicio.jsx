@@ -6,6 +6,8 @@ import BackToTop from '../components/BackToTop.jsx';
 import { motion } from "framer-motion";
 import "../styles/Inicio.css";
 
+import { useTranslation } from 'react-i18next';
+
 import {
   GithubLogo,
   EnvelopeSimple,
@@ -99,6 +101,7 @@ const SkillImage = styled.img`
 `;
 
 function Inicio() {
+  const { t } = useTranslation();
   return (
     <div className="home">
       <div className="about">
@@ -110,8 +113,7 @@ function Inicio() {
           className="text-4xl font-bold text-gray-900"
         >
           <h2>
-            {" "}
-            {"Bienvenido a "}<span>M</span>{"m>gno"}
+            {t("home.welcome")} <span>{t("home.letter")}</span>{t("home.brand")}
           </h2>
         </motion.h1>
 
@@ -119,10 +121,10 @@ function Inicio() {
           <p>
             <Typed
               strings={[
-                'Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵',
-                'Especialista en React, creando interfaces modernas y fluidas. 😏',
-                'Experto en WordPress Full Stack, llevando ideas a producción. 😎',
-                'Tu socio digital para soluciones web funcionales y escalables. 🥸'
+                t("home.typed1"),
+                t("home.typed2"),
+                t("home.typed3"),
+                t("home.typed4")
               ]}
               typeSpeed={80}
               backSpeed={70}
@@ -146,7 +148,7 @@ function Inicio() {
       </div>
 
       <div className="skills">
-        <h1>Habilidades</h1>
+        <h1>{t("home.skillsTitle")}</h1>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -157,7 +159,7 @@ function Inicio() {
           <SkillsContainer>
             {skills.map((skill) => (
               <Skill key={skill.title}>
-                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillTitle>{skill.titleKey ? t(skill.titleKey) : skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item) => (
                     <SkillItem key={item.name}>

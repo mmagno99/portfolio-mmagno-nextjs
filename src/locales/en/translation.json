@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "nav1": "Home",
+    "nav2": "Projects",
+    "nav3": "Experience",
+    "nav4": "Blog"
+  },
+  "home": {
+    "welcome": "Welcome to",
+    "letter": "M",
+    "brand": "m>gno",
+    "typed1": "Passionate Web Developer who loves creating innovative projects. 🥵",
+    "typed2": "React Specialist, crafting modern and fluid interfaces. 😏",
+    "typed3": "WordPress Full Stack Expert, turning ideas into production. 😎",
+    "typed4": "Your digital partner for functional and scalable web solutions. 🥸",
+    "skillsTitle": "Skills",
+    "skillCardThree": "Networking | Cybersecurity",
+    "skillCardFour": "Additional"
+  },
+
+    "projects": {  
+    "title": "Choose the project type",
+    "cardtitle1": "Personal projects",
+    "cardtitle2": "BBX projects",
+    "cardtitle3": "TDI projects",
+
+        "personalProjects": {
+          "title": "My personal projects",
+          "desc": "I need to add more 😓"
+        },
+
+        "bbxProjects": {
+          "title": "Projects at Balabox",
+          "desc": "Probably some",
+          "desc2": "might be inactive 😭",
+          "btnDownload": "Download Portfolio Book"
+        },
+        "project":{
+            "paragraph": "Skills:"
+        }
+  },
+
+  "blog": {
+  "title": "My Personal Blog",
+  "article1": "What Does a Front-end Developer Do?",
+  "article2": "How to Improve Your Developer Profile",
+  "article3": "What Does a Back-end Developer Do?"
+},
+
+"experience": {
+  "school1": {
+    "name": "CETis 44",
+    "desc": "Technical degree in programming",
+    "date": "August 2015 - July 2018"
+  },
+  "job1": {
+    "name": "Freelance/ Web Designer",
+    "dot1": "Web layouts with Bootstrap",
+    "dot2": "Web layouts with Elementor and Divi",
+    "dot3": "Server configuration",
+    "dot4": "Web applications with HTML, CSS & JS",
+    "dot5": "Technical support",
+    "viewLetter": "VIEW RECOMMENDATION LETTER",
+    "date": "March 2019 - July 2021"
+  },
+  "certificate1": {
+    "name": "Udemy - Web Development University",
+    "viewCertificate": "VIEW CERTIFICATE",
+    "date": "October 2021"
+  },
+  "school2": {
+    "name": "Interamerican University/ UNIT",
+    "desc": "Bachelor's degree in Computer Engineering",
+    "date": "September 2018 - March 2022"
+  },
+  "job2": {
+    "name": "Balabox Inc/ Front-End Developer",
+    "dot1": "Front-End web development",
+    "dot2": "Web layouts - WordPress",
+    "dot3": "E-commerce development",
+    "viewLetter": "VIEW RECOMMENDATION LETTER",
+    "date": "February 2022 - September 2023"
+  },
+  "certificate2": {
+    "name": "Udemy - JavaScript University",
+    "viewCertificate": "VIEW CERTIFICATE",
+    "date": "October 2023"
+  },
+  "job3": {
+    "name": "Tierra de ideas/ WordPress Full Stack",
+    "dot1": "UI/UX Web Development",
+    "dot2": "Web Security",
+    "dot3": "Web Scalability",
+    "dot4": "Plugin development",
+    "date": "Since October 2023 - ",
+    "active": "Currently working"
+  },
+  "certificate3": {
+    "name": "Platzi - Software Engineering Fundamentals",
+    "viewCertificate": "VIEW CERTIFICATE",
+    "date": "November 2024"
+  }
+},
+
+  "footer": {
+      "copy": "All rights reserved"
+  }
+}

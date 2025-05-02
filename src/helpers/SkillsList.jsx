@@ -65,7 +65,7 @@
       ],
     },
     {
-      title: "Redes | Ciberseguridad",
+      titleKey: "home.skillCardThree",
       skills: [
         {
           name: "White Hat",
@@ -90,7 +90,7 @@
       ],
     },
     {
-      title: "Adicionales",
+      titleKey: "home.skillCardFour",
       skills: [
         {
           name: "Git",

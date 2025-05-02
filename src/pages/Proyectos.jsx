@@ -9,13 +9,14 @@ import '@splidejs/react-splide/css';
 import ProjectItem from "../components/ProjectItem.jsx";
 import { ProjectList } from "../helpers/ProjectList.jsx";
 
-import BackToTop from '../components/BackToTop.jsx';
+import { useTranslation } from 'react-i18next';
 
 function Proyectos() {
+  const { t } = useTranslation();
   return (
     <div className="projects">
-      <h1 className="projectTitle">Mis proyectos personales</h1>
-      <h3>Me hace falta agregar más 😓</h3>
+      <h1 className="projectTitle">{t("projects.personalProjects.title")}</h1>
+      <h3>{t("projects.personalProjects.desc")}</h3>
 
       {/* <div className="projectList">
         {ProjectList.map((project, idx) => {

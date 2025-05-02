@@ -1,0 +1,109 @@
+{
+  "navbar": {
+    "nav1": "Início",
+    "nav2": "Projetos",
+    "nav3": "Experiência",
+    "nav4": "Blog"
+  },
+  "home": {
+    "welcome": "Bem-vindo ao",
+    "letter": "M",
+    "brand": "m>gno",
+    "typed1": "Desenvolvedor Web apaixonado, que adora criar projetos inovadores. 🥵",
+    "typed2": "Especialista em React, criando interfaces modernas e fluidas. 😏",
+    "typed3": "Expert em WordPress Full Stack, transformando ideias em produção. 😎",
+    "typed4": "Seu parceiro digital para soluções web funcionais e escaláveis. 🥸",
+    "skillsTitle": "Habilidades",
+    "skillCardThree": "Redes | Cibersegurança",
+    "skillCardFour": "Adicionais"
+  },
+
+    "projects": {  
+    "title": "Escolha o tipo de projeto",
+    "cardtitle1": "Projetos pessoais",
+    "cardtitle2": "Projetos BBX",
+    "cardtitle3": "Projetos TDI",
+
+        "personalProjects": {
+        "title": "Meus projetos pessoais",
+        "desc": "Preciso adicionar mais 😓"
+        },
+
+        "bbxProjects": {
+          "title": "Projetos na Balabox",
+          "desc": "Provavelmente alguns",
+          "desc2": "podem estar inativos 😭",
+          "btnDownload": "Baixar Portfólio em PDF"
+        },
+        "project":{
+            "paragraph": "Habilidades:"
+        }
+  },
+
+  "blog": {
+  "title": "Meu Blog Pessoal",
+  "article1": "O que faz um Desenvolvedor Front-end?",
+  "article2": "Como melhorar seu perfil como Desenvolvedor",
+  "article3": "O que faz um Desenvolvedor Back-end?"
+},
+
+"experience": {
+  "school1": {
+    "name": "CETis 44",
+    "desc": "Curso técnico em programação",
+    "date": "Agosto 2015 - Julho 2018"
+  },
+  "job1": {
+    "name": "Freelance/ Web Designer",
+    "dot1": "Layouts web com Bootstrap",
+    "dot2": "Layouts web com Elementor e Divi",
+    "dot3": "Configuração de servidores",
+    "dot4": "Aplicações web com HTML, CSS e JS",
+    "dot5": "Suporte técnico",
+    "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
+    "date": "Março 2019 - Julho 2021"
+  },
+  "certificate1": {
+    "name": "Udemy - Universidade de Desenvolvimento Web",
+    "viewCertificate": "VER CERTIFICADO",
+    "date": "Outubro 2021"
+  },
+  "school2": {
+    "name": "Universidade Interamericana/ UNIT",
+    "desc": "Bacharelado em Engenharia da Computação",
+    "date": "Setembro 2018 - Março 2022"
+  },
+  "job2": {
+    "name": "Balabox Inc/ Front-End",
+    "dot1": "Desenvolvimento web Front-End",
+    "dot2": "Layouts web - WordPress",
+    "dot3": "Desenvolvimento de lojas virtuais",
+    "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
+    "date": "Fevereiro 2022 - Setembro 2023"
+  },
+  "certificate2": {
+    "name": "Udemy - Universidade JavaScript",
+    "viewCertificate": "VER CERTIFICADO",
+    "date": "Outubro 2023"
+  },
+  "job3": {
+    "name": "Tierra de ideas/ WordPress Full Stack",
+    "dot1": "Desenvolvimento Web UI/UX",
+    "dot2": "Segurança Web",
+    "dot3": "Escalabilidade Web",
+    "dot4": "Desenvolvimento de plugins",
+    "date": "Desde Outubro 2023 - ",
+    "active": "Atualmente trabalhando"
+  },
+  "certificate3": {
+    "name": "Platzi - Fundamentos de Engenharia de Software",
+    "viewCertificate": "VER CERTIFICADO",
+    "date": "Novembro 2024"
+  }
+},
+
+  "footer": {
+      "copy": "Todos os direitos reservados"
+  }
+}
+

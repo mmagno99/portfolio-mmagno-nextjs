@@ -3,13 +3,13 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import {LaboralList} from '../helpers/LaboralList';
 import '../styles/ProyectoDisplay.css';
-
-import LiveDemoIcon from '@mui/icons-material/LiveTv';
-
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
-function LaboralDisplay()
-{
+import { useTranslation } from 'react-i18next';
+
+function LaboralDisplay(){
+    const { t } = useTranslation();
+
     const { id } = useParams();
     const proyecto = LaboralList[id];
 
@@ -19,7 +19,7 @@ function LaboralDisplay()
           <img src={proyecto.image} alt="" />
     
           <p className='paragraphDisplay'>
-            <b>Skills:</b> {proyecto.skills}
+            <b>{t("projects.project.paragraph")}</b> {proyecto.skills}
           </p>
     
           <div className="iconsDisplay">

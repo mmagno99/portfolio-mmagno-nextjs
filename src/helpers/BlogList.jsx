@@ -7,7 +7,7 @@ import developerJr from "../assets/blog/developer.jpg";
 
 export const BlogList = [
   {
-    name: "¿Qué hace un Front-end Developer?",
+    name: "blog.article1",
     image: catFrontEnd, // Imagen pro online
     paragraph: (
       <>
@@ -48,7 +48,7 @@ export const BlogList = [
     ),
   },
   {
-    name: "Mejorar tu perfil como Developer",
+    name: "blog.article2",
     image: developerJr,
     paragraph: (
       <>
@@ -83,7 +83,7 @@ export const BlogList = [
     ),
   },
   {
-    name: "¿Qué hace un Back-end Developer?",
+    name: "blog.article3",
     image: catBackEnd,
     paragraph: (
       <>

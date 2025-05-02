@@ -1,0 +1,113 @@
+{
+
+    "navbar": {
+      "nav1": "Inicio",
+      "nav2": "Proyectos",
+      "nav3": "Experiencia",
+      "nav4": "Blog"
+    },
+
+    "home": {
+      "welcome": "Bienvenido a",
+      "letter": "M",
+      "brand": "m>gno",
+      "typed1": "Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵",
+      "typed2": "Especialista en React, creando interfaces modernas y fluidas. 😏",
+      "typed3": "Experto en WordPress Full Stack, llevando ideas a producción. 😎",
+      "typed4": "Tu socio digital para soluciones web funcionales y escalables. 🥸",
+      "skillsTitle": "Habilidades",
+      "skillCardThree": "Redes | Ciberseguridad",
+      "skillCardFour": "Adicionales"
+    },
+
+    "projects":{  
+        "title": "Escoge el tipo de proyecto",
+        "cardtitle1": "Proyectos personales",
+        "cardtitle2": "Proyectos BBX",
+        "cardtitle3": "Proyectos TDI",
+
+        "personalProjects": {
+        "title": "Mis proyectos personales",
+        "desc": "Me hace falta agregar más 😓"
+        },
+
+        "bbxProjects": {
+            "title": "Proyectos en balabox",
+            "desc": "Probablemente algunos",
+            "desc2": "estén inactivos 😭",
+            "btnDownload": "Descargar Book Portfolio"
+        },
+        "project":{
+            "paragraph": "Habilidades:"
+        }
+    
+    },
+
+    "blog":{
+        "title":"Mi Blog Personal",
+        "article1": "¿Qué hace un Front-end Developer?",
+        "article2": "Mejorar tu perfil como Developer",
+        "article3": "¿Qué hace un Back-end Developer?"
+    },
+
+    "experience":{
+        "school1":{
+            "name": "CETis 44",
+            "desc": "Carrera técnica en programación",
+            "date": "Agosto 2015 - Julio 2018"
+        },
+        "job1":{
+            "name": "Freelance/ Maquetador web",
+            "dot1": "Maquetaciones Web con Bootstrap",
+            "dot2": "Maquetaciones Web con Elementor y Divi",
+            "dot3": "Configuracion de servidores",
+            "dot4": "Aplicaciones Web con HTML, CSS & JS",
+            "dot5": "Soporte técnico",
+            "viewLetter": "VER CARTA DE RECOMENDACIÓN",
+            "date": "Marzo 2019 - Julio 2021"
+        },
+        "certificate1":{
+            "name": "Udemy - Universidad Desarrollo Web",
+            "viewCertificate": "VER CERTIFICADO",
+            "date": "Octubre - 2021"
+        },
+        "school2":{
+            "name": "Universidad interamericana/ UNIT",
+            "desc": "Licenciatura en ingenieria informatica",
+            "date": "Septiembre 2018 - Marzo 2022"
+        },
+        "job2":{
+            "name": "Balabox Inc/ Front-End",
+            "dot1": "Desarrollo web Front-End",
+            "dot2": "Maquetaciones web - WordPress",
+            "dot3": "Desarrollo de tiendas en línea",
+            "viewLetter": "VER CARTA DE RECOMENDACIÓN",
+            "date": "Febrero 2022 - Septiembre 2023"
+        },
+        "certificate2":{
+            "name": "Udemy - Universidad Javascript",
+            "viewCertificate": "VER CERTIFICADO",
+            "date": "Octubre - 2023"
+        },
+        "job3":{
+            "name": "Tierra de ideas/ Full Stack WordPress",
+            "dot1": "Desarrollo Web UI/UX",
+            "dot2": "Seguridad Web",
+            "dot3": "Escalabilidad Web",
+            "dot4": "Desarrollo de plugins",
+            "date": "Desde Octubre 2023 - ",
+            "active": "En activo"
+        },
+        "certificate3":{
+            "name": "Platzi - Fundamentos de Ingeniería de Software",
+            "viewCertificate": "VER CERTIFICADO",
+            "date": "Noviembre - 2024"
+        }
+    },
+    
+    "footer": {
+        "copy": "Todos los derechos reservados"
+    }
+    
+  }
+  
