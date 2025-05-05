@@ -40,14 +40,16 @@
         "project":{
             "paragraph": "Habilidades:"
         }
-    
     },
 
     "blog":{
         "title":"Mi Blog Personal",
         "article1": "¿Qué hace un Front-end Developer?",
         "article2": "Mejorar tu perfil como Developer",
-        "article3": "¿Qué hace un Back-end Developer?"
+        "article3": "¿Qué hace un Back-end Developer?",
+
+        "blog1":{
+            "code":"`const portfolio = { name: 'Juan Pérez', role: 'Front-end Developer', skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'], projects: [ { name: 'Tienda Online', url: 'https://mi-tienda.com' }, { name: 'Blog Personal', url: 'https://mi-blog.com' } ] };`" }
     },
 
     "experience":{

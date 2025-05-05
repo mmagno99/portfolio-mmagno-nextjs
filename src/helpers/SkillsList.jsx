@@ -1,3 +1,7 @@
+
+  import GithubLogo from "../assets/icons/github-mark-white.svg";  
+  
+  
   export const skills = [
     {
       title: "Frontend",
@@ -99,8 +103,7 @@
         },
         {
           name: "GitHub",
-          image:
-            "https://cdn.svgporn.com/logos/github-icon.svg",
+          image: GithubLogo,
         },
         {
           name: "VS Code",
