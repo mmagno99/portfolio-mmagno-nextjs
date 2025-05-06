@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/Footer.css';
 import BackToTop from '../components/BackToTop.jsx';
 import {
@@ -25,7 +26,7 @@ function Footer() {
         </div>
        
         <p>
-          <Link to='/' className='linkHome'>Mmagno</Link> | {t("footer.copy")} &copy; {anoActual()}
+          <Link href='/' className='linkHome'>Mmagno</Link> | {t("footer.copy")} &copy; {anoActual()}
         </p>
 
         <span class="heart"><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.2 9.4c0 1.3.2 3.3 2 5.1 1.6 1.6 6.9 5.2 7.1 5.4.2.1.4.2.6.2s.4-.1.6-.2c.2-.2 5.5-3.7 7.1-5.4 1.8-1.8 2-3.8 2-5.1 0-3-2.4-5.4-5.4-5.4-1.6 0-3.2.9-4.2 2.3-1-1.4-2.6-2.3-4.4-2.3-2.9 0-5.4 2.4-5.4 5.4z"></path></svg></span>

@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { useParams } from 'next/navigation'
+
 import {LaboralList} from '../helpers/LaboralList';
 import '../styles/ProyectoDisplay.css';
 import { ArrowSquareOut } from "@phosphor-icons/react";

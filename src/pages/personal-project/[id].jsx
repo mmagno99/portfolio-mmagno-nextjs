@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { useParams } from 'next/navigation'
+
 import {ProjectList} from '../helpers/ProjectList';
 import '../styles/ProyectoDisplay.css';
 import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react";

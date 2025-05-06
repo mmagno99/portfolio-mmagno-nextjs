@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation'
+
 import { BlogList } from '../helpers/BlogList.jsx';
 import '../styles/BlogDisplay.css';
 import BackToTop from '../components/BackToTop.jsx';

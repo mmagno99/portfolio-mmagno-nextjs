@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/OptionCards.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 import { useTranslation } from 'react-i18next';
 
@@ -12,7 +13,7 @@ function OptionCards() {
 
       <div className="cardList">
         <div className="cardItem">
-          <Link to="/personal-projects">
+          <Link href="/personal-projects">
             <div className="bgImage"></div>
 
             <h1>{t("projects.cardtitle1")}</h1>
@@ -20,7 +21,7 @@ function OptionCards() {
         </div>
 
         <div className="cardItem">
-          <Link to="/projects-bbxs">
+          <Link href="/projects-bbxs">
             <div className="bgImage2"></div>
 
             <h1>{t("projects.cardtitle2")}</h1>

@@ -1,14 +1,14 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/blog": "pages/blog.js",
   "/_error": "pages/_error.js",
-  "/experience": "pages/experience.js",
+  "/blog": "pages/blog.js",
   "/blog/[id]": "pages/blog/[id].js",
+  "/experience": "pages/experience.js",
   "/": "pages/index.js",
   "/personal-project/[id]": "pages/personal-project/[id].js",
   "/personal-projects": "pages/personal-projects.js",
   "/project-bbx/[id]": "pages/project-bbx/[id].js",
-  "/projects": "pages/projects.js",
-  "/projects-bbx": "pages/projects-bbx.js"
+  "/projects-bbx": "pages/projects-bbx.js",
+  "/projects": "pages/projects.js"
 }
