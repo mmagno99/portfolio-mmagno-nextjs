@@ -12,8 +12,8 @@
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: var(--pading-body);
+  margin: var(--margin-body);
 }
 
 :root {
@@ -23,6 +23,10 @@ body {
   
   /* Transiciones */
   --transition-theme: all 0.3s ease;
+
+  /* paddings y margins */
+  --pading-body: 0;
+  --margin-body: 0;
 }
 
 /* ========== DARK MODE ========== */

@@ -1,0 +1,14 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/BlogDisplay": "pages/BlogDisplay.js",
+  "/_document": "pages/_document.js",
+  "/Blog": "pages/Blog.js",
+  "/Experiencia": "pages/Experiencia.js",
+  "/Inicio": "pages/Inicio.js",
+  "/LaboralDisplay": "pages/LaboralDisplay.js",
+  "/OptionCard": "pages/OptionCard.js",
+  "/PLaboral": "pages/PLaboral.js",
+  "/Proyectos": "pages/Proyectos.js",
+  "/ProyectoDisplay": "pages/ProyectoDisplay.js"
+}
