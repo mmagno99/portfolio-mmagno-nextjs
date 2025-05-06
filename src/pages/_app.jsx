@@ -1,15 +1,17 @@
-// /pages/_app.jsx
-import React from 'react';
+// pages/_app.jsx
+import '../styles/Global.css';
 import { ThemeProvider } from 'next-themes';
-import '../i18n';
-import '../styles/globals.css'; // Asegúrate de tener un archivo global si lo necesitas
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <React.StrictMode>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+      <div className="container-mmagno">
+        <Navbar />
         <Component {...pageProps} />
-      </ThemeProvider>
-    </React.StrictMode>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }

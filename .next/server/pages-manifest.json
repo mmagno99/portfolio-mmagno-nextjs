@@ -1,14 +1,14 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/BlogDisplay": "pages/BlogDisplay.js",
   "/_document": "pages/_document.js",
-  "/Blog": "pages/Blog.js",
-  "/Experiencia": "pages/Experiencia.js",
-  "/Inicio": "pages/Inicio.js",
-  "/LaboralDisplay": "pages/LaboralDisplay.js",
-  "/OptionCard": "pages/OptionCard.js",
-  "/PLaboral": "pages/PLaboral.js",
-  "/Proyectos": "pages/Proyectos.js",
-  "/ProyectoDisplay": "pages/ProyectoDisplay.js"
+  "/blog": "pages/blog.js",
+  "/_error": "pages/_error.js",
+  "/experience": "pages/experience.js",
+  "/blog/[id]": "pages/blog/[id].js",
+  "/": "pages/index.js",
+  "/personal-project/[id]": "pages/personal-project/[id].js",
+  "/personal-projects": "pages/personal-projects.js",
+  "/project-bbx/[id]": "pages/project-bbx/[id].js",
+  "/projects": "pages/projects.js",
+  "/projects-bbx": "pages/projects-bbx.js"
 }
