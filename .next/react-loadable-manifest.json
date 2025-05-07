@@ -1,14 +1,14 @@
 {
-  "..\\..\\..\\..\\..\\..\\..\\..\\AppData\\Roaming\\npm\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 90299,
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 57,
     "files": [
-      "static/chunks/299.4c0d259465bc23e9.js"
+      "static/chunks/57.f6e61451d712b805.js"
     ]
   },
-  "..\\..\\..\\..\\..\\..\\..\\..\\AppData\\Roaming\\npm\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 36950,
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 84100,
     "files": [
-      "static/chunks/950.a2734f998f6a1302.js"
+      "static/chunks/100.9028873f38b84e5d.js"
     ]
   },
   "..\\node_modules\\react-syntax-highlighter\\dist\\esm\\async-languages\\hljs.js -> highlight.js/lib/languages/1c": {

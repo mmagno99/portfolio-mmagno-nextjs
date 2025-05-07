@@ -1,4 +1,4 @@
-/* CONTENEDOR DE LA NAVBAR */
+/* NAVBAR BASE */
 .navbar {
   width: 100%;
   height: 100px;
@@ -14,40 +14,37 @@
   flex-direction: column;
 }
 
-/* Cuando se oculta por scroll */
 .navbar.hidden {
   transform: translateY(-100%);
 }
 
-/* MENU EXPANDIDO (en móvil) */
-.open {
+/* MENU EXPANDIDO */
+.navbar.open {
   height: 100vh;
 }
 
-.open .links {
+.navbar.open .links {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: 100px;
 }
 
-.open .links a {
+.navbar.open .links a {
   text-align: center;
   padding: 15px 0;
   font-size: 1.5rem;
   margin: 0;
 }
 
-.open .mobileButtonsContainer {
+.navbar.open .mobileButtonsContainer {
   display: flex;
 }
 
-/* MENU COLAPSADO (en móvil) */
-.closed {
-  height: 100px;
+/* MENU CERRADO */
+.navbar.close .links {
+  display: none;
 }
-
-/* NO se aplica display:none a .links en closed ya que lo controlamos en JSX */
 
 /* TOGGLE BUTTON Y LOGO */
 .toggleButton {
@@ -215,7 +212,6 @@
 }
 
 /* RESPONSIVE */
-
 @media only screen and (max-width: 1024px) {
   .toggleButton {
     display: flex;
@@ -240,6 +236,23 @@
     justify-content: space-between;
   }
 
+  .navbar.close .links {
+    display: flex !important;
+  }
+
+  .navbar.open {
+    height: 100px;
+  }
+
+  .navbar.open .links {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .navbar.open .mobileButtonsContainer {
+    display: none;
+  }
+
   .toggleButton {
     width: auto;
     border-bottom: none;
@@ -247,11 +260,6 @@
 
   .logoName {
     margin-left: 40px;
-  }
-
-  /* En escritorio forzamos a mostrar siempre los links */
-  .links {
-    display: flex !important;
   }
 
   .mobileButtonsContainer {

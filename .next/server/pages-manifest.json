@@ -1,14 +1,15 @@
 {
-  "/blog/[id]": "pages/blog/[id].js",
-  "/blog": "pages/blog.js",
-  "/experience": "pages/experience.js",
-  "/": "pages/index.js",
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/projects-bbx/[id]": "pages/projects-bbx/[id].js",
-  "/projects-bbx": "pages/projects-bbx.js",
-  "/projects": "pages/projects.js",
-  "/personal-projects/[id]": "pages/personal-projects/[id].js",
-  "/personal-projects": "pages/personal-projects.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/blog": "pages/blog.html",
+  "/_error": "pages/_error.js",
+  "/blog/[id]": "pages/blog/[id].html",
+  "/experience": "pages/experience.html",
+  "/": "pages/index.html",
+  "/personal-projects/[id]": "pages/personal-projects/[id].html",
+  "/personal-projects": "pages/personal-projects.html",
+  "/projects-bbx/[id]": "pages/projects-bbx/[id].html",
+  "/projects-bbx": "pages/projects-bbx.html",
+  "/projects": "pages/projects.html",
+  "/404": "pages/404.html"
 }
