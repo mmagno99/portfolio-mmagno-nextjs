@@ -1,15 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import mexicoFlag from '../assets/flags/mx.svg';
-import usaFlag from '../assets/flags/us.svg';
-import portugalFlag from '../assets/flags/pt.svg';
-import '../styles/LanguageSelector.css';
+import styles from '../styles/components/LanguageSelector.module.css';
 
 const allLanguages = [
-  { code: 'es', flag: mexicoFlag, alt: 'Español' },
-  { code: 'en', flag: usaFlag, alt: 'English' },
-  { code: 'pt', flag: portugalFlag, alt: 'Português' },
+  { code: 'es', flag: '/assets/flags/mx.svg', alt: 'Español' },
+  { code: 'en', flag: '/assets/flags/us.svg', alt: 'English' },
+  { code: 'pt', flag: '/assets/flags/pt.svg', alt: 'Português' },
 ];
 
 function LanguageSelector() {
@@ -21,7 +18,7 @@ function LanguageSelector() {
   ];
 
   return (
-    <div className="language-selector">
+    <div className={`${styles["language-selector"]}`}>
       <AnimatePresence initial={false}>
         {orderedLanguages.map(({ code, flag, alt }) => (
           <motion.img
@@ -30,7 +27,7 @@ function LanguageSelector() {
             src={flag}
             alt={alt}
             onClick={() => i18n.changeLanguage(code)}
-            className={`flag-icon ${code === i18n.language ? 'active' : 'hidden'}`}
+            className={`${styles["flag-icon"]} ${code === i18n.language ? 'active' : 'hidden'}`}
             style={{ transitionDelay: `${orderedLanguages.indexOf(code) * 80}ms` }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: code === i18n.language ? 1 : 0.6, scale: 1 }}

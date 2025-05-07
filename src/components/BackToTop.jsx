@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowUp } from '@phosphor-icons/react';
-import '../styles/BackToTop.css';
+import styles from '../styles/components/BackToTop.module.css';
 
 function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +20,7 @@ function BackToTop() {
 
   return (
     <button
-      className={`back-to-top ${isVisible ? 'visible' : ''}`}
+      className={`${styles["back-to-top"]} ${isVisible ? styles.visible : ''}`}
       onClick={scrollToTop}
       aria-label="Back to top"
     >

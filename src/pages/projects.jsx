@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/OptionCards.css";
+import styles from "../styles/pages/projects.module.css";
 // import { Link } from "react-router-dom";
 import Link from 'next/link';
 
@@ -8,28 +8,28 @@ import { useTranslation } from 'react-i18next';
 function OptionCards() {
   const { t } = useTranslation();
   return (
-    <div className="cards">
-      <h1 className="cardsTitle">{t("projects.title")}</h1>
+    <div className={styles.cards}>
+      <h1 className={styles.cardsTitle}>{t("projects.title")}</h1>
 
-      <div className="cardList">
-        <div className="cardItem">
+      <div className={styles.cardList}>
+        <div className={styles.cardItem}>
           <Link href="/personal-projects">
-            <div className="bgImage"></div>
+            <div className={styles.bgImage}></div>
 
             <h1>{t("projects.cardtitle1")}</h1>
           </Link>
         </div>
 
-        <div className="cardItem">
-          <Link href="/projects-bbxs">
-            <div className="bgImage2"></div>
+        <div className={styles.cardItem}>
+          <Link href="/projects-bbx">
+            <div className={styles.bgImage2}></div>
 
             <h1>{t("projects.cardtitle2")}</h1>
           </Link>
         </div>
 
-        <div className="cardItem" id="tdi">
-          <div className="bgImage3"></div>
+        <div className={styles.cardItem} id="tdi">
+          <div className={styles.bgImage3}></div>
           <h1>{t("projects.cardtitle3")}</h1>
         </div>
       </div>

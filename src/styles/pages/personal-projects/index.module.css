@@ -1,0 +1,101 @@
+
+.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .projects .projectTitle {
+    text-align: center;
+    color: var(--color-title);
+    font-size: 60px;
+    font-weight: bolder;
+  }
+  
+  .projectList {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  
+  /* MENU ITEM STYLING */
+  
+  .projectItem {
+    background-color: var(--card-bg);
+    overflow: hidden;
+    border-radius: .5rem;
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    box-shadow: var(--shadow-elevation);
+    transition: 0.3s ease-in;
+    text-align: center;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+  .projectItem:hover {
+    box-shadow: var(--shadow-elevation-hover);
+    cursor: pointer;
+    transform: translateY(-8px);
+  }
+  
+  .projectItem .bgImage {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .projectItem h1 {
+    font-family:var(--secondary-font-firacode);
+    font-size: 20px;
+  }
+
+  
+  
+ /* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espaciado ligeramente reducido */
+  }
+}
+
+/* Tabletas pequeñas (800px → 601px) - 1 columna */
+@media only screen and (max-width: 800px) {
+  .projectList {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px; /* Padding lateral para no pegarse a los bordes */
+  }
+}
+
+/* Móviles (≤ 600px) - Ajustes específicos */
+@media only screen and (max-width: 600px) {
+  .projectList {
+    width: auto;
+    gap: 12px;
+    padding: 0 10px; /* Padding más ajustado */
+  }
+
+  .projectItem {
+    width: 300px !important;  /* !important para sobrescribir otros estilos */
+    height: 300px !important;
+  }
+
+  .projects .projectTitle {
+    font-size: 35px !important; /* Tamaño de fuente específico */
+    text-align: center; /* Opcional: centrado en móvil */
+    margin: 15px 0; /* Espaciado vertical */
+  }
+}

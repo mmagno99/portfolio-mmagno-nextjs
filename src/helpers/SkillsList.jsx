@@ -1,5 +1,5 @@
 
-  import GithubLogo from "../assets/icons/github-mark-white.svg";  
+ 
   
   
   export const skills = [
@@ -103,7 +103,7 @@
         },
         {
           name: "GitHub",
-          image: GithubLogo,
+          image: "/assets/icons/github-mark-white.svg",
         },
         {
           name: "VS Code",

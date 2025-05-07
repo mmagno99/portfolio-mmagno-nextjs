@@ -1,18 +1,16 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-import { useNavigate } from 'next/navigation'
+import { useRouter } from 'next/router';
+import styles from '../styles/pages/project-bbx/index.module.css';
 
-function LaboralItem({image, name, id})
-{
+function LaboralItem({ image, name, id }) {
+  const router = useRouter();
 
-    const navigate = useNavigate();
-    return (
-      <div className="projectItemLaboral" onClick={() => {navigate('/project-bbx/' + id)}}>
-          <div style={{backgroundImage: `url(${image})`}} className="bgImage"/>
-          <h1>{name}</h1>
-      </div>
-    )
-
+  return (
+    <div className={styles.projectItemLaboral} onClick={() => router.push(`/projects-bbx/${id}`)}>
+      <div style={{ backgroundImage: `url(${image})` }} className={styles.bgImage} />
+      <h1>{name}</h1>
+    </div>
+  );
 }
 
 export default LaboralItem;

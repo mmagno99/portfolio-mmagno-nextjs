@@ -5,10 +5,7 @@ import SchoolIcon from '@mui/icons-material/School'
 import WorkIcon from '@mui/icons-material/Work'
 import Certificate from '@mui/icons-material/EmojiEvents'
 import { useTheme } from 'next-themes'
-
-import cartaBalabox from '../assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf'
-import cartaSah from '../assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf'
-import '../styles/Experience.css'
+import styles from '../styles/pages/Experience.module.css'
 import BackToTop from '../components/BackToTop.jsx'
 
 import { useTranslation } from 'react-i18next';
@@ -66,7 +63,7 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.school1.name")}</h3>
-          <p className='paragraph'>{t("experience.school1.desc")}</p>
+          <p className={styles.paragraph}>{t("experience.school1.desc")}</p>
         </VerticalTimelineElement>
 
         {/* Trabajo 1 */}
@@ -79,14 +76,14 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.job1.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
               <li>{t("experience.job1.dot1")}</li>
               <li>{t("experience.job1.dot2")}</li>
               <li>{t("experience.job1.dot3")}</li>
               <li>{t("experience.job1.dot4")}</li>
               <li>{t("experience.job1.dot5")}</li>
-              <li><a className='cartasah' href={cartaSah} target={'blank'} style={{color: currentColors.link}}>{t("experience.job1.viewLetter")}</a></li>
+              <li><a className={styles.cartasah} href='/assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf' target={'blank'} style={{color: currentColors.link}}>{t("experience.job1.viewLetter")}</a></li>
             </ul>
           </p>
         </VerticalTimelineElement>
@@ -101,9 +98,9 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.certificate1.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
-              <li><a className='certificate' href={'https://udemy.com/certificate/UC-31b96167-5a80-453c-a2dc-94c845a2c522/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate1.viewCertificate")}</a></li>
+              <li><a className={styles.certificate} href={'https://udemy.com/certificate/UC-31b96167-5a80-453c-a2dc-94c845a2c522/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate1.viewCertificate")}</a></li>
             </ul>
           </p>
         </VerticalTimelineElement>
@@ -118,7 +115,7 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.school2.name")}</h3>
-          <p className='paragraph'>{t("experience.school2.desc")}</p>
+          <p className={styles.paragraph}>{t("experience.school2.desc")}</p>
         </VerticalTimelineElement>
 
         {/* Trabajo 2 */}
@@ -131,12 +128,12 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.job2.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
               <li>{t("experience.job2.dot1")}</li>
               <li>{t("experience.job2.dot2")}</li>
               <li>{t("experience.job2.dot3")}</li>
-              <li><a className='cartabbx' href={cartaBalabox} target={'blank'} style={{color: currentColors.link}}>{t("experience.job2.viewLetter")}</a></li>
+              <li><a className={styles.cartabbx} href='/assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf' target={'blank'} style={{color: currentColors.link}}>{t("experience.job2.viewLetter")}</a></li>
             </ul>
           </p>
         </VerticalTimelineElement>
@@ -151,9 +148,9 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.certificate2.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
-              <li><a className='certificate' href={'https://www.udemy.com/certificate/UC-e7e1f977-a76c-461c-be45-b940bd8642df/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate2.viewCertificate")}</a></li>
+              <li><a className={styles.certificate} href={'https://www.udemy.com/certificate/UC-e7e1f977-a76c-461c-be45-b940bd8642df/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate2.viewCertificate")}</a></li>
             </ul>
           </p>
         </VerticalTimelineElement>
@@ -163,7 +160,7 @@ function Experiencia() {
           className='vertical-timeline-element--education'
           date={
             <>
-              {t("experience.job3.date")}<span className="active" style={{color: currentColors.active}}>{t("experience.job3.active")} {anoActual()}</span>
+              {t("experience.job3.date")}<span className={styles.active} style={{color: currentColors.active}}>{t("experience.job3.active")} {anoActual()}</span>
             </>
           }
           iconStyle={{background: currentColors.iconWork, color:"#ffffff"}}
@@ -172,7 +169,7 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.job3.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
               <li>{t("experience.job3.dot1")}</li>
               <li>{t("experience.job3.dot2")}</li>
@@ -192,9 +189,9 @@ function Experiencia() {
           contentArrowStyle={{ borderRight: `7px solid ${currentColors.card}` }}
         >
           <h3 className="vertical-timeline-element-title">{t("experience.certificate3.name")}</h3>
-          <p className='paragraph'>
+          <p className={styles.paragraph}>
             <ul>
-              <li><a className='certificate' href={'https://platzi.com/p/mmagno.dev/curso/1098-ingenieria/diploma/detalle/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate3.viewCertificate")}</a></li>
+              <li><a className={styles.certificate} href={'https://platzi.com/p/mmagno.dev/curso/1098-ingenieria/diploma/detalle/'} target={'blank'} style={{color: currentColors.link}}>{t("experience.certificate3.viewCertificate")}</a></li>
             </ul>
           </p>
         </VerticalTimelineElement>

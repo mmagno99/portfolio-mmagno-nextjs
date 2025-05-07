@@ -11,11 +11,19 @@ const resources = {
   pt: { translation: translationPT },
 };
 
+// Solo accede a localStorage si está en el navegador
+const getInitialLang = () => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("lang") || "es";
+  }
+  return "es"; // por defecto en servidor
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: localStorage.getItem("lang") || "es",
+    lng: getInitialLang(),
     fallbackLng: "es",
     interpolation: {
       escapeValue: false,

@@ -1,80 +1,63 @@
-import Metracon from '../assets/laboral/metracon.png';
-import EyC from '../assets/laboral/eycingenieria.png'
-import GmG from '../assets/laboral/proycongmg.png';
-import Kaizen from '../assets/laboral/kaizen.png';
-import MT from '../assets/laboral/monicatablas.png';
-import skydive from '../assets/laboral/skydive.png';
-import CyA from '../assets/laboral/CyA.png';
-import perfectcare from '../assets/laboral/perfectcare.png';
-import ROCA from '../assets/laboral/roca.png';
-import Neo from '../assets/laboral/neoinvesting.png';
-import SAH from '../assets/laboral/sah-desktop-project.png';
 
 export const LaboralList = [
 
     {
         name: "Grupo Metracon",
-        image: Metracon,
+        image: '/assets/laboral/metracon.png',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://grupometracon.com.mx/"
     },
     {
         name: "E&C Ingenieria",
-        image: EyC,
+        image: '/assets/laboral/eycingenieria.png',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://eycingenieria.com.mx/"
     },
     {
         name: "Proyectos y Construcciónes GMG",
-        image: GmG,
+        image: '/assets/laboral/proycongmg.png',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://proycongmg.com.mx/"
     },
     {
         name: "Kaizen cuidando de ti",
-        image: Kaizen,
+        image: '/assets/laboral/kaizen.png',
         skills: "WordPress, Divi",
         livedemo: "https://kaizencuidandodeti.com/"
     },
     {
         name: "Monica Tablas",
-        image: MT,
+        image: '/assets/laboral/monicatablas.png',
         skills: "WordPress, Elementor, Woocommerce",
         livedemo: "https://monicatablas.com/"
     },
     {
         name: "Skydive Monkey Head",
-        image: skydive,
+        image: '/assets/laboral/skydive.png',
         skills: "WordPress, Divi",
         livedemo: "https://skydivemonkeyhead.com/"
     },
     {
-        name: "C&A Construction (Demo)",
-        image: CyA,
-        skills: "WordPress, Divi",
-        livedemo: "https://cdmrrsul.lucusvirtual.es/"
-    },
-    {
         name: "Perfect Care",
-        image: perfectcare,
+        image: '/assets/laboral/perfectcare.png',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://perfectcareapp.com.mx/"
     },
     {
         name: "RO.CA Arquitectos",
-        image: ROCA,
+        image: '/assets/laboral/roca.png',
         skills: "WordPress, Plantilla, Divi",
         livedemo: "https://roca-arquitectos.com.mx/"
     },
     {
         name: "Neo Investing",
-        image: Neo,
+        image: '/assets/laboral/neoinvesting.png',
         skills: "WordPress, Plantilla, Divi",
         livedemo: "https://neoinvesting.com.mx/"
     },
     {
         name: "Sistema Aguas Huixquilucan - SAH",
-        image: SAH,
+        image: '/assets/laboral/sah-desktop-project.png',
         skills: "PHP, JS, CSS",
         livedemo: "https://sah.gob.mx/"
     },

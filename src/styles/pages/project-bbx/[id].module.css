@@ -1,0 +1,57 @@
+
+.project {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .project h1 {
+    margin-top: 50px;
+    color: var(--primary-color);
+    font-size: 35px;
+    text-align: center;
+    
+  }
+  .project img {
+    width: 700px;
+    border-radius: 10px;
+  }
+  
+  .project p {
+    font-family: var(--secondary-font-firacode);
+    font-size: 25px;
+    color: var(--bg-color);
+    text-align: center;
+  }
+  
+  .project .iconsDisplay svg {
+    font-size: 30px;
+    color: var(--primary-color);
+  }
+
+  .iconsDisplay{
+    display: flex;
+    gap: 2em;
+  }
+
+  .liveDemo{
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .project h1{
+      font-size: 30px;
+    }
+
+    .project img {
+      max-width: 90%;
+    }
+
+    .project p {
+      font-size: 30px;
+    }
+  }

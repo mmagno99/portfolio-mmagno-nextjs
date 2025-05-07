@@ -1,18 +1,19 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-import { useNavigate } from 'next/navigation';
+import { useRouter } from 'next/router';
+import styles from '../styles/pages/blog/index.module.css';
 
-function BlogItem({image, name, id})
-{
-    const navigate = useNavigate();
-    return (
-        <div className="blogItem" onClick={() => {navigate(`/blog/${id}`)}}>
+function BlogItem({ image, name, id }) {
+  const router = useRouter();
 
-            <div style={{backgroundImage: `url(${image})`}} className='bgImageBlog' />
-            <h1>{name}</h1>
-
-        </div>
-    )
+  return (
+    <div className={styles.blogItem} onClick={() => router.push(`/blog/${id}`)}>
+      <div
+        style={{ backgroundImage: `url(${image})` }}
+        className={styles.bgImageBlog}
+      />
+      <h1>{name}</h1>
+    </div>
+  );
 }
 
 export default BlogItem;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import '../styles/Navbar.css';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import styles from '../styles/components/Navbar.module.css';
 import { useTheme } from 'next-themes';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import LanguageSelector from "../components/LanguageSelector";
@@ -11,29 +12,40 @@ function Navbar() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const location = useLocation();
+  const [isDesktop, setIsDesktop] = useState(false);
+  const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Para evitar problemas de hidratación de next-themes
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Detectar si el viewport es de escritorio (>=1025px)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1025);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Al cambiar de ruta se cierra el menú móvil
   useEffect(() => {
     setExpandNavbar(false);
-  }, [location]);
+  }, [router.asPath]);
 
+  // Bloquear scroll cuando el menú móvil está abierto
   useEffect(() => {
-    if (expandNavbar) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = expandNavbar ? 'hidden' : 'auto';
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [expandNavbar]);
 
+  // Mostrar u ocultar la navbar al hacer scroll (solo en móvil o menú cerrado)
   useEffect(() => {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
@@ -48,51 +60,78 @@ function Navbar() {
       setLastScrollY(currentScrollY);
     };
     window.addEventListener('scroll', controlNavbar, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-    };
+    return () => window.removeEventListener('scroll', controlNavbar);
   }, [lastScrollY, expandNavbar]);
 
   const isDark = resolvedTheme === 'dark';
-  const toggleTheme = () => {
-    setTheme(isDark ? 'light' : 'dark');
-  };
-  const toggleMenu = () => {
-    setExpandNavbar(prev => !prev);
-  };
+  const toggleTheme = () => setTheme(isDark ? 'light' : 'dark');
+  const toggleMenu = () => setExpandNavbar(prev => !prev);
 
   if (!mounted) return null;
 
   return (
-    <div className={`navbar ${!showNavbar ? 'hidden' : ''}`} id={expandNavbar ? 'open' : 'close'}>
-      <div className="toggleButton">
-        <div className="logoContainer">
-          <Link to="/" className="logoLink">
-            <div className="logoName">
-              <h2><span>M</span>m{`>`}gno</h2>
+    <div
+      className={`${styles.navbar} ${!showNavbar ? styles.hidden : ''} ${
+        expandNavbar ? styles.open : styles.closed
+      }`}
+    >
+      <div className={styles.toggleButton}>
+        <div className={styles.logoContainer}>
+          <Link href="/" className={styles.logoLink}>
+            <div className={styles.logoName}>
+              <h2>
+                <span>M</span>m{`>`}gno
+              </h2>
             </div>
           </Link>
         </div>
-        <button 
-          className={`hamburger ${expandNavbar ? 'active' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Menu"
-          aria-expanded={expandNavbar}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        {/* Mostrar botón hamburguesa solo en móvil */}
+        {!isDesktop && (
+          <button
+            className={`${styles.hamburger} ${expandNavbar ? styles.active : ''}`}
+            onClick={toggleMenu}
+            aria-label="Menu"
+            aria-expanded={expandNavbar}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        )}
       </div>
 
-      <div className="links">
-        <Link to="/">{t("navbar.nav1")}</Link>
-        <Link to="/projects">{t("navbar.nav2")}</Link>
-        <Link to="/experience">{t("navbar.nav3")}</Link>
-        <Link to="/blog">{t("navbar.nav4")}</Link>
-        
-        <div className="mobileButtonsContainer">
-          <div className="theme-switch">
+      <div className={styles.links}>
+        {/* En desktop se muestran siempre los links; en móvil, solo si el menú está expandido */}
+        {(isDesktop || expandNavbar) && (
+          <>
+            <Link href="/">{t("navbar.nav1")}</Link>
+            <Link href="/projects">{t("navbar.nav2")}</Link>
+            <Link href="/experience">{t("navbar.nav3")}</Link>
+            <Link href="/blog">{t("navbar.nav4")}</Link>
+          </>
+        )}
+
+        {/* En móvil, si el menú está abierto, se muestran los botones de tema y selector de idioma */}
+        {!isDesktop && expandNavbar && (
+          <div className={styles.mobileButtonsContainer}>
+            <div className={styles.themeSwitch}>
+              <DarkModeSwitch
+                checked={isDark}
+                onChange={toggleTheme}
+                size={30}
+                sunColor="#facc15"
+                moonColor={isDark ? "#6366f1" : "#1e3a8a"}
+              />
+            </div>
+            <LanguageSelector />
+          </div>
+        )}
+      </div>
+
+      {/* Botones para desktop siempre visibles */}
+      {isDesktop && (
+        <div className={styles.desktopButtonsContainer}>
+          <div className={styles.themeSwitch}>
             <DarkModeSwitch
               checked={isDark}
               onChange={toggleTheme}
@@ -103,20 +142,7 @@ function Navbar() {
           </div>
           <LanguageSelector />
         </div>
-      </div>
-
-      <div className="desktopButtonsContainer">
-        <div className="theme-switch">
-          <DarkModeSwitch
-            checked={isDark}
-            onChange={toggleTheme}
-            size={30}
-            sunColor="#facc15"
-            moonColor={isDark ? "#6366f1" : "#1e3a8a"}
-          />
-        </div>
-        <LanguageSelector />
-      </div>
+      )}
     </div>
   );
 }

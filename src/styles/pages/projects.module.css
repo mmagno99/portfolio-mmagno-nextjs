@@ -1,0 +1,142 @@
+
+.cards {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content:flex-start;
+    width: 100%; 
+}
+
+.bgImage{
+    background-image: url('/assets/options/personalProjects.png');
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.bgImage2{
+    background-image: url('/assets/options/balabox.png');
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.bgImage3{
+    background-image: url('/assets/options/Logo TDI.jpg');
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.bgImage:hover,
+.bgImage2:hover,
+.bgImage3:hover{transform: scale(1.05); }
+
+.cards .cardsTitle
+{
+    text-align: center;
+    color: var(--color-title);
+    font-size: 60px;
+    font-weight: bolder;
+    
+}
+
+.cardList
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    place-items: center;
+    width: auto;   
+}
+
+.cardList a{
+    text-decoration:none;
+}
+
+.cardItem
+{
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-elevation);
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    transition: 0.3s ease-in;
+    text-align: center;
+    background-color: var(--card-bg);
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.cardItem:hover
+{
+    box-shadow: var(--shadow-elevation-hover);
+    transform: translateY(-8px);
+}
+
+.cardItem .bgImage,
+.cardItem .bgImage2,
+.cardItem .bgImage3{
+    cursor: pointer;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardItem h1{
+    font-family: var(--secondary-font-firacode);
+    font-size: 20px;
+    color: var(--color-subtitle);
+}
+
+/*Responsive*/
+
+/* Tabletas grandes (1300px → 801px) - 2 columnas */
+@media only screen and (max-width: 1300px) {
+    .cardList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Tabletas pequeñas (800px → 601px) - 1 columna */
+  @media only screen and (max-width: 800px) {
+    .cardList {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Móviles (≤ 600px) - Ajustes específicos */
+  @media only screen and (max-width: 600px) {
+    .cardList {
+      width: auto; /* Elimina anchos fijos si existen */
+      gap: 15px; /* Espaciado más ajustado para móvil */
+    }
+  
+    .cardItem {
+        width: 300px !important;
+        height: 300px !important;
+    }
+  
+    .cards .cardsTitle {
+      font-size: 35px !important; /* Tamaño fijo para móvil */
+      text-align: center; /* Opcional: centrado en móvil */
+    }
+  }

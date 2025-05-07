@@ -1,20 +1,15 @@
-import Proj1 from "../assets/proyectos/dgenerador.png";
-import Proj2 from "../assets/proyectos/magnosocial2.png";
-import Proj3 from "../assets/proyectos/dineout1.png";
-import Proj4 from "../assets/proyectos/spotify-concept-desktop.png";
-
 
 export const ProjectList = [
   {
     name: "Generate Password",
-    image: Proj1,
+    image: '/assets/proyectos/dgenerador.png',
     skills: "Django, Python, Bootstrap",
     repository: 'https://github.com/mmagno99/django-password-generator',
     livedemo: 'https://django-password-generator-production.up.railway.app/'
   },
   {
     name: "MagnoSocial",
-    image: Proj2,
+    image: '/assets/proyectos/magnosocial2.png',
     skills: "Django, Python, Bootstrap",
     repository: 'https://github.com/mmagno99/SocialDjango',
     livedemo: function()
@@ -24,7 +19,7 @@ export const ProjectList = [
   },
   {
     name: "Dine's Food",
-    image: Proj3,
+    image: '/assets/proyectos/dineout1.png',
     skills: "HTML, CSS, JS",
     repository: 'https://github.com/mmagno99/LandingRestaurant',
     livedemo: function()
@@ -34,7 +29,7 @@ export const ProjectList = [
   },
   {
     name: "Spotify Concept",
-    image: Proj4,
+    image: '/assets/proyectos/spotify-concept-desktop.png',
     skills: "HTML, CSS, JS",
     repository: function()
     {
@@ -42,7 +37,4 @@ export const ProjectList = [
     },
     livedemo: "https://spotify-concept-2023.web.app/"
   },
-
-  
-  
 ];

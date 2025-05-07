@@ -1,0 +1,268 @@
+/* CONTENEDOR DE LA NAVBAR */
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: var(--navbar-bg);
+  color: var(--color-paragraph);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cuando se oculta por scroll */
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+/* MENU EXPANDIDO (en móvil) */
+.open {
+  height: 100vh;
+}
+
+.open .links {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.open .links a {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.open .mobileButtonsContainer {
+  display: flex;
+}
+
+/* MENU COLAPSADO (en móvil) */
+.closed {
+  height: 100px;
+}
+
+/* NO se aplica display:none a .links en closed ya que lo controlamos en JSX */
+
+/* TOGGLE BUTTON Y LOGO */
+.toggleButton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.logoContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logoName {
+  color: var(--color-paragraph);
+  margin-left: 20px;
+  font-family: var(--secondary-font-firacode);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoName h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.logoName span {
+  color: var(--secondary-color);
+  transition: 0.3s ease-in;
+}
+
+.logoName:hover span {
+  color: var(--secondary-hover);
+}
+
+/* LINKS DE NAVEGACIÓN */
+.links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .links a {
+  position: relative;
+  color: var(--navbar-text);
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 25px;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.navbar .links a:hover {
+  color: var(--navbar-text-hover);
+}
+
+.navbar .links a:after {
+  content: '';
+  position: absolute;
+  background-color: var(--navbar-underline);
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  transition: 0.3s ease-out;
+}
+
+.navbar .links a:hover:after {
+  width: 100%;
+}
+
+/* CONTENEDOR DE BOTONES PARA MÓVIL */
+.mobileButtonsContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* CONTENEDOR DE BOTONES PARA ESCRITORIO */
+.desktopButtonsContainer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* TOGGLE DARK/LIGHT MODE */
+.themeSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 20px;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: var(--icon-primary);
+  border-radius: 3px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+}
+
+.hamburger span:nth-child(3) {
+  top: calc(100% - 8px);
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1024px) {
+  .toggleButton {
+    display: flex;
+  }
+
+  .logoContainer {
+    position: inherit;
+  }
+
+  .themeSwitch {
+    margin-left: 0;
+  }
+
+  .desktopButtonsContainer {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .toggleButton {
+    width: auto;
+    border-bottom: none;
+  }
+
+  .logoName {
+    margin-left: 40px;
+  }
+
+  /* En escritorio forzamos a mostrar siempre los links */
+  .links {
+    display: flex !important;
+  }
+
+  .mobileButtonsContainer {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .themeSwitch {
+    margin-left: 0;
+  }
+}

@@ -4,7 +4,7 @@ import { ReactTyped as Typed } from 'react-typed';
 import { skills } from '../helpers/SkillsList.jsx';
 import BackToTop from '../components/BackToTop.jsx';
 import { motion } from "framer-motion";
-import "../styles/Inicio.css";
+import styles from "../styles/pages/index.module.css";
 
 import { useTranslation } from 'react-i18next';
 
@@ -13,8 +13,6 @@ import {
   EnvelopeSimple,
   DownloadSimple
 } from "@phosphor-icons/react";
-
-import Curriculum from "../assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf";
 
 // Detecta si es móvil o tablet REAL
 const isMobileDevice = typeof window !== 'undefined' &&
@@ -103,21 +101,21 @@ const SkillImage = styled.img`
 function Inicio() {
   const { t } = useTranslation();
   return (
-    <div className="home">
-      <div className="about">
-        <motion.h1
+    <div className={styles.home}>
+      <div className={styles.about}>
+        <motion.h2
           initial={{ opacity: 0, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
           viewport={{ once: isMobileDevice, amount: 0.6 }}
           className="text-4xl font-bold text-gray-900"
         >
-          <h2>
+          {/* <h2> */}
             {t("home.welcome")} <span>{t("home.letter")}</span>{t("home.brand")}
-          </h2>
-        </motion.h1>
+          {/* </h2> */}
+        </motion.h2>
 
-        <div className="prompt">
+        <div className={styles.prompt}>
           <p>
             <Typed
               strings={[
@@ -136,8 +134,10 @@ function Inicio() {
             <EnvelopeSimple size={40} weight="regular" />
           </a>
           <a
-            href={Curriculum}
+            href="/assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf"
             download={"CV Marcos Gonzalez Ingeniero informatico"}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <DownloadSimple size={40} weight="regular" />
           </a>
@@ -147,7 +147,7 @@ function Inicio() {
         </div>
       </div>
 
-      <div className="skills">
+      <div className={styles.skills}>
         <h1>{t("home.skillsTitle")}</h1>
 
         <motion.div
