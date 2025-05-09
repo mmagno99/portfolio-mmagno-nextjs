@@ -26,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="theme">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Marcos González R.</title>

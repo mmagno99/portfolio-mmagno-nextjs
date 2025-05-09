@@ -4,11 +4,11 @@
   "/_document": "pages/_document.js",
   "/experience": "pages/experience.html",
   "/": "pages/index.html",
-  "/personal-projects/[id]": "pages/personal-projects/[id].html",
   "/personal-projects": "pages/personal-projects.html",
+  "/projects": "pages/projects.html",
+  "/personal-projects/[id]": "pages/personal-projects/[id].html",
   "/projects-bbx/[id]": "pages/projects-bbx/[id].html",
   "/projects-bbx": "pages/projects-bbx.html",
-  "/projects": "pages/projects.html",
   "/blog": "pages/blog.js",
   "/blog/[slug]": "pages/blog/[slug].js",
   "/404": "pages/404.html"
