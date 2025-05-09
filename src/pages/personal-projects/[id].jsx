@@ -4,6 +4,7 @@ import { ProjectList } from '../../helpers/ProjectList';
 import styles from '../../styles/pages/personal-projects/[id].module.css';
 import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react";
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 function ProyectoDisplay() {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ function ProyectoDisplay() {
     <div className={styles.project}>
       <h1>{proyecto.name}</h1>
       <img src={proyecto.image} alt={proyecto.name} />
-
+       
       <p className={styles.paragraphDisplay}>
         <b>{t("projects.project.paragraph")}</b> {proyecto.skills}
       </p>

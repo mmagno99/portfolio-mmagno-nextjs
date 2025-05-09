@@ -5,7 +5,7 @@ import ComingSoonCard from "../components/ComingSoonCard.jsx";
 export const ProjectList = [
   {
     name: "MagnoSocial",
-    image: '/assets/proyectos/magnosocial2.png',
+    image: 'https://ik.imagekit.io/mmagnodev/magnosocial.webp',
     skills: "Django, Python, Bootstrap",
     repository: 'https://github.com/mmagno99/SocialDjango',
     livedemo: function()
@@ -15,7 +15,7 @@ export const ProjectList = [
   },
   {
     name: "Spotify Concept",
-    image: '/assets/proyectos/spotify-concept-desktop.png',
+    image: 'https://ik.imagekit.io/mmagnodev/spotify-concept-desktop.webp',
     skills: "HTML, CSS, JS",
     repository: function()
     {

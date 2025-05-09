@@ -3,61 +3,61 @@ export const LaboralList = [
 
     {
         name: "Grupo Metracon",
-        image: '/assets/laboral/metracon.png',
+        image: 'https://ik.imagekit.io/mmagnodev/metracon.webp',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://grupometracon.com.mx/"
     },
     {
         name: "E&C Ingenieria",
-        image: '/assets/laboral/eycingenieria.png',
+        image: 'https://ik.imagekit.io/mmagnodev/eycingenieria.webp',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://eycingenieria.com.mx/"
     },
     {
         name: "ProyCon GMG",
-        image: '/assets/laboral/proycongmg.png',
+        image: 'https://ik.imagekit.io/mmagnodev/proycongmg.webp',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://proycongmg.com.mx/"
     },
     {
         name: "Kaizen cuidando de ti",
-        image: '/assets/laboral/kaizen.png',
+        image: 'https://ik.imagekit.io/mmagnodev/kaizen.webp',
         skills: "WordPress, Divi",
         livedemo: "https://kaizencuidandodeti.com/"
     },
     {
         name: "Monica Tablas",
-        image: '/assets/laboral/monicatablas.png',
+        image: 'https://ik.imagekit.io/mmagnodev/monicatablas.webp',
         skills: "WordPress, Elementor, Woocommerce",
         livedemo: "https://monicatablas.com/"
     },
     {
         name: "Skydive Monkey Head",
-        image: '/assets/laboral/skydive.png',
+        image: 'https://ik.imagekit.io/mmagnodev/skydive.webp',
         skills: "WordPress, Divi",
         livedemo: "https://skydivemonkeyhead.com/"
     },
     {
         name: "Perfect Care",
-        image: '/assets/laboral/perfectcare.png',
+        image: 'https://ik.imagekit.io/mmagnodev/perfectcare.webp',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://perfectcareapp.com.mx/"
     },
     {
         name: "RO.CA Arquitectos",
-        image: '/assets/laboral/roca.png',
-        skills: "WordPress, Plantilla, Divi",
+        image: 'https://ik.imagekit.io/mmagnodev/roca.webp',
+        skills: "WordPress, Divi",
         livedemo: "https://roca-arquitectos.com.mx/"
     },
     {
         name: "Neo Investing",
-        image: '/assets/laboral/neoinvesting.png',
+        image: 'https://ik.imagekit.io/mmagnodev/neoinvesting.webp',
         skills: "WordPress, Plantilla, Divi",
         livedemo: "https://neoinvesting.com.mx/"
     },
     {
         name: "Sistema Aguas de Huixquilucan - SAH",
-        image: '/assets/laboral/sah-desktop-project.png',
+        image: 'https://ik.imagekit.io/mmagnodev/sah-desktop-project.webp',
         skills: "PHP, JS, CSS",
         livedemo: "https://sah.gob.mx/"
     },

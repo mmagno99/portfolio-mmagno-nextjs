@@ -88,7 +88,7 @@ function Experiencia() {
             <li>
               <a
                 className={styles.cartasah}
-                href="/assets/cv/CONSTANCIA LABORAL SISTEMA AGUAS DE HUIXQUILUCAN.pdf"
+                href="https://ik.imagekit.io/mmagnodev/CONSTANCIA%20LABORAL%20SISTEMA%20AGUAS%20DE%20HUIXQUILUCAN.pdf"
                 target="_blank"
                 style={{ color: currentColors.link }}
               >
@@ -149,7 +149,7 @@ function Experiencia() {
             <li>
               <a
                 className={styles.cartabbx}
-                href="/assets/cv/CARTA DE RECOMENDACIÓN Marcos.pdf"
+                href="https://ik.imagekit.io/mmagnodev/CARTA%20DE%20RECOMENDACIO%CC%81N%20Marcos.pdf"
                 target="_blank"
                 style={{ color: currentColors.link }}
               >

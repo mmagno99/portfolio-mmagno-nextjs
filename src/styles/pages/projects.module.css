@@ -27,7 +27,7 @@
 }
 
 .bgImage3{
-    background-image: url('/assets/options/Logo TDI.jpg');
+    background-image: url('https://ik.imagekit.io/mmagnodev/Logo%20TDI.webp');
     transition: transform 0.3s ease;
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;

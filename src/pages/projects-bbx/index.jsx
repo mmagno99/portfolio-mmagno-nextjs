@@ -52,7 +52,7 @@ function ProyectosLaborales() {
 
       <div className={styles.CTA}>
       <a
-        href="/assets/book-portfolio/Book-portfolio-wordpress-2023.pdf"
+        href="https://ik.imagekit.io/mmagnodev/Book-portfolio-wordpress-2023.pdf"
         download={"Book Portfolio 2023"}
         target="_blank"
         rel="noopener noreferrer">{t("projects.bbxProjects.btnDownload")}</a>
