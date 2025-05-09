@@ -4,7 +4,7 @@
     "/blog": {
       "initialRevalidateSeconds": false,
       "srcRoute": null,
-      "dataRoute": "/_next/data/hgD5dXKDQhT72cZvgt-T-/blog.json",
+      "dataRoute": "/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -17,7 +17,7 @@
     "/blog/como-mejorar-tu-perfil-como-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog/[slug]",
-      "dataRoute": "/_next/data/hgD5dXKDQhT72cZvgt-T-/blog/como-mejorar-tu-perfil-como-developer.json",
+      "dataRoute": "/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog/como-mejorar-tu-perfil-como-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -30,7 +30,7 @@
     "/blog/que-hace-un-back-end-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog/[slug]",
-      "dataRoute": "/_next/data/hgD5dXKDQhT72cZvgt-T-/blog/que-hace-un-back-end-developer.json",
+      "dataRoute": "/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog/que-hace-un-back-end-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -43,7 +43,7 @@
     "/blog/que-hace-un-front-end-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog/[slug]",
-      "dataRoute": "/_next/data/hgD5dXKDQhT72cZvgt-T-/blog/que-hace-un-front-end-developer.json",
+      "dataRoute": "/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog/que-hace-un-front-end-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -57,9 +57,9 @@
   "dynamicRoutes": {
     "/blog/[slug]": {
       "routeRegex": "^/blog/([^/]+?)(?:/)?$",
-      "dataRoute": "/_next/data/hgD5dXKDQhT72cZvgt-T-/blog/[slug].json",
+      "dataRoute": "/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog/[slug].json",
       "fallback": false,
-      "dataRouteRegex": "^/_next/data/hgD5dXKDQhT72cZvgt\\-T\\-/blog/([^/]+?)\\.json$",
+      "dataRouteRegex": "^/_next/data/hu0IgWe8zIT0Xrse9Gsez/blog/([^/]+?)\\.json$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -72,8 +72,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "5fad1d65722accc3e1d80e37fb283188",
-    "previewModeSigningKey": "4b2532800060d661dcfceecb9bb63cc35f8f9b769ae6bc26dac600a1e0864d12",
-    "previewModeEncryptionKey": "322103ba078ae1ddd7e47034e99b25d355f1ff0b1ee055215a08942134684e3f"
+    "previewModeId": "28f169ae8fcad2a41b7d148c7a5b67c6",
+    "previewModeSigningKey": "0b453c3f3258cb1bfbb9f861372521189c266238ba573e897f94d2f7154df42b",
+    "previewModeEncryptionKey": "874eee7b58824e0a8a0ecc20ce4b8ba2bc8581413ff472f5a0dc882075f319dc"
   }
 }
