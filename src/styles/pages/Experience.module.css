@@ -1,6 +1,11 @@
 
 .paragraph{
-    font-family: var(--secondary-font-firacode);
+    font-family: var(--text-font-roboto);
+}
+
+.experience h3{
+  font-family: var(--alternative-font-acorn), sans-serif; /* Usa la variable */
+  font-weight: 400;
 }
 
 .paragraph ul li .cartabbx, .certificate, .cartasah{

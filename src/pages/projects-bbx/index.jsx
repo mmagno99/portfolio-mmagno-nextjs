@@ -11,7 +11,6 @@ function ProyectosLaborales() {
   return (
     <div className={styles.projectsLaboral}>
       <h1 className={styles.projectTitleLaboral}>{t("projects.bbxProjects.title")}</h1>
-      <h3 style={{textAlign: 'center'}}>{t("projects.bbxProjects.desc")}<br/>{t("projects.bbxProjects.desc2")}</h3>
       
       <div className="slider-container">
         <Splide

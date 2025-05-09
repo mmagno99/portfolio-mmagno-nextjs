@@ -9,6 +9,7 @@
   }
   
   .project h1 {
+    font-family: var(--alternative-font-acorn), sans-serif; /* Usa la variable */
     margin-top: 50px;
     color: var(--primary-color);
     font-size: 35px;
@@ -21,7 +22,7 @@
   }
   
   .project p {
-    font-family: var(--secondary-font-firacode);
+    font-family: var(--text-font-roboto);
     font-size: 25px;
     color: var(--bg-color);
     text-align: center;

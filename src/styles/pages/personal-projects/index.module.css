@@ -9,6 +9,7 @@
     
   }
   .projects .projectTitle {
+    font-family: var(--alternative-font-acorn), sans-serif; /* Usa la variable */
     text-align: center;
     color: var(--color-title);
     font-size: 60px;
@@ -35,10 +36,15 @@
     box-shadow: var(--shadow-elevation);
     transition: 0.3s ease-in;
     text-align: center;
+    
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
     -ms-border-radius: .5rem;
     -o-border-radius: .5rem;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
 }
   .projectItem:hover {
     box-shadow: var(--shadow-elevation-hover);
@@ -57,8 +63,8 @@
   }
   
   .projectItem h1 {
-    font-family:var(--secondary-font-firacode);
-    font-size: 20px;
+    font-family:var(--text-font-roboto);
+    font-size: 22px;
   }
 
   

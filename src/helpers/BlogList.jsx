@@ -1,10 +1,10 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '../styles/pages/blog/[id].module.css';
+import styles from '../styles/pages/blog/[slug].module.css';
 
 export const BlogList = [
   {
-    name: "blog.article1",
+    name: "blog.article1", //Articulo de slug que-hace-un-front-end-developer.mdx
     image: '/assets/blog/catFrontEnd.jpg',
     paragraph: (
       <>
@@ -45,7 +45,7 @@ export const BlogList = [
     ),
   },
   {
-    name: "blog.article2",
+    name: "blog.article2", //Articulo de slug mejorar-tu-perfil-como-developer.mdx
     image: '/assets/blog/developer.jpg',
     paragraph: (
       <>
@@ -80,7 +80,7 @@ export const BlogList = [
     ),
   },
   {
-    name: "blog.article3",
+    name: "blog.article3", //Articulo de slug que-hace-un-back-end-developer.mdx
     image: '/assets/blog/catBackEnd.jpg',
     paragraph: (
       <>

@@ -71,14 +71,14 @@
 .logoName {
   color: var(--color-paragraph);
   margin-left: 20px;
-  font-family: var(--secondary-font-firacode);
+  font-family: var(--alternative-font-acorn), sans-serif; /* Usa la variable */
   display: flex;
   align-items: center;
   height: 100%;
 }
 
 .logoName h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -107,13 +107,14 @@
   color: var(--navbar-text);
   text-decoration: none;
   margin: 0 20px;
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 0 10px;
   transition: 0.3s;
 }
 
 .navbar .links a:hover {
   color: var(--navbar-text-hover);
+  transform: scale(1.1);
 }
 
 .navbar .links a:after {

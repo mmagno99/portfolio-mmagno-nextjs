@@ -14,7 +14,7 @@ export const LaboralList = [
         livedemo: "https://eycingenieria.com.mx/"
     },
     {
-        name: "Proyectos y Construcciónes GMG",
+        name: "ProyCon GMG",
         image: '/assets/laboral/proycongmg.png',
         skills: "WordPress, Figma, Divi",
         livedemo: "https://proycongmg.com.mx/"
@@ -56,7 +56,7 @@ export const LaboralList = [
         livedemo: "https://neoinvesting.com.mx/"
     },
     {
-        name: "Sistema Aguas Huixquilucan - SAH",
+        name: "Sistema Aguas de Huixquilucan - SAH",
         image: '/assets/laboral/sah-desktop-project.png',
         skills: "PHP, JS, CSS",
         livedemo: "https://sah.gob.mx/"

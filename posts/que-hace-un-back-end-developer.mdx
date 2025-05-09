@@ -1,0 +1,32 @@
+---
+title: "¿Qué hace un Back-end Developer?"
+slug: "que-hace-un-back-end-developer"
+image: "/assets/blog/catBackEnd.jpg"
+date: "2023-11-10"
+---
+
+Un **Back-end Developer** se encarga de que todo lo que ocurre detrás de la interfaz gráfica funcione correctamente.
+
+Su trabajo abarca desde la gestión de bases de datos, servidores, APIs, hasta la seguridad de la aplicación.
+
+- **Node.js:** Para construir servidores rápidos y escalables con JavaScript.
+- **Python:** Usando frameworks como Django o Flask para APIs robustas.
+- **Java:** Muy usado en aplicaciones empresariales mediante Spring Boot.
+- **Ruby on Rails:** Ideal para startups que buscan agilidad.
+- **Bases de datos:** MySQL, PostgreSQL y MongoDB son esenciales en su stack.
+
+Un ejemplo básico de un servidor en Node.js sería:
+
+```javascript
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('¡Hola desde el servidor!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+``` 

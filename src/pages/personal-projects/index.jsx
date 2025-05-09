@@ -16,15 +16,6 @@ function Proyectos() {
   return (
     <div className={styles.projects}>
       <h1 className={styles.projectTitle}>{t("projects.personalProjects.title")}</h1>
-      <h3>{t("projects.personalProjects.title")}</h3>
-
-      {/* <div className="projectList">
-        {ProjectList.map((project, idx) => {
-          return (
-            <ProjectItem id={idx} name={project.name} image={project.image} />
-          );
-        })}
-      </div> */}
 
       <div className="slider-container">
         <Splide
@@ -50,7 +41,7 @@ function Proyectos() {
           }}
           aria-label="Proyectos personales"
         >
-          {ProjectList.map((project, idx) => (
+          {/* {ProjectList.map((project, idx) => (
             <SplideSlide key={idx}>
               <div className="slide-inner">
                 <ProjectItem 
@@ -58,7 +49,23 @@ function Proyectos() {
                 />
               </div>
             </SplideSlide>
-          ))}
+          ))} */}
+
+            {ProjectList.map((project, idx) => (
+              <SplideSlide key={idx}>
+                <div className="slide-inner">
+                  {project.comingSoon && project.component ? (
+                    project.component
+                  ) : (
+                    <ProjectItem
+                      id={idx}
+                      name={project.name}
+                      image={project.image}
+                    />
+                  )}
+                </div>
+              </SplideSlide>
+            ))}
         </Splide>
       </div>
 

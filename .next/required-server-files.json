@@ -17,10 +17,9 @@
     "useFileSystemPublicRoutes": true,
     "generateEtags": true,
     "pageExtensions": [
-      "tsx",
-      "ts",
+      "js",
       "jsx",
-      "js"
+      "mdx"
     ],
     "poweredByHeader": true,
     "compress": true,

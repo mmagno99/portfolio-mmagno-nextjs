@@ -1,5 +1,4 @@
 {
-
     "navbar": {
       "nav1": "Inicio",
       "nav2": "Proyectos",
@@ -8,9 +7,11 @@
     },
 
     "home": {
-      "welcome": "Bienvenido a",
+      "welcome": "Hola, soy",
       "letter": "M",
-      "brand": "m>gno",
+      "brand": "magno.",
+      "job_start": "Desarrollador",
+      "job_end": "Frontend",
       "typed1": "Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵",
       "typed2": "Especialista en React, creando interfaces modernas y fluidas. 😏",
       "typed3": "Experto en WordPress Full Stack, llevando ideas a producción. 😎",
@@ -28,7 +29,12 @@
 
         "personalProjects": {
         "title": "Mis proyectos personales",
-        "desc": "Me hace falta agregar más 😓"
+        "desc": "Me hace falta agregar más 😓",
+
+                "comingSoonCard":{
+                    "title":"Próximamente"
+                }
+
         },
 
         "bbxProjects": {

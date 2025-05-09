@@ -65,7 +65,7 @@ function Navbar() {
         <div className={styles.logoContainer}>
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logoName}>
-              <h2><span>M</span>m{`>`}gno</h2>
+              <h2><span>M</span>m{`a`}gno</h2>
             </div>
           </Link>
         </div>

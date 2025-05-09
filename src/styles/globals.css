@@ -1,23 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 
+
+/* Define la fuente Acorn */
+@font-face {
+  font-family: 'Acorn';
+  src: url('/fonts/acorn-6.otf') format('opentype');
+  font-display: swap;
+}
 
 .container-mmagno {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  font-family: var(--primary-font-poppins); 
   background-color: var(--bg-body);
 }
 
 body {
+  font-family: var(--text-font-roboto); 
   padding: var(--pading-body);
   margin: var(--margin-body);
+  
 }
+
 
 :root {
   /* Fuentes */
+  --alternative-font-acorn: 'Acorn', sans-serif; /* Ahora solo referencia el nombre */
+  --text-font-roboto: 'Roboto', sans-serif;
   --primary-font-poppins: 'Poppins', sans-serif;
   --secondary-font-firacode: 'Fira Code', monospace;
   
@@ -28,6 +40,8 @@ body {
   --pading-body: 0;
   --margin-body: 0;
 }
+
+
 
 /* ========== DARK MODE ========== */
 html.dark {
@@ -57,8 +71,8 @@ html.dark {
 
   /* Navbar */
   --navbar-bg: #0f172a;
-  --navbar-text: #f8fafc;
-  --navbar-text-hover: #22d3ee;
+  --navbar-text: #94a3b8;
+  --navbar-text-hover: #f8fafc;
   --navbar-underline: #22d3ee;
 
   /* Footer */

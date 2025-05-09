@@ -6,9 +6,10 @@
     "nav4": "Blog"
   },
   "home": {
-    "welcome": "Bem-vindo ao",
+    "welcome": "Olá, eu sou",
     "letter": "M",
-    "brand": "m>gno",
+    "brand": "magno",
+    "job": "Desarrollador Frontend",
     "typed1": "Desenvolvedor Web apaixonado, que adora criar projetos inovadores. 🥵",
     "typed2": "Especialista em React, criando interfaces modernas e fluidas. 😏",
     "typed3": "Expert em WordPress Full Stack, transformando ideias em produção. 😎",
@@ -26,7 +27,11 @@
 
         "personalProjects": {
         "title": "Meus projetos pessoais",
-        "desc": "Preciso adicionar mais 😓"
+        "desc": "Preciso adicionar mais 😓",
+
+            "comingSoonCard":{
+                "title":"Em breve"
+              }
         },
 
         "bbxProjects": {

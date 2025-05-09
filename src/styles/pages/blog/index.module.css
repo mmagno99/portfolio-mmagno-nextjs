@@ -9,6 +9,7 @@
   }
 
   .blogs .blogTitle{
+    font-family: var(--alternative-font-acorn), sans-serif; /* Usa la variable */
     text-align: center;
     color: var(--color-title);
     font-size: 60px;
@@ -63,8 +64,8 @@
   .bgImageBlog:hover{transform: scale(1.05);}
 
   .blogItem h1{
-    font-family:var(--secondary-font-firacode);
-    font-size: 20px;
+    font-family:var(--text-font-roboto);
+    font-size: 22px;
   }
 
   /* ============ RESPONSIVE ============ */

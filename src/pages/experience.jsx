@@ -50,7 +50,7 @@ function Experiencia() {
   function anoActual() { return new Date().getFullYear() }
 
   return (
-    <div className="experience" style={{ background: currentColors.background }}>
+    <div className={styles.experience} style={{ background: currentColors.background }}>
       <VerticalTimeline lineColor={currentColors.line}>
 
         {/* Educación 1 */}

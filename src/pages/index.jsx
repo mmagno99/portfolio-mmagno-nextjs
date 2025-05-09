@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { ReactTyped as Typed } from 'react-typed';
 import { skills } from '../helpers/SkillsList.jsx';
 import BackToTop from '../components/BackToTop.jsx';
@@ -8,17 +8,78 @@ import styles from "../styles/pages/index.module.css";
 
 import { useTranslation } from 'react-i18next';
 
-import {
-  GithubLogo,
-  EnvelopeSimple,
-  DownloadSimple
-} from "@phosphor-icons/react";
-
-// Detecta si es móvil o tablet REAL
-const isMobileDevice = typeof window !== 'undefined' &&
-  /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
-
 /* Estilos para los componentes */
+
+// Tamaños en rem (1rem = 16px, entonces 0.25rem = 4px)
+const reactSize = 'calc(0.25rem * 48)'; // = 12rem = 192px
+const jsSize = 'calc(0.25rem * 32)';    // = 8rem = 128px
+
+// Contenedor para los íconos
+const IconWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+`;
+
+// Ícono de React con animación de rotación
+const ReactIcon = styled(motion.img)`
+  width: ${reactSize};
+  height: auto;
+  position: absolute;
+  left: 20em;
+  bottom: 0;
+
+  /* Celulares */
+  @media (max-width: 640px) {
+    width: calc(0.25rem * 24);
+    left: 0;
+    bottom: 0;
+  }
+
+  /* Tabletas */
+  @media (min-width: 641px) and (max-width: 1024px) {
+  width: calc(0.25rem * 40);
+  left: 0;
+  bottom: 1em;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+  /* Estilos para pantallas entre 1025px y 1440px laptops*/
+  left: 2em;
+  bottom: 0;
+}
+`;
+
+// Ícono de JavaScript con animación de traslación vertical
+const JsIcon = styled(motion.img)`
+  width: ${jsSize};
+  height: auto;
+  position: absolute;
+  right: 25em;
+  bottom: 5em;
+
+  /* Celulares */
+  @media (max-width: 640px) {
+    width: calc(0.25rem * 20);
+    right: 0;
+    bottom: 6em;
+  }
+
+  /* Tabletas */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: calc(0.25rem * 30);
+    right: 2em;
+    bottom: 5em;
+  }
+
+  /* Laptops */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    right: 5em;
+    bottom: 5em;
+  }
+`;
+
+
 const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
@@ -69,6 +130,7 @@ const SkillList = styled.div`
 `;
 
 const SkillItem = styled.div`
+  font-family: var(--text-font-roboto);   
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 80};
@@ -100,6 +162,14 @@ const SkillImage = styled.img`
 
 function Inicio() {
   const { t } = useTranslation();
+
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+    useEffect(() => {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+      setIsMobileDevice(isMobile);
+    }, []);
+
   return (
     <div className={styles.home}>
       <div className={styles.about}>
@@ -110,10 +180,34 @@ function Inicio() {
           viewport={{ once: isMobileDevice, amount: 0.6 }}
           className="text-4xl font-bold text-gray-900"
         >
-          {/* <h2> */}
             {t("home.welcome")} <span>{t("home.letter")}</span>{t("home.brand")}
-          {/* </h2> */}
+            <br/>
+            {t("home.job_start")} {isMobileDevice && <br />} {t("home.job_end")}
         </motion.h2>
+
+        <IconWrapper>
+              <ReactIcon
+                src="/assets/icons/react_icon.svg"
+                alt="React Icon"
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 16,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
+
+              <JsIcon
+                src="/assets/icons/javascript_icon.svg"
+                alt="JavaScript Icon"
+                animate={{ y: [0, -20, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+        </IconWrapper>
 
         <div className={styles.prompt}>
           <p>
@@ -129,21 +223,6 @@ function Inicio() {
               loop
             />
           </p>
-
-          <a href={"mailto:contacto.marcosgr@gmail.com"}>
-            <EnvelopeSimple size={40} weight="regular" />
-          </a>
-          <a
-            href="/assets/cv/CV Marcos Gonzalez Ingeniero informatico.pdf"
-            download={"CV Marcos Gonzalez Ingeniero informatico"}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <DownloadSimple size={40} weight="regular" />
-          </a>
-          <a href={"https://github.com/mmagno99"} target={"blank"}>
-            <GithubLogo size={40} weight="regular" />
-          </a>
         </div>
       </div>
 

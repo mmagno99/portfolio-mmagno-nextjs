@@ -6,9 +6,11 @@
     "nav4": "Blog"
   },
   "home": {
-    "welcome": "Welcome to",
+    "welcome": "Hi! I'm",
     "letter": "M",
-    "brand": "m>gno",
+    "brand": "magno.",
+    "job_start": "A Frontend",
+    "job_end":"Developer.",
     "typed1": "Passionate Web Developer who loves creating innovative projects. 🥵",
     "typed2": "React Specialist, crafting modern and fluid interfaces. 😏",
     "typed3": "WordPress Full Stack Expert, turning ideas into production. 😎",
@@ -26,7 +28,11 @@
 
         "personalProjects": {
           "title": "My personal projects",
-          "desc": "I need to add more 😓"
+          "desc": "I need to add more 😓",
+
+          "comingSoonCard":{
+            "title":"Coming Soon"
+          }
         },
 
         "bbxProjects": {
