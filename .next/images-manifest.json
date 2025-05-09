@@ -25,7 +25,8 @@
     "loader": "default",
     "loaderFile": "",
     "domains": [
-      "localhost"
+      "localhost",
+      "ik.imagekit.io"
     ],
     "disableStaticImages": false,
     "minimumCacheTTL": 60,

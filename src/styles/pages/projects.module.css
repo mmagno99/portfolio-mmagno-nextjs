@@ -9,7 +9,7 @@
 }
 
 .bgImage{
-    background-image: url('/assets/options/personalProjects.PNG');
+    background-image: url('https://ik.imagekit.io/mmagnodev/personalProjects.webp');
     transition: transform 0.3s ease;
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
@@ -18,7 +18,7 @@
 }
 
 .bgImage2{
-    background-image: url('/assets/options/balabox.png');
+    background-image: url('https://ik.imagekit.io/mmagnodev/balabox.webp');
     transition: transform 0.3s ease;
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;

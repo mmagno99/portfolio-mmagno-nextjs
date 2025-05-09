@@ -10,7 +10,7 @@ const nextConfig = {
     emotion: true
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'ik.imagekit.io'],
   },
   webpack: (config) => {
     config.resolve.alias = {
