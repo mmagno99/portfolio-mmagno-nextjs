@@ -9,7 +9,7 @@
 }
 
 .bgImage{
-    background-image: url('/assets/options/personalProjects.png');
+    background-image: url('/assets/options/personalProjects.PNG');
     transition: transform 0.3s ease;
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
