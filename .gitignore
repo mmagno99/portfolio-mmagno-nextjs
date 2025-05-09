@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Archivos de Next.js que deben ignorarse
+.next
+.vercel
+node_modules
+*.log
+.env*
