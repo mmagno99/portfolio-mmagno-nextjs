@@ -9,17 +9,7 @@ import styles from '../styles/pages/Experience.module.css'
 import BackToTop from '../components/BackToTop.jsx'
 import { useTranslation } from 'react-i18next'
 
-function Experiencia() {
-  const { t } = useTranslation()
-  const { resolvedTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
+function getColors(theme) {
   const colors = {
     dark: {
       background: '#020617',
@@ -32,7 +22,7 @@ function Experiencia() {
       iconCert: '#facc15',
       line: '#334155',
       link: '#38bdf8',
-      active: '#22d3ee'
+      active: '#22d3ee',
     },
     light: {
       background: '#f8fafc',
@@ -45,11 +35,22 @@ function Experiencia() {
       iconCert: '#f59e0b',
       line: '#e2e8f0',
       link: '#2563eb',
-      active: '#4f46e5'
-    }
+      active: '#4f46e5',
+    },
   }
+  return colors[theme] || colors.light
+}
 
-  const currentColors = resolvedTheme === 'dark' ? colors.dark : colors.light
+function Experiencia() {
+  const { t } = useTranslation()
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const currentColors = getColors(resolvedTheme)
 
   const anoActual = () => new Date().getFullYear()
 
