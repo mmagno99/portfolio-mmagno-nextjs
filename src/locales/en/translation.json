@@ -2,7 +2,7 @@
   "navbar": {
     "nav1": "Home",
     "nav2": "Projects",
-    "nav3": "Experience",
+    "nav3": "About",
     "nav4": "Blog"
   },
   "home": {
@@ -52,6 +52,29 @@
   "article2": "How to Improve Your Developer Profile",
   "article3": "What Does a Back-end Developer Do?"
 },
+
+"about":{
+        "description": "Passionate Computer Engineer | Web Developer with experience in building websites and web applications. Skilled in designing innovative solutions for technical challenges. Deeply committed to continuous learning to improve web development best practices.",
+
+        
+    "sah": {
+        "date": "March 2019 – July 2021",
+        "description": "Custom website development with PHP, JavaScript, and Bootstrap, updates to the site's dependencies, structural changes, and FireWall configuration for DDoS protection."
+    },
+    "bbx": {
+        "date": "February 2022 – September 2023",
+        "description": "Custom web development with WordPress and React using Figma, server configuration, and ongoing website maintenance."
+    },
+    "tdi": {
+        "date": "October 2023 – Present",
+        "description": "Design and construction of websites with WordPress, development of plugins with specific functionalities, API handling with WooCommerce integrations, MySQL database management, and AI-powered automations."
+    },
+
+        "button":{
+            "title":"See reference letter"
+        }
+
+    },
 
 "experience": {
   "school1": {

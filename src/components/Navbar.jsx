@@ -84,7 +84,7 @@ function Navbar() {
       <div className={styles.links}>
         <Link href="/">{t("navbar.nav1")}</Link>
         <Link href="/projects">{t("navbar.nav2")}</Link>
-        <Link href="/experience">{t("navbar.nav3")}</Link>
+        <Link href="/about">{t("navbar.nav3")}</Link>
         <Link href="/blog">{t("navbar.nav4")}</Link>
         
         <div className={styles.mobileButtonsContainer}>

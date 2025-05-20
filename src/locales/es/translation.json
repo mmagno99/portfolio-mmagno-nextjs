@@ -2,7 +2,7 @@
     "navbar": {
       "nav1": "Inicio",
       "nav2": "Proyectos",
-      "nav3": "Experiencia",
+      "nav3": "Acerca de",
       "nav4": "Blog"
     },
 
@@ -56,6 +56,27 @@
 
         "blog1":{
             "code":"`const portfolio = { name: 'Juan Pérez', role: 'Front-end Developer', skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'], projects: [ { name: 'Tienda Online', url: 'https://mi-tienda.com' }, { name: 'Blog Personal', url: 'https://mi-blog.com' } ] };`" }
+    },
+
+    "about":{
+        "description": "Ingeniero en informática apasionado Desarrollador Web con experiencia en la construcción de sitios y aplicaciones web. Hábil en el diseño de soluciones innovadoras para retos técnicos. Ampliamente comprometido con el aprendizaje continuo par mejorar las mejores prácticas del desarrollo web",
+
+        "sah":{
+            "date":"Marzo 2019 – Julio 2021",
+            "description":"Desarrollo de sitio web a medida con PHP, JavaScript y Bootstrap, actualizaciones de las dependencias del sitio, cambios de estructura y configuracion de FireWall para protección DDoS"
+        },
+        "bbx":{
+            "date":"Febrero 2022 – Septiembre 2023",
+            "description":"Desarrollo de sitios Web con WordPress y React a medida con Figma, configuración de servidores y mantenimiento continuo a los sitios web."
+        },
+        "tdi":{
+            "date":"Octubre 2023 – Presente",
+            "description":"Diseño y construcción de sitios web con WordPress, desarrollo de plugins con funciones especificas, manejo de API's con integraciones de WooCommerce, manejo de bases de datos MySQL, automatizaciones con IA"
+        },
+
+        "button":{
+            "title":"Ver carta de recomendación"
+        }
     },
 
     "experience":{

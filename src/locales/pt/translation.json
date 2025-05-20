@@ -2,7 +2,7 @@
   "navbar": {
     "nav1": "Início",
     "nav2": "Projetos",
-    "nav3": "Experiência",
+    "nav3": "Sobre mim",
     "nav4": "Blog"
   },
   "home": {
@@ -51,6 +51,27 @@
   "article2": "Como melhorar seu perfil como Desenvolvedor",
   "article3": "O que faz um Desenvolvedor Back-end?"
 },
+
+"about":{
+        "description": "Engenheiro de Computação apaixonado | Desenvolvedor Web com experiência na construção de sites e aplicações web. Habilidoso em projetar soluções inovadoras para desafios técnicos. Totalmente comprometido com o aprendizado contínuo para aprimorar as melhores práticas de desenvolvimento web.",
+
+        "sah": {
+        "date": "Março 2019 – Julho 2021",
+        "description": "Desenvolvimento de site personalizado com PHP, JavaScript e Bootstrap, atualizações das dependências do site, mudanças de estrutura e configuração de FireWall para proteção contra DDoS."
+    },
+    "bbx": {
+        "date": "Fevereiro 2022 – Setembro 2023",
+        "description": "Desenvolvimento de sites personalizados com WordPress e React usando Figma, configuração de servidores e manutenção contínua dos sites."
+    },
+    "tdi": {
+        "date": "Outubro 2023 – Presente",
+        "description": "Design e construção de sites com WordPress, desenvolvimento de plugins com funções específicas, manipulação de APIs com integrações WooCommerce, gerenciamento de bancos de dados MySQL e automações com IA."
+    },
+
+        "button":{
+            "title":"Visualizar carta de referência"
+        }
+    },
 
 "experience": {
   "school1": {
