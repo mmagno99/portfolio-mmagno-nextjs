@@ -10,7 +10,7 @@ import { ThemeProvider } from 'next-themes';
 import { useState, useEffect } from 'react';
 
 import { DefaultSeo } from 'next-seo';
-import SEO from '@/next-seo.config.js'; // Asegúrate que el archivo tenga extensión `.js`
+import SEO from './next-seo.config.js'; // Asegúrate que el archivo tenga extensión `.js`
 
 export default function MyApp({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
