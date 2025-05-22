@@ -1,4 +1,9 @@
 {
+    "404":{
+        "subtitle": "Página no encontrada",
+        "description":"Lo sentimos, la página que estás buscando no existe o ha sido movida."
+    },
+
     "navbar": {
       "nav1": "Inicio",
       "nav2": "Proyectos",

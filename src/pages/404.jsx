@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -44,12 +45,13 @@ const ImageWrapper = styled.div`
 `
 
 export default function NotFoundPage() {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <Title>404</Title>
-      <Subtitle>Página no encontrada</Subtitle>
+      <Subtitle>{t("404.subtitle")}</Subtitle>
       <Description>
-        Lo sentimos, la página que estás buscando no existe o ha sido movida.
+        {t("404.description")}
       </Description>
       <ImageWrapper>
         <Image
