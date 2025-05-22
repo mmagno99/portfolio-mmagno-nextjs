@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styles from '../styles/components/Navbar.module.css';
+import styles from '@/styles/components/Navbar.module.css';
 import { useTheme } from 'next-themes';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import LanguageSelector from './LanguageSelector';

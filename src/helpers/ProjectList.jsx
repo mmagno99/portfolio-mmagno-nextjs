@@ -1,5 +1,5 @@
 // helpers/ProjectList.jsx
-import ComingSoonCard from "../components/ComingSoonCard.jsx";
+import ComingSoonCard from "@/components/ComingSoonCard.jsx";
 
 
 export const ProjectList = [

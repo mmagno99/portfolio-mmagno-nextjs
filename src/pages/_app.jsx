@@ -1,10 +1,10 @@
-import '../styles/globals.css';
-import '../styles/Splide.css';
-import { ThemeProvider } from 'next-themes';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import '@/styles/globals.css';
+import '@/styles/Splide.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import '@/i18n.jsx';
 import Head from 'next/head';
-import '../i18n.jsx';
+import { ThemeProvider } from 'next-themes';
 import { useState, useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {

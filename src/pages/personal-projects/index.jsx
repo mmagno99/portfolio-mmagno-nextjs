@@ -1,13 +1,13 @@
 import React from "react";
 
-import styles from "../../styles/pages/personal-projects/index.module.css";
+import styles from "@/styles/pages/personal-projects/index.module.css";
 // import "../styles/Splide.css"; se llamanda a llamar en _app.jsx
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
-import ProjectItem from "../../components/ProjectItem.jsx";
-import { ProjectList } from "../../helpers/ProjectList.jsx";
+import ProjectItem from "@/components/ProjectItem.jsx";
+import { ProjectList } from "@/helpers/ProjectList.jsx";
 
 import { useTranslation } from 'react-i18next';
 

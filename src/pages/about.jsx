@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import listAbout from "../helpers/listAbout"; // Asegúrate que esta ruta sea correcta
+import listAbout from "@/helpers/listAbout"; // Asegúrate que esta ruta sea correcta
 import { useTranslation } from 'react-i18next';
-import BackToTop from '../components/BackToTop.jsx';
+import BackToTop from '@/components/BackToTop.jsx';
 
 // --- Styled Components ---
 const Container = styled.main`

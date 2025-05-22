@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../../styles/pages/project-bbx/index.module.css';
+import styles from '@/styles/pages/project-bbx/index.module.css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import LaboralItem from '../../components/LaboralItem';
-import { LaboralList } from '../../helpers/LaboralList';
+import LaboralItem from '@/components/LaboralItem.jsx';
+import { LaboralList } from '@/helpers/LaboralList.jsx';
 import { useTranslation } from 'react-i18next';
 
 function ProyectosLaborales() {

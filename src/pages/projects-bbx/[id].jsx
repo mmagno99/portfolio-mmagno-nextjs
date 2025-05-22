@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { LaboralList } from '../../helpers/LaboralList';
-import styles from '../../styles/pages/project-bbx/[id].module.css';
+import { LaboralList } from '@/helpers/LaboralList.jsx';
+import styles from '@/styles/pages/project-bbx/[id].module.css';
 import { ArrowSquareOut } from "@phosphor-icons/react";
 import { useTranslation } from 'react-i18next';
 

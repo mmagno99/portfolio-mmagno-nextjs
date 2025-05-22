@@ -6,10 +6,10 @@ import { serialize } from 'next-mdx-remote/serialize';
 import Image from 'next/image';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '../../styles/pages/blog/[slug].module.css';
+import styles from '@/styles/pages/blog/[slug].module.css';
 
-// 🧠 Importa los componentes MDX estilizados
-import mdxComponents from '../../components/mdxComponents.jsx';
+//Componentes MDX estilizados
+import mdxComponents from '@/components/mdxComponents.jsx';
 
 const components = {
   ...mdxComponents,

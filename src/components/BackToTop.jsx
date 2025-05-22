@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowUp } from '@phosphor-icons/react';
-import styles from '../styles/components/BackToTop.module.css';
+import styles from '@/styles/components/BackToTop.module.css';
 
 function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);

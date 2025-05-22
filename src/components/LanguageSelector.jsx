@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import styles from '../styles/components/LanguageSelector.module.css';
+import styles from '@/styles/components/LanguageSelector.module.css';
 
 const allLanguages = [
   { code: 'es', flag: '/assets/flags/mx.svg', alt: 'Español' },

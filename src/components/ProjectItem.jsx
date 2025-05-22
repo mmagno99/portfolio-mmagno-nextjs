@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import styles from "../styles/pages/personal-projects/index.module.css";
+import styles from "@/styles/pages/personal-projects/index.module.css";
 
 function ProjectItem({ image, name, id }) {
   const router = useRouter();

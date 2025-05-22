@@ -1,8 +1,7 @@
 import React from 'react'
 // import {Link} from 'react-router-dom';
 import Link from 'next/link';
-import styles from '../styles/components/Footer.module.css';
-import BackToTop from '../components/BackToTop.jsx';
+import styles from '@/styles/components/Footer.module.css';
 import {
   LinkedinLogo,
   InstagramLogo,

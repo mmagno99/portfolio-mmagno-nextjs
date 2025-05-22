@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { ProjectList } from '../../helpers/ProjectList';
-import styles from '../../styles/pages/personal-projects/[id].module.css';
+import { ProjectList } from '@/helpers/ProjectList.jsx';
+import styles from '@/styles/pages/personal-projects/[id].module.css';
 import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react";
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';

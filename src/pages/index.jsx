@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from 'styled-components';
 import { ReactTyped as Typed } from 'react-typed';
-import { skills } from '../helpers/SkillsList.jsx';
-import BackToTop from '../components/BackToTop.jsx';
+import { skills } from '@/helpers/SkillsList.jsx';
+import BackToTop from '@/components/BackToTop.jsx';
 import { motion } from "framer-motion";
-import styles from "../styles/pages/index.module.css";
+import styles from "@/styles/pages/index.module.css";
 import { useTranslation } from 'react-i18next';
 
 /* Estilos para los componentes */
@@ -249,6 +249,7 @@ function Inicio() {
               </Skill>
             ))}
           </SkillsContainer>
+
         </motion.div>
       </div>
 
