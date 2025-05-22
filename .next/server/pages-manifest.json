@@ -2,6 +2,14 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/404": "pages/404.js"
+  "/404": "pages/404.html",
+  "/about": "pages/about.html",
+  "/personal-projects/[id]": "pages/personal-projects/[id].html",
+  "/personal-projects": "pages/personal-projects.html",
+  "/": "pages/index.html",
+  "/projects-bbx/[id]": "pages/projects-bbx/[id].html",
+  "/projects-bbx": "pages/projects-bbx.html",
+  "/projects": "pages/projects.html",
+  "/blog": "pages/blog.js",
+  "/blog/[slug]": "pages/blog/[slug].js"
 }

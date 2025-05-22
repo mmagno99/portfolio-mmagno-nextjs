@@ -1,11 +1,16 @@
 import '@/styles/globals.css';
 import '@/styles/Splide.css';
+import '@/i18n.jsx';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import '@/i18n.jsx';
+
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import { useState, useEffect } from 'react';
+
+import { DefaultSeo } from 'next-seo';
+import SEO from '@/next-seo.config.js'; // Asegúrate que el archivo tenga extensión `.js`
 
 export default function MyApp({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false);
@@ -26,7 +31,8 @@ export default function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="theme">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme">
+      <DefaultSeo {...SEO} />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Marcos González R.</title>
