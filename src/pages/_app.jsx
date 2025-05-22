@@ -25,6 +25,7 @@ export default function MyApp({ Component, pageProps }) {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>Marcos González R.</title>
+          <meta name="google-site-verification" content="HH9xzJYZot6pZPuhQRomr0W2QJZy4qyw0JrYVTzng38" />
         </Head>
       </div>
     );

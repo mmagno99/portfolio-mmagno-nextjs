@@ -1,4 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://mmagno.dev
+
+# Sitemaps
 Sitemap: https://mmagno.dev/sitemap.xml
