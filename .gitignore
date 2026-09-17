@@ -28,3 +28,8 @@ yarn-error.log*
 node_modules
 *.log
 .env*
+
+# Astro
+/dist
+/.astro
+/.pnpm-store

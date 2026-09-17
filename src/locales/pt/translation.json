@@ -1,10 +1,9 @@
 {
+  "404": {
+    "subtitle": "Página não encontrada",
+    "description": "Desculpe, a página que você está procurando não existe ou foi movida."
+  },
 
-  "404":{
-        "subtitle": "Página não encontrada",
-        "description":"Desculpe, a página que você está procurando não existe ou foi movida."
-    },
-    
   "navbar": {
     "nav1": "Início",
     "nav2": "Projetos",
@@ -25,117 +24,116 @@
     "skillCardFour": "Adicionais"
   },
 
-    "projects": {  
+  "projects": {
     "title": "Escolha o tipo de projeto",
     "cardtitle1": "Projetos pessoais",
     "cardtitle2": "Projetos BBX",
     "cardtitle3": "Projetos TDI",
 
-        "personalProjects": {
-        "title": "Meus projetos pessoais",
-        "desc": "Preciso adicionar mais 😓",
+    "personalProjects": {
+      "title": "Meus projetos pessoais",
+      "desc": "Preciso adicionar mais 😓",
 
-            "comingSoonCard":{
-                "title":"Em breve"
-              }
-        },
+      "comingSoonCard": {
+        "title": "Em breve"
+      }
+    },
 
-        "bbxProjects": {
-          "title": "Projetos na Balabox",
-          "desc": "Provavelmente alguns",
-          "desc2": "podem estar inativos 😭",
-          "btnDownload": "Baixar Portfólio em PDF"
-        },
-        "project":{
-            "paragraph": "Habilidades:"
-        }
+    "bbxProjects": {
+      "title": "Projetos na Balabox",
+      "desc": "Provavelmente alguns",
+      "desc2": "podem estar inativos 😭",
+      "btnDownload": "Baixar Portfólio em PDF"
+    },
+    "project": {
+      "paragraph": "Habilidades:"
+    }
   },
 
   "blog": {
-  "title": "Meu Blog Pessoal",
-  "article1": "O que faz um Desenvolvedor Front-end?",
-  "article2": "Como melhorar seu perfil como Desenvolvedor",
-  "article3": "O que faz um Desenvolvedor Back-end?"
-},
+    "title": "Meu Blog Pessoal",
+    "article1": "O que faz um Desenvolvedor Front-end?",
+    "article2": "Como melhorar seu perfil como Desenvolvedor",
+    "article3": "O que faz um Desenvolvedor Back-end?"
+  },
 
-"about":{
-        "description": "Engenheiro de Computação apaixonado | Desenvolvedor Web com experiência na construção de sites e aplicações web. Habilidoso em projetar soluções inovadoras para desafios técnicos. Totalmente comprometido com o aprendizado contínuo para aprimorar as melhores práticas de desenvolvimento web.",
+  "about": {
+    "description": "Engenheiro de Computação apaixonado | Desenvolvedor Web com experiência na construção de sites e aplicações web. Habilidoso em projetar soluções inovadoras para desafios técnicos. Totalmente comprometido com o aprendizado contínuo para aprimorar as melhores práticas de desenvolvimento web.",
 
-        "sah": {
-        "date": "Março 2019 – Julho 2021",
-        "description": "Desenvolvimento de site personalizado com PHP, JavaScript e Bootstrap, atualizações das dependências do site, mudanças de estrutura e configuração de FireWall para proteção contra DDoS."
+    "sah": {
+      "date": "Março 2019 – Julho 2021",
+      "description": "Desenvolvimento de site personalizado com PHP, JavaScript e Bootstrap, atualizações das dependências do site, mudanças de estrutura e configuração de FireWall para proteção contra DDoS."
     },
     "bbx": {
-        "date": "Fevereiro 2022 – Setembro 2023",
-        "description": "Desenvolvimento de sites personalizados com WordPress e React usando Figma, configuração de servidores e manutenção contínua dos sites."
+      "date": "Fevereiro 2022 – Setembro 2023",
+      "description": "Desenvolvimento de sites personalizados com WordPress e React usando Figma, configuração de servidores e manutenção contínua dos sites."
     },
     "tdi": {
-        "date": "Outubro 2023 – Presente",
-        "description": "Design e construção de sites com WordPress, desenvolvimento de plugins com funções específicas, manipulação de APIs com integrações WooCommerce, gerenciamento de bancos de dados MySQL e automações com IA."
+      "date": "Outubro 2023 – Presente",
+      "description": "Design e construção de sites com WordPress, desenvolvimento de plugins com funções específicas, manipulação de APIs com integrações WooCommerce, gerenciamento de bancos de dados MySQL e automações com IA."
     },
 
-        "button":{
-            "title":"Visualizar carta de referência"
-        }
-    },
+    "button": {
+      "title": "Visualizar carta de referência"
+    }
+  },
 
-"experience": {
-  "school1": {
-    "name": "CETis 44",
-    "desc": "Curso técnico em programação",
-    "date": "Agosto 2015 - Julho 2018"
+  "experience": {
+    "school1": {
+      "name": "CETis 44",
+      "desc": "Curso técnico em programação",
+      "date": "Agosto 2015 - Julho 2018"
+    },
+    "job1": {
+      "name": "Freelance/ Web Designer",
+      "dot1": "Layouts web com Bootstrap",
+      "dot2": "Layouts web com Elementor e Divi",
+      "dot3": "Configuração de servidores",
+      "dot4": "Aplicações web com HTML, CSS e JS",
+      "dot5": "Suporte técnico",
+      "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
+      "date": "Março 2019 - Julho 2021"
+    },
+    "certificate1": {
+      "name": "Udemy - Universidade de Desenvolvimento Web",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Outubro 2021"
+    },
+    "school2": {
+      "name": "Universidade Interamericana/ UNIT",
+      "desc": "Bacharelado em Engenharia da Computação",
+      "date": "Setembro 2018 - Março 2022"
+    },
+    "job2": {
+      "name": "Balabox Inc/ Front-End",
+      "dot1": "Desenvolvimento web Front-End",
+      "dot2": "Layouts web - WordPress",
+      "dot3": "Desenvolvimento de lojas virtuais",
+      "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
+      "date": "Fevereiro 2022 - Setembro 2023"
+    },
+    "certificate2": {
+      "name": "Udemy - Universidade JavaScript",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Outubro 2023"
+    },
+    "job3": {
+      "name": "Tierra de ideas/ WordPress Full Stack",
+      "dot1": "Desenvolvimento Web UI/UX",
+      "dot2": "Segurança Web",
+      "dot3": "Escalabilidade Web",
+      "dot4": "Desenvolvimento de plugins",
+      "date": "Desde Outubro 2023 - ",
+      "active": "Atualmente trabalhando"
+    },
+    "certificate3": {
+      "name": "Platzi - Fundamentos de Engenharia de Software",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Novembro 2024"
+    }
   },
-  "job1": {
-    "name": "Freelance/ Web Designer",
-    "dot1": "Layouts web com Bootstrap",
-    "dot2": "Layouts web com Elementor e Divi",
-    "dot3": "Configuração de servidores",
-    "dot4": "Aplicações web com HTML, CSS e JS",
-    "dot5": "Suporte técnico",
-    "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
-    "date": "Março 2019 - Julho 2021"
-  },
-  "certificate1": {
-    "name": "Udemy - Universidade de Desenvolvimento Web",
-    "viewCertificate": "VER CERTIFICADO",
-    "date": "Outubro 2021"
-  },
-  "school2": {
-    "name": "Universidade Interamericana/ UNIT",
-    "desc": "Bacharelado em Engenharia da Computação",
-    "date": "Setembro 2018 - Março 2022"
-  },
-  "job2": {
-    "name": "Balabox Inc/ Front-End",
-    "dot1": "Desenvolvimento web Front-End",
-    "dot2": "Layouts web - WordPress",
-    "dot3": "Desenvolvimento de lojas virtuais",
-    "viewLetter": "VER CARTA DE RECOMENDAÇÃO",
-    "date": "Fevereiro 2022 - Setembro 2023"
-  },
-  "certificate2": {
-    "name": "Udemy - Universidade JavaScript",
-    "viewCertificate": "VER CERTIFICADO",
-    "date": "Outubro 2023"
-  },
-  "job3": {
-    "name": "Tierra de ideas/ WordPress Full Stack",
-    "dot1": "Desenvolvimento Web UI/UX",
-    "dot2": "Segurança Web",
-    "dot3": "Escalabilidade Web",
-    "dot4": "Desenvolvimento de plugins",
-    "date": "Desde Outubro 2023 - ",
-    "active": "Atualmente trabalhando"
-  },
-  "certificate3": {
-    "name": "Platzi - Fundamentos de Engenharia de Software",
-    "viewCertificate": "VER CERTIFICADO",
-    "date": "Novembro 2024"
-  }
-},
 
   "footer": {
-      "copy": "Todos os direitos reservados"
+    "copy": "Todos os direitos reservados"
   }
 }
-

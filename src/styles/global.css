@@ -1,0 +1,155 @@
+@import '@fontsource-variable/plus-jakarta-sans';
+@import 'tailwindcss';
+@theme {
+  --font-sans: 'Plus Jakarta Sans Variable', sans-serif;
+  --color-ink: #151525;
+  --color-paper: #f7f7fb;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-fuchsia-200 text-indigo-950;
+  }
+  :focus-visible {
+    outline: 3px solid #818cf8;
+    outline-offset: 5px;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+}
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-10;
+  }
+  .section {
+    @apply py-20 md:py-28;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-indigo-600;
+  }
+  .heading {
+    @apply text-3xl leading-tight font-extrabold tracking-tight sm:text-4xl lg:text-5xl;
+  }
+  .glass {
+    @apply rounded-3xl border border-white bg-white/70 shadow-[0_12px_50px_-24px_#6366f133] backdrop-blur-xl;
+  }
+  .pill {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 py-3 text-sm font-bold transition duration-200 hover:-translate-y-0.5 active:scale-95;
+  }
+  .primary {
+    @apply bg-linear-to-r from-indigo-600 to-fuchsia-600 text-white shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/35;
+  }
+  .secondary {
+    @apply border border-slate-200 bg-white/80 text-ink hover:border-indigo-300 hover:bg-white;
+  }
+  .tag {
+    @apply inline-flex rounded-full border border-slate-200/80 bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-600;
+  }
+  .project-card {
+    @apply overflow-hidden rounded-3xl border border-white bg-white/75 shadow-[0_10px_40px_-20px_#6366f140] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_#6366f150];
+  }
+  .gradient-text {
+    @apply bg-linear-to-r from-indigo-300 via-purple-300 to-fuchsia-300 bg-clip-text text-transparent;
+  }
+}
+.hero-grid {
+  background-image:
+    linear-gradient(#ffffff04 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff04 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.orb {
+  animation: drift 12s ease-in-out infinite alternate;
+}
+.float-card {
+  animation: float 7s ease-in-out infinite;
+}
+@keyframes drift {
+  to {
+    transform: translate(25px, -20px) scale(1.1);
+  }
+}
+@keyframes float {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.prose {
+  color: #475569;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.prose > * + * {
+  margin-top: 1.5rem;
+}
+.prose h2,
+.prose h3 {
+  color: #151525;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+}
+.prose h2 {
+  font-size: 1.8rem;
+}
+.prose h3 {
+  font-size: 1.4rem;
+}
+.prose strong {
+  color: #151525;
+  font-weight: 700;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+.prose ul {
+  list-style: disc;
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose li + li {
+  margin-top: 0.7rem;
+}
+.prose pre {
+  overflow-x: auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.prose :not(pre) > code {
+  background: #eef2ff;
+  color: #4338ca;
+  border-radius: 0.3rem;
+  padding: 0.15rem 0.3rem;
+}
+.prose a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+.prose img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

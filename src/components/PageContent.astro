@@ -1,0 +1,259 @@
+---
+import { getCollection } from 'astro:content';
+import { copy, translate, localized, type Lang } from '../lib/i18n';
+import { personalProjects, workProjects } from '../data/projects';
+import about from '../data/about.js';
+import ProjectCard from './ProjectCard.astro';
+import Contact from './Contact.astro';
+import Icon from './Icon.astro';
+interface Props {
+  lang: Lang;
+  page: string;
+}
+const { lang, page } = Astro.props;
+const c = copy[lang];
+const titles: Record<string, string> = {
+  projects: c.workTitle,
+  'personal-projects': translate(lang, 'projects.personalProjects.title'),
+  'projects-bbx': translate(lang, 'projects.bbxProjects.title'),
+  about: c.aboutTitle,
+  blog: c.journal,
+};
+const descriptions: Record<string, string> = {
+  projects: c.workDesc,
+  'personal-projects': c.personalDesc,
+  'projects-bbx': c.bbxDesc,
+  about: translate(lang, 'about.description'),
+  blog: c.journalDesc,
+};
+const posts =
+  page === 'blog'
+    ? (await getCollection('blog')).sort(
+        (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+      )
+    : [];
+const projects = page === 'personal-projects' ? personalProjects : workProjects;
+const categories = [
+  {
+    key: 'cardtitle1',
+    path: 'personal-projects',
+    image: 'https://ik.imagekit.io/mmagnodev/personalProjects.webp',
+    description: c.personalDesc,
+    count: '02',
+  },
+  {
+    key: 'cardtitle2',
+    path: 'projects-bbx',
+    image: 'https://ik.imagekit.io/mmagnodev/balabox.webp',
+    description: c.bbxDesc,
+    count: '10',
+  },
+];
+---
+
+<section class="relative isolate overflow-hidden border-b border-indigo-100 bg-linear-to-br from-indigo-50 via-white to-fuchsia-50">
+  <div class="pointer-events-none absolute -right-16 -top-32 -z-10 size-96 rounded-full bg-fuchsia-200/40 blur-3xl"></div>
+  <div class="shell pt-16 pb-14 md:pt-20 md:pb-16">
+    <p class="eyebrow mb-5">
+      MMAGNO /{' '}
+      {page === 'about'
+        ? translate(lang, 'navbar.nav3')
+        : page === 'blog'
+          ? 'JOURNAL'
+          : c.portfolio}
+    </p>
+    <h1 class="heading max-w-3xl">{titles[page]}</h1>
+    <p class="mt-6 max-w-2xl text-sm leading-8 text-slate-500">
+      {descriptions[page]}
+    </p>
+  </div>
+</section>
+{page === 'projects' && (
+  <section class="shell section">
+    <div class="grid gap-7 md:grid-cols-3">
+      {categories.map((category) => (
+        <a href={localized(lang, category.path)} class="project-card group">
+          <div class="relative aspect-[4/3] overflow-hidden bg-indigo-100">
+            <img
+              src={category.image}
+              alt=""
+              width="600"
+              height="450"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <span class="absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold backdrop-blur">
+              {category.count}
+            </span>
+          </div>
+          <div class="p-7">
+            <h2 class="text-xl font-extrabold">
+              {translate(lang, `projects.${category.key}`)}
+            </h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              {category.description}
+            </p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-indigo-600">
+              {c.work}
+              <Icon class="size-4" />
+            </span>
+          </div>
+        </a>
+      ))}
+      <div class="glass flex flex-col justify-center p-8">
+        <span class="mb-6 flex size-14 items-center justify-center rounded-2xl bg-fuchsia-100 text-fuchsia-600">
+          <Icon name="spark" class="size-7" />
+        </span>
+        <span class="eyebrow mb-3">{c.soon}</span>
+        <h2 class="text-xl font-extrabold">
+          {translate(lang, 'projects.cardtitle3')}
+        </h2>
+        <p class="mt-4 text-sm leading-7 text-slate-500">{c.tdiDesc}</p>
+      </div>
+    </div>
+  </section>
+)}
+{(page === 'personal-projects' || page === 'projects-bbx') && (
+  <section class="shell section">
+    <a
+      href={localized(lang, 'projects')}
+      class="mb-8 inline-block text-sm font-bold text-indigo-600"
+    >
+      ← {c.back}
+    </a>
+    <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <ProjectCard project={project} lang={lang} />
+      ))}
+      {page === 'personal-projects' &&
+        [0, 1, 2].map((_, i) => (
+          <div class="glass flex min-h-72 flex-col justify-center p-8">
+            <span class="text-sm font-bold text-indigo-300">0{i + 3}</span>
+            <Icon name="spark" class="my-6 size-8 text-indigo-500" />
+            <h2 class="text-xl font-bold">{c.soon}</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              {c.personalDesc}
+            </p>
+          </div>
+        ))}
+    </div>
+    {page === 'projects-bbx' && (
+      <div class="mt-12 flex flex-col items-start gap-4">
+        <a
+          href="https://ik.imagekit.io/mmagnodev/Book-portfolio-wordpress-2023.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill secondary"
+        >
+          {translate(lang, 'projects.bbxProjects.btnDownload')}
+          <Icon class="size-4" />
+        </a>
+        <p class="text-xs text-slate-500">
+          {translate(lang, 'projects.bbxProjects.desc')}{' '}
+          {translate(lang, 'projects.bbxProjects.desc2')}
+        </p>
+      </div>
+    )}
+  </section>
+)}
+{page === 'about' && (
+  <section class="shell section">
+    <div class="grid items-start gap-12 md:grid-cols-[.65fr_1.35fr]">
+      <aside class="glass p-5 md:sticky md:top-28">
+        <img
+          src={about.profileImage}
+          alt="Marcos González"
+          width="500"
+          height="500"
+          class="aspect-square w-full rounded-2xl object-cover"
+        />
+        <div class="p-4">
+          <h2 class="text-xl font-extrabold">{about.name}</h2>
+          <p class="mt-2 text-sm text-indigo-600">Frontend & WordPress</p>
+          <a
+            href="mailto:mmagno.dev@gmail.com"
+            class="pill primary mt-6 w-full"
+          >
+            {c.contact}
+            <Icon name="mail" class="size-4" />
+          </a>
+        </div>
+      </aside>
+      <div>
+        <h2 class="mb-9 text-3xl font-extrabold tracking-tight">
+          {c.experience}
+        </h2>
+        <div class="space-y-6 border-l border-indigo-200 pl-6">
+          {about.jobs.map((job) => (
+            <article class="glass relative p-6 sm:p-8">
+              <span class="absolute top-9 -left-[31px] size-3 rounded-full border-2 border-paper bg-indigo-500"></span>
+              <p class="mb-3 text-xs font-semibold text-indigo-600">
+                {translate(lang, job.dateKey)}
+              </p>
+              <h3 class="text-xl font-extrabold">{job.job}</h3>
+              <p class="mt-1 font-semibold text-slate-500">{job.company}</p>
+              <p class="mt-5 text-sm leading-8 text-slate-500">
+                {translate(lang, job.descjobKey)}
+              </p>
+              {job.recommendationUrl && (
+                <a
+                  href={job.recommendationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-indigo-600"
+                >
+                  {translate(lang, 'about.button.title')}
+                  <Icon class="size-4" />
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+{page === 'blog' && (
+  <section class="shell section">
+    <p class="mb-8 text-sm text-slate-500">{c.blogNote}</p>
+    <div class="grid gap-7 md:grid-cols-3">
+      {posts.map((post) => (
+        <a href={`/blog/${post.data.slug}`} class="project-card group">
+          <div class="aspect-[4/3] overflow-hidden bg-indigo-100">
+            <img
+              src={post.data.image}
+              alt=""
+              width="600"
+              height="450"
+              loading="lazy"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-7">
+            <time
+              datetime={post.data.date.toISOString()}
+              class="text-xs font-semibold text-indigo-600"
+            >
+              {post.data.date.toLocaleDateString(lang, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timeZone: 'UTC',
+              })}
+            </time>
+            <h2
+              lang="es"
+              class="mt-4 text-xl leading-snug font-extrabold tracking-tight"
+            >
+              {post.data.title}
+            </h2>
+            <span class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-indigo-600">
+              {c.read}
+              <Icon class="size-4" />
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+<Contact lang={lang} />

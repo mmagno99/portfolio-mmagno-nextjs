@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/Home.astro';
+import PageContent from '../components/PageContent.astro';
+import ProjectDetail from '../components/ProjectDetail.astro';
+import { languages, copy, translate, type Lang } from '../lib/i18n';
+import { projects, type Project } from '../data/projects';
+export function getStaticPaths() {
+  return languages.flatMap((lang) => {
+    const prefix = lang === 'es' ? '' : lang + '/';
+    const pages = [
+      '',
+      'projects',
+      'personal-projects',
+      'projects-bbx',
+      'about',
+      'blog',
+    ].map((page) => ({
+      params: { route: (prefix + page).replace(/\/$/, '') || undefined },
+      props: { lang, page, project: undefined },
+    }));
+    const details = projects.map((project) => ({
+      params: { route: prefix + project.category + '/' + project.id },
+      props: { lang, page: project.category + '/' + project.id, project },
+    }));
+    return [...pages, ...details];
+  });
+}
+interface Props {
+  lang: Lang;
+  page: string;
+  project?: Project;
+}
+const { lang, page, project } = Astro.props;
+const titles: Record<string, string> = {
+  '': 'Marcos González — Frontend & WordPress',
+  projects: copy[lang].workTitle,
+  'personal-projects': translate(lang, 'projects.personalProjects.title'),
+  'projects-bbx': translate(lang, 'projects.bbxProjects.title'),
+  about: translate(lang, 'navbar.nav3'),
+  blog: copy[lang].journal,
+};
+---
+
+<Layout
+  lang={lang}
+  path={page}
+  title={project?.name ?? titles[page]}
+  image={project?.image}
+>
+  {page === '' ? (
+    <Home lang={lang} />
+  ) : project ? (
+    <ProjectDetail lang={lang} project={project} />
+  ) : (
+    <PageContent lang={lang} page={page} />
+  )}
+</Layout>

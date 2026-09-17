@@ -1,8 +1,8 @@
 {
-  "404":{
-        "subtitle": "Page not found",
-        "description":"We're sorry, the page you are looking for does not exist or has been moved."
-    },
+  "404": {
+    "subtitle": "Page not found",
+    "description": "We're sorry, the page you are looking for does not exist or has been moved."
+  },
 
   "navbar": {
     "nav1": "Home",
@@ -15,7 +15,7 @@
     "letter": "M",
     "brand": "magno.",
     "job_start": "A Frontend",
-    "job_end":"Developer.",
+    "job_end": "Developer.",
     "typed1": "Passionate Web Developer who loves creating innovative projects. 🥵",
     "typed2": "React Specialist, crafting modern and fluid interfaces. 😏",
     "typed3": "WordPress Full Stack Expert, turning ideas into production. 😎",
@@ -25,118 +25,116 @@
     "skillCardFour": "Additional"
   },
 
-    "projects": {  
+  "projects": {
     "title": "Choose the project type",
     "cardtitle1": "Personal projects",
     "cardtitle2": "BBX projects",
     "cardtitle3": "TDI projects",
 
-        "personalProjects": {
-          "title": "My personal projects",
-          "desc": "I need to add more 😓",
+    "personalProjects": {
+      "title": "My personal projects",
+      "desc": "I need to add more 😓",
 
-          "comingSoonCard":{
-            "title":"Coming Soon"
-          }
-        },
+      "comingSoonCard": {
+        "title": "Coming Soon"
+      }
+    },
 
-        "bbxProjects": {
-          "title": "Projects at Balabox",
-          "desc": "Probably some",
-          "desc2": "might be inactive 😭",
-          "btnDownload": "Download Portfolio Book"
-        },
-        "project":{
-            "paragraph": "Skills:"
-        }
+    "bbxProjects": {
+      "title": "Projects at Balabox",
+      "desc": "Probably some",
+      "desc2": "might be inactive 😭",
+      "btnDownload": "Download Portfolio Book"
+    },
+    "project": {
+      "paragraph": "Skills:"
+    }
   },
 
   "blog": {
-  "title": "My Personal Blog",
-  "article1": "What Does a Front-end Developer Do?",
-  "article2": "How to Improve Your Developer Profile",
-  "article3": "What Does a Back-end Developer Do?"
-},
+    "title": "My Personal Blog",
+    "article1": "What Does a Front-end Developer Do?",
+    "article2": "How to Improve Your Developer Profile",
+    "article3": "What Does a Back-end Developer Do?"
+  },
 
-"about":{
-        "description": "Passionate Computer Engineer | Web Developer with experience in building websites and web applications. Skilled in designing innovative solutions for technical challenges. Deeply committed to continuous learning to improve web development best practices.",
+  "about": {
+    "description": "Passionate Computer Engineer | Web Developer with experience in building websites and web applications. Skilled in designing innovative solutions for technical challenges. Deeply committed to continuous learning to improve web development best practices.",
 
-        
     "sah": {
-        "date": "March 2019 – July 2021",
-        "description": "Custom website development with PHP, JavaScript, and Bootstrap, updates to the site's dependencies, structural changes, and FireWall configuration for DDoS protection."
+      "date": "March 2019 – July 2021",
+      "description": "Custom website development with PHP, JavaScript, and Bootstrap, updates to the site's dependencies, structural changes, and FireWall configuration for DDoS protection."
     },
     "bbx": {
-        "date": "February 2022 – September 2023",
-        "description": "Custom web development with WordPress and React using Figma, server configuration, and ongoing website maintenance."
+      "date": "February 2022 – September 2023",
+      "description": "Custom web development with WordPress and React using Figma, server configuration, and ongoing website maintenance."
     },
     "tdi": {
-        "date": "October 2023 – Present",
-        "description": "Design and construction of websites with WordPress, development of plugins with specific functionalities, API handling with WooCommerce integrations, MySQL database management, and AI-powered automations."
+      "date": "October 2023 – Present",
+      "description": "Design and construction of websites with WordPress, development of plugins with specific functionalities, API handling with WooCommerce integrations, MySQL database management, and AI-powered automations."
     },
 
-        "button":{
-            "title":"See reference letter"
-        }
+    "button": {
+      "title": "See reference letter"
+    }
+  },
 
+  "experience": {
+    "school1": {
+      "name": "CETis 44",
+      "desc": "Technical degree in programming",
+      "date": "August 2015 - July 2018"
     },
-
-"experience": {
-  "school1": {
-    "name": "CETis 44",
-    "desc": "Technical degree in programming",
-    "date": "August 2015 - July 2018"
+    "job1": {
+      "name": "Freelance/ Web Designer",
+      "dot1": "Web layouts with Bootstrap",
+      "dot2": "Web layouts with Elementor and Divi",
+      "dot3": "Server configuration",
+      "dot4": "Web applications with HTML, CSS & JS",
+      "dot5": "Technical support",
+      "viewLetter": "VIEW RECOMMENDATION LETTER",
+      "date": "March 2019 - July 2021"
+    },
+    "certificate1": {
+      "name": "Udemy - Web Development University",
+      "viewCertificate": "VIEW CERTIFICATE",
+      "date": "October 2021"
+    },
+    "school2": {
+      "name": "Interamerican University/ UNIT",
+      "desc": "Bachelor's degree in Computer Engineering",
+      "date": "September 2018 - March 2022"
+    },
+    "job2": {
+      "name": "Balabox Inc/ Front-End Developer",
+      "dot1": "Front-End web development",
+      "dot2": "Web layouts - WordPress",
+      "dot3": "E-commerce development",
+      "viewLetter": "VIEW RECOMMENDATION LETTER",
+      "date": "February 2022 - September 2023"
+    },
+    "certificate2": {
+      "name": "Udemy - JavaScript University",
+      "viewCertificate": "VIEW CERTIFICATE",
+      "date": "October 2023"
+    },
+    "job3": {
+      "name": "Tierra de ideas/ WordPress Full Stack",
+      "dot1": "UI/UX Web Development",
+      "dot2": "Web Security",
+      "dot3": "Web Scalability",
+      "dot4": "Plugin development",
+      "date": "Since October 2023 - ",
+      "active": "Currently working"
+    },
+    "certificate3": {
+      "name": "Platzi - Software Engineering Fundamentals",
+      "viewCertificate": "VIEW CERTIFICATE",
+      "date": "November 2024"
+    }
   },
-  "job1": {
-    "name": "Freelance/ Web Designer",
-    "dot1": "Web layouts with Bootstrap",
-    "dot2": "Web layouts with Elementor and Divi",
-    "dot3": "Server configuration",
-    "dot4": "Web applications with HTML, CSS & JS",
-    "dot5": "Technical support",
-    "viewLetter": "VIEW RECOMMENDATION LETTER",
-    "date": "March 2019 - July 2021"
-  },
-  "certificate1": {
-    "name": "Udemy - Web Development University",
-    "viewCertificate": "VIEW CERTIFICATE",
-    "date": "October 2021"
-  },
-  "school2": {
-    "name": "Interamerican University/ UNIT",
-    "desc": "Bachelor's degree in Computer Engineering",
-    "date": "September 2018 - March 2022"
-  },
-  "job2": {
-    "name": "Balabox Inc/ Front-End Developer",
-    "dot1": "Front-End web development",
-    "dot2": "Web layouts - WordPress",
-    "dot3": "E-commerce development",
-    "viewLetter": "VIEW RECOMMENDATION LETTER",
-    "date": "February 2022 - September 2023"
-  },
-  "certificate2": {
-    "name": "Udemy - JavaScript University",
-    "viewCertificate": "VIEW CERTIFICATE",
-    "date": "October 2023"
-  },
-  "job3": {
-    "name": "Tierra de ideas/ WordPress Full Stack",
-    "dot1": "UI/UX Web Development",
-    "dot2": "Web Security",
-    "dot3": "Web Scalability",
-    "dot4": "Plugin development",
-    "date": "Since October 2023 - ",
-    "active": "Currently working"
-  },
-  "certificate3": {
-    "name": "Platzi - Software Engineering Fundamentals",
-    "viewCertificate": "VIEW CERTIFICATE",
-    "date": "November 2024"
-  }
-},
 
   "footer": {
-      "copy": "All rights reserved"
+    "copy": "All rights reserved"
   }
 }

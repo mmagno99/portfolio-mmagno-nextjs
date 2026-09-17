@@ -1,0 +1,75 @@
+---
+import { copy, localized, type Lang } from '../lib/i18n';
+import type { Project } from '../data/projects';
+import Icon from './Icon.astro';
+import Contact from './Contact.astro';
+interface Props {
+  lang: Lang;
+  project: Project;
+}
+const { lang, project } = Astro.props;
+const c = copy[lang];
+---
+
+<section class="shell pt-14 pb-20">
+  <a
+    href={localized(lang, project.category)}
+    class="text-sm font-bold text-indigo-600"
+  >
+    ← {c.back}
+  </a>
+  <div class="mt-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+    <div>
+      <p class="eyebrow mb-4">
+        {project.category === 'projects-bbx' ? 'BALABOX' : c.personal}
+      </p>
+      <h1 class="heading">{project.name}</h1>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      {project.skills.split(',').map((skill) => (
+        <span class="tag">{skill.trim()}</span>
+      ))}
+    </div>
+  </div>
+  <div class="mt-10 rounded-3xl border border-white bg-linear-to-br from-indigo-100 to-fuchsia-100 p-4 shadow-xl shadow-indigo-100/40 sm:p-10">
+    <img
+      src={project.image}
+      alt={project.name}
+      width="1400"
+      height="900"
+      class="h-auto w-full rounded-xl object-contain shadow-xl"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="mt-9 flex flex-wrap items-center gap-4">
+    {project.livedemo ? (
+      <a
+        href={project.livedemo}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pill primary"
+      >
+        {c.live}
+        <Icon class="size-4" />
+      </a>
+    ) : (
+      <span class="tag">{c.noDemo}</span>
+    )}
+    {project.repository ? (
+      <a
+        href={project.repository}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pill secondary"
+      >
+        {c.repo}
+        <Icon name="code" class="size-4" />
+      </a>
+    ) : (
+      project.category === 'personal-projects' && (
+        <span class="tag">{c.noRepo}</span>
+      )
+    )}
+  </div>
+</section>
+<Contact lang={lang} />

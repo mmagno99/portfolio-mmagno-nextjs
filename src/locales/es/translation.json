@@ -1,147 +1,145 @@
 {
-    "404":{
-        "subtitle": "Página no encontrada",
-        "description":"Lo sentimos, la página que estás buscando no existe o ha sido movida."
+  "404": {
+    "subtitle": "Página no encontrada",
+    "description": "Lo sentimos, la página que estás buscando no existe o ha sido movida."
+  },
+
+  "navbar": {
+    "nav1": "Inicio",
+    "nav2": "Proyectos",
+    "nav3": "Acerca de",
+    "nav4": "Blog"
+  },
+
+  "home": {
+    "welcome": "Hola, soy",
+    "letter": "M",
+    "brand": "magno.",
+    "job_start": "Desarrollador",
+    "job_end": "Frontend",
+    "typed1": "Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵",
+    "typed2": "Especialista en React, creando interfaces modernas y fluidas. 😏",
+    "typed3": "Experto en WordPress Full Stack, llevando ideas a producción. 😎",
+    "typed4": "Tu socio digital para soluciones web funcionales y escalables. 🥸",
+    "skillsTitle": "Habilidades",
+    "skillCardThree": "Redes | Ciberseguridad",
+    "skillCardFour": "Adicionales"
+  },
+
+  "projects": {
+    "title": "Escoge el tipo de proyecto",
+    "cardtitle1": "Proyectos personales",
+    "cardtitle2": "Proyectos BBX",
+    "cardtitle3": "Proyectos TDI",
+
+    "personalProjects": {
+      "title": "Mis proyectos personales",
+      "desc": "Me hace falta agregar más 😓",
+
+      "comingSoonCard": {
+        "title": "Próximamente"
+      }
     },
 
-    "navbar": {
-      "nav1": "Inicio",
-      "nav2": "Proyectos",
-      "nav3": "Acerca de",
-      "nav4": "Blog"
+    "bbxProjects": {
+      "title": "Proyectos en balabox",
+      "desc": "Probablemente algunos",
+      "desc2": "estén inactivos 😭",
+      "btnDownload": "Descargar Book Portfolio"
     },
-
-    "home": {
-      "welcome": "Hola, soy",
-      "letter": "M",
-      "brand": "magno.",
-      "job_start": "Desarrollador",
-      "job_end": "Frontend",
-      "typed1": "Desarrollador Web apasionado, que ama crear proyectos innovadores. 🥵",
-      "typed2": "Especialista en React, creando interfaces modernas y fluidas. 😏",
-      "typed3": "Experto en WordPress Full Stack, llevando ideas a producción. 😎",
-      "typed4": "Tu socio digital para soluciones web funcionales y escalables. 🥸",
-      "skillsTitle": "Habilidades",
-      "skillCardThree": "Redes | Ciberseguridad",
-      "skillCardFour": "Adicionales"
-    },
-
-    "projects":{  
-        "title": "Escoge el tipo de proyecto",
-        "cardtitle1": "Proyectos personales",
-        "cardtitle2": "Proyectos BBX",
-        "cardtitle3": "Proyectos TDI",
-
-        "personalProjects": {
-        "title": "Mis proyectos personales",
-        "desc": "Me hace falta agregar más 😓",
-
-                "comingSoonCard":{
-                    "title":"Próximamente"
-                }
-
-        },
-
-        "bbxProjects": {
-            "title": "Proyectos en balabox",
-            "desc": "Probablemente algunos",
-            "desc2": "estén inactivos 😭",
-            "btnDownload": "Descargar Book Portfolio"
-        },
-        "project":{
-            "paragraph": "Habilidades:"
-        }
-    },
-
-    "blog":{
-        "title":"Mi Blog Personal",
-        "article1": "¿Qué hace un Front-end Developer?",
-        "article2": "Mejorar tu perfil como Developer",
-        "article3": "¿Qué hace un Back-end Developer?",
-
-        "blog1":{
-            "code":"`const portfolio = { name: 'Juan Pérez', role: 'Front-end Developer', skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'], projects: [ { name: 'Tienda Online', url: 'https://mi-tienda.com' }, { name: 'Blog Personal', url: 'https://mi-blog.com' } ] };`" }
-    },
-
-    "about":{
-        "description": "Ingeniero en informática apasionado Desarrollador Web con experiencia en la construcción de sitios y aplicaciones web. Hábil en el diseño de soluciones innovadoras para retos técnicos. Ampliamente comprometido con el aprendizaje continuo par mejorar las mejores prácticas del desarrollo web",
-
-        "sah":{
-            "date":"Marzo 2019 – Julio 2021",
-            "description":"Desarrollo de sitio web a medida con PHP, JavaScript y Bootstrap, actualizaciones de las dependencias del sitio, cambios de estructura y configuracion de FireWall para protección DDoS"
-        },
-        "bbx":{
-            "date":"Febrero 2022 – Septiembre 2023",
-            "description":"Desarrollo de sitios Web con WordPress y React a medida con Figma, configuración de servidores y mantenimiento continuo a los sitios web."
-        },
-        "tdi":{
-            "date":"Octubre 2023 – Presente",
-            "description":"Diseño y construcción de sitios web con WordPress, desarrollo de plugins con funciones especificas, manejo de API's con integraciones de WooCommerce, manejo de bases de datos MySQL, automatizaciones con IA"
-        },
-
-        "button":{
-            "title":"Ver carta de recomendación"
-        }
-    },
-
-    "experience":{
-        "school1":{
-            "name": "CETis 44",
-            "desc": "Carrera técnica en programación",
-            "date": "Agosto 2015 - Julio 2018"
-        },
-        "job1":{
-            "name": "Freelance/ Maquetador web",
-            "dot1": "Maquetaciones Web con Bootstrap",
-            "dot2": "Maquetaciones Web con Elementor y Divi",
-            "dot3": "Configuracion de servidores",
-            "dot4": "Aplicaciones Web con HTML, CSS & JS",
-            "dot5": "Soporte técnico",
-            "viewLetter": "VER CARTA DE RECOMENDACIÓN",
-            "date": "Marzo 2019 - Julio 2021"
-        },
-        "certificate1":{
-            "name": "Udemy - Universidad Desarrollo Web",
-            "viewCertificate": "VER CERTIFICADO",
-            "date": "Octubre - 2021"
-        },
-        "school2":{
-            "name": "Universidad interamericana/ UNIT",
-            "desc": "Licenciatura en ingenieria informatica",
-            "date": "Septiembre 2018 - Marzo 2022"
-        },
-        "job2":{
-            "name": "Balabox Inc/ Front-End",
-            "dot1": "Desarrollo web Front-End",
-            "dot2": "Maquetaciones web - WordPress",
-            "dot3": "Desarrollo de tiendas en línea",
-            "viewLetter": "VER CARTA DE RECOMENDACIÓN",
-            "date": "Febrero 2022 - Septiembre 2023"
-        },
-        "certificate2":{
-            "name": "Udemy - Universidad Javascript",
-            "viewCertificate": "VER CERTIFICADO",
-            "date": "Octubre - 2023"
-        },
-        "job3":{
-            "name": "Tierra de ideas/ Full Stack WordPress",
-            "dot1": "Desarrollo Web UI/UX",
-            "dot2": "Seguridad Web",
-            "dot3": "Escalabilidad Web",
-            "dot4": "Desarrollo de plugins",
-            "date": "Desde Octubre 2023 - ",
-            "active": "En activo"
-        },
-        "certificate3":{
-            "name": "Platzi - Fundamentos de Ingeniería de Software",
-            "viewCertificate": "VER CERTIFICADO",
-            "date": "Noviembre - 2024"
-        }
-    },
-    
-    "footer": {
-        "copy": "Todos los derechos reservados"
+    "project": {
+      "paragraph": "Habilidades:"
     }
-    
+  },
+
+  "blog": {
+    "title": "Mi Blog Personal",
+    "article1": "¿Qué hace un Front-end Developer?",
+    "article2": "Mejorar tu perfil como Developer",
+    "article3": "¿Qué hace un Back-end Developer?",
+
+    "blog1": {
+      "code": "`const portfolio = { name: 'Juan Pérez', role: 'Front-end Developer', skills: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'], projects: [ { name: 'Tienda Online', url: 'https://mi-tienda.com' }, { name: 'Blog Personal', url: 'https://mi-blog.com' } ] };`"
+    }
+  },
+
+  "about": {
+    "description": "Ingeniero en informática apasionado Desarrollador Web con experiencia en la construcción de sitios y aplicaciones web. Hábil en el diseño de soluciones innovadoras para retos técnicos. Ampliamente comprometido con el aprendizaje continuo par mejorar las mejores prácticas del desarrollo web",
+
+    "sah": {
+      "date": "Marzo 2019 – Julio 2021",
+      "description": "Desarrollo de sitio web a medida con PHP, JavaScript y Bootstrap, actualizaciones de las dependencias del sitio, cambios de estructura y configuracion de FireWall para protección DDoS"
+    },
+    "bbx": {
+      "date": "Febrero 2022 – Septiembre 2023",
+      "description": "Desarrollo de sitios Web con WordPress y React a medida con Figma, configuración de servidores y mantenimiento continuo a los sitios web."
+    },
+    "tdi": {
+      "date": "Octubre 2023 – Presente",
+      "description": "Diseño y construcción de sitios web con WordPress, desarrollo de plugins con funciones especificas, manejo de API's con integraciones de WooCommerce, manejo de bases de datos MySQL, automatizaciones con IA"
+    },
+
+    "button": {
+      "title": "Ver carta de recomendación"
+    }
+  },
+
+  "experience": {
+    "school1": {
+      "name": "CETis 44",
+      "desc": "Carrera técnica en programación",
+      "date": "Agosto 2015 - Julio 2018"
+    },
+    "job1": {
+      "name": "Freelance/ Maquetador web",
+      "dot1": "Maquetaciones Web con Bootstrap",
+      "dot2": "Maquetaciones Web con Elementor y Divi",
+      "dot3": "Configuracion de servidores",
+      "dot4": "Aplicaciones Web con HTML, CSS & JS",
+      "dot5": "Soporte técnico",
+      "viewLetter": "VER CARTA DE RECOMENDACIÓN",
+      "date": "Marzo 2019 - Julio 2021"
+    },
+    "certificate1": {
+      "name": "Udemy - Universidad Desarrollo Web",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Octubre - 2021"
+    },
+    "school2": {
+      "name": "Universidad interamericana/ UNIT",
+      "desc": "Licenciatura en ingenieria informatica",
+      "date": "Septiembre 2018 - Marzo 2022"
+    },
+    "job2": {
+      "name": "Balabox Inc/ Front-End",
+      "dot1": "Desarrollo web Front-End",
+      "dot2": "Maquetaciones web - WordPress",
+      "dot3": "Desarrollo de tiendas en línea",
+      "viewLetter": "VER CARTA DE RECOMENDACIÓN",
+      "date": "Febrero 2022 - Septiembre 2023"
+    },
+    "certificate2": {
+      "name": "Udemy - Universidad Javascript",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Octubre - 2023"
+    },
+    "job3": {
+      "name": "Tierra de ideas/ Full Stack WordPress",
+      "dot1": "Desarrollo Web UI/UX",
+      "dot2": "Seguridad Web",
+      "dot3": "Escalabilidad Web",
+      "dot4": "Desarrollo de plugins",
+      "date": "Desde Octubre 2023 - ",
+      "active": "En activo"
+    },
+    "certificate3": {
+      "name": "Platzi - Fundamentos de Ingeniería de Software",
+      "viewCertificate": "VER CERTIFICADO",
+      "date": "Noviembre - 2024"
+    }
+  },
+
+  "footer": {
+    "copy": "Todos los derechos reservados"
   }
-  
+}
