@@ -31,7 +31,7 @@ Las páginas se generan con Astro y el cotizador utiliza una isla de React. El e
 
 ## Desarrollo local
 
-Requisitos: Node.js 22.12 o posterior y pnpm 11. La versión de pnpm utilizada está declarada en `package.json`.
+Requisitos: Node.js 22 (22.12 o posterior dentro de la rama 22.x) y pnpm 11. La versión de pnpm utilizada está declarada en `package.json`. El campo `engines.node` fija la rama `22.x` para coincidir con Vercel y evitar actualizaciones automáticas a otra versión mayor.
 
 ```sh
 pnpm install
