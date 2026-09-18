@@ -1,0 +1,113 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { localized, copy } from '../../../lib/i18n';
+export async function getStaticPaths() {
+  return (await getCollection('blog')).map((post) => ({
+    params: {
+      locale: post.data.lang === 'es' ? undefined : post.data.lang,
+      slug: post.data.slug,
+    },
+    props: { post },
+  }));
+}
+const { post } = Astro.props;
+const lang = post.data.lang;
+const c = copy[lang];
+const { Content } = await render(post);
+const articleUrl = new URL(
+  localized(lang, `blog/${post.data.slug}`),
+  Astro.site,
+).href;
+const imageUrl = new URL(post.data.image, Astro.site).href;
+const seoTitle = post.data.seoTitle ?? post.data.title;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  '@id': articleUrl + '#article',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+  url: articleUrl,
+  headline: post.data.title,
+  description: post.data.description,
+  image: [imageUrl],
+  datePublished: post.data.date.toISOString().slice(0, 10),
+  inLanguage: lang,
+  author: {
+    '@type': 'Person',
+    name: 'Marcos González',
+    url: new URL(localized(lang, 'about'), Astro.site).href,
+  },
+  keywords: post.data.focusKeyword,
+};
+---
+
+<Layout
+  lang={lang}
+  title={seoTitle}
+  path={`blog/${post.data.slug}`}
+  description={post.data.description}
+  image={post.data.image}
+  article
+>
+  <Fragment slot="head">
+    <meta
+      property="article:published_time"
+      content={post.data.date.toISOString()}
+    />
+    <meta property="og:image:alt" content={post.data.imageAlt} />
+    <meta name="twitter:title" content={`${seoTitle} · Marcos GZZ`} />
+    <meta name="twitter:description" content={post.data.description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={post.data.imageAlt} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}
+    ></script>
+  </Fragment>
+  <article>
+    <header class="relative isolate overflow-hidden bg-[#101020] py-16 text-white md:py-24">
+      <img
+        src={post.data.image}
+        alt=""
+        width="1600"
+        height="800"
+        class="absolute inset-0 -z-20 h-full w-full object-cover opacity-25"
+      />
+      <div class="absolute inset-0 -z-10 bg-linear-to-r from-[#101020] to-[#101020]/60"></div>
+      <div class="page-intro shell">
+        <a
+          href={localized(lang, 'blog')}
+          class="text-sm font-bold text-indigo-200"
+        >
+          ← {c.back}
+        </a>
+        <p class="mt-12 text-xs font-bold uppercase tracking-widest text-fuchsia-200">
+          {c.article} ·{' '}
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString(lang, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              timeZone: 'UTC',
+            })}
+          </time>
+        </p>
+        <h1 class="mt-6 max-w-3xl text-4xl leading-tight font-extrabold tracking-tight md:text-6xl">
+          {post.data.title}
+        </h1>
+        <p class="mt-7 text-sm text-slate-300">Marcos González</p>
+      </div>
+    </header>
+    <div class="shell py-14 md:py-20">
+      <div class="prose mx-auto max-w-3xl">
+        <Content />
+      </div>
+      <div class="mx-auto mt-12 max-w-3xl border-t border-slate-200 pt-8">
+        <a href={localized(lang, 'blog')} class="pill secondary">
+          ← {c.journal}
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

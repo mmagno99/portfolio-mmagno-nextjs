@@ -1,0 +1,74 @@
+<script>
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let observer: IntersectionObserver | undefined;
+  let frame = 0;
+  function show(element: Element) {
+    element.classList.add('is-visible');
+    observer?.unobserve(element);
+  }
+  function initAnimations() {
+    observer?.disconnect();
+    cancelAnimationFrame(frame);
+    document
+      .querySelectorAll<HTMLElement>('[data-stagger]')
+      .forEach((group) => {
+        Array.from(group.children).forEach((child, index) => {
+          if (!(child instanceof HTMLElement)) return;
+          child.dataset.reveal ||= 'fade';
+          child.style.setProperty(
+            '--reveal-delay',
+            `${Math.min(index, 4) * 100}ms`,
+          );
+        });
+      });
+    const elements = document.querySelectorAll<HTMLElement>('[data-reveal]');
+    if (motion.matches || !('IntersectionObserver' in window)) {
+      elements.forEach(show);
+      return;
+    }
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) show(entry.target);
+        });
+      },
+      { threshold: 0.08 },
+    );
+    elements.forEach((element) => {
+      if (element.classList.contains('is-visible')) return;
+      // Never hide text already on screen or content focused via a deep link.
+      if (
+        element.getBoundingClientRect().top < innerHeight ||
+        element.contains(document.activeElement)
+      ) {
+        show(element);
+        return;
+      }
+      if (element.dataset.reveal === 'scale')
+        element.style.setProperty('--reveal-duration', '500ms');
+      element.classList.add('reveal-ready');
+    });
+    frame = requestAnimationFrame(() => {
+      elements.forEach((element) => {
+        if (!element.classList.contains('is-visible'))
+          observer?.observe(element);
+      });
+    });
+  }
+  document.addEventListener('focusin', (event) => {
+    if (!(event.target instanceof Element)) return;
+    let current = event.target.closest('[data-reveal]');
+    while (current) {
+      show(current);
+      current = current.parentElement?.closest('[data-reveal]') ?? null;
+    }
+  });
+  motion.addEventListener('change', initAnimations);
+  document.addEventListener('astro:page-load', initAnimations);
+  document.addEventListener('astro:before-swap', () => {
+    observer?.disconnect();
+    cancelAnimationFrame(frame);
+  });
+  window.addEventListener('pageshow', initAnimations);
+  initAnimations();
+</script>

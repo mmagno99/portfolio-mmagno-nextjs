@@ -1,6 +1,6 @@
 ---
 import { copy, translate, localized, type Lang } from '../lib/i18n';
-import { personalProjects, workProjects } from '../data/projects';
+import { workProjects, tdiProjects } from '../data/projects';
 import { skills } from '../data/skills.js';
 import about from '../data/about.js';
 import ProjectCard from './ProjectCard.astro';
@@ -17,7 +17,7 @@ const c = copy[lang];
   <div class="orb pointer-events-none absolute -top-40 left-1/3 -z-10 size-[600px] rounded-full bg-indigo-700/25 blur-3xl"></div>
   <div class="orb pointer-events-none absolute -right-24 bottom-0 -z-10 size-96 rounded-full bg-fuchsia-700/20 blur-3xl"></div>
   <div class="shell grid items-center gap-14 pt-16 pb-12 md:min-h-[660px] md:grid-cols-[1.2fr_1fr] md:gap-8 md:pt-24 md:pb-20">
-    <div class="relative z-10">
+    <div class="page-intro relative z-10">
       <p class="mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-[10px] font-semibold tracking-[.12em] text-indigo-200">
         <span class="size-1.5 rounded-full bg-fuchsia-300"></span>
         {c.role}
@@ -56,12 +56,12 @@ const c = copy[lang];
           <span class="size-2 rounded-full bg-amber-300/80"></span>
           <span class="size-2 rounded-full bg-emerald-300/80"></span>
           <span class="ml-auto text-[9px] tracking-widest text-slate-400">
-            MMAGNO.DEV / SELECTED WORK
+            INNOVA MANAGEMENT / SELECTED WORK
           </span>
         </div>
         <div class="overflow-hidden rounded-xl bg-[#181d30]">
           <img
-            src="https://ik.imagekit.io/mmagnodev/spotify-concept-desktop.webp"
+            src="https://ik.imagekit.io/mmagnodev/innova-management.webp?updatedAt=1789752162195"
             alt=""
             width="720"
             height="480"
@@ -95,7 +95,7 @@ const c = copy[lang];
   </div>
   <div class="border-t border-white/10 bg-white/[.02]">
     <div class="shell flex flex-wrap items-center justify-between gap-5 py-6 text-sm font-semibold tracking-wide text-slate-400">
-      {['React', 'WordPress', 'JavaScript', 'Figma', 'PHP', 'Django'].map(
+      {['WordPress', 'React', 'Tailwind CSS', 'Figma', 'PHP', 'Django'].map(
         (name) => (
           <span>{name}</span>
         ),
@@ -106,7 +106,10 @@ const c = copy[lang];
 <section class="section relative overflow-hidden">
   <div class="pointer-events-none absolute right-0 top-20 -z-10 size-96 rounded-full bg-fuchsia-100/70 blur-3xl"></div>
   <div class="shell">
-    <div class="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+    <div
+      data-reveal="fade"
+      class="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end"
+    >
       <div>
         <p class="eyebrow mb-4">01 / {translate(lang, 'navbar.nav2')}</p>
         <h2 class="heading">{c.selected}</h2>
@@ -122,20 +125,24 @@ const c = copy[lang];
         <Icon class="size-4" />
       </a>
     </div>
-    <div class="grid gap-7 md:grid-cols-2">
-      <ProjectCard lang={lang} project={personalProjects[1]} />
-      <ProjectCard lang={lang} project={workProjects[0]} />
+    <div data-stagger class="grid gap-7 md:grid-cols-2">
+      <div data-reveal="fade">
+        <ProjectCard lang={lang} project={workProjects[1]} />
+      </div>
+      <div data-reveal="fade">
+        <ProjectCard lang={lang} project={tdiProjects[3]} />
+      </div>
     </div>
   </div>
 </section>
 <section class="border-y border-indigo-100/60 bg-linear-to-br from-indigo-50/70 via-white to-fuchsia-50/60 section">
   <div class="shell">
-    <div class="mb-12 max-w-2xl">
+    <div data-reveal="fade" class="mb-12 max-w-2xl">
       <p class="eyebrow mb-4">02 / {translate(lang, 'home.skillsTitle')}</p>
       <h2 class="heading">{c.craft}</h2>
       <p class="mt-5 text-sm leading-7 text-slate-500">{c.craftDesc}</p>
     </div>
-    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div data-stagger class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {skills.map((group, index) => (
         <div class="glass p-6">
           <div class="mb-6 flex size-11 items-center justify-center rounded-2xl bg-linear-to-br from-indigo-100 to-fuchsia-100 font-mono text-sm font-bold text-indigo-600">
@@ -156,7 +163,7 @@ const c = copy[lang];
 </section>
 <section class="section">
   <div class="shell grid items-center gap-12 md:grid-cols-[.85fr_1.15fr] md:gap-20">
-    <div class="relative mx-auto w-full max-w-sm">
+    <div data-reveal="scale" class="relative mx-auto w-full max-w-sm">
       <div class="absolute inset-4 rounded-full bg-linear-to-br from-indigo-200 to-fuchsia-200 blur-3xl"></div>
       <div class="glass relative rotate-[-3deg] p-4">
         <img
@@ -165,17 +172,17 @@ const c = copy[lang];
           width="500"
           height="500"
           loading="lazy"
-          class="aspect-square w-full rounded-2xl object-cover"
+          class="aspect-square w-full rounded-2xl object-cover object-top"
         />
       </div>
       <div class="absolute -right-3 bottom-5 rounded-2xl border border-white bg-white/85 px-5 py-4 shadow-lg backdrop-blur-xl">
         <span class="block text-sm font-extrabold">Marcos González</span>
         <span class="mt-1 block text-xs text-indigo-600">
-          Frontend & WordPress
+          Full Stack & WordPress
         </span>
       </div>
     </div>
-    <div>
+    <div data-reveal="fade">
       <p class="eyebrow mb-4">03 / {c.aboutLabel}</p>
       <h2 class="heading">{c.aboutTitle}</h2>
       <p class="mt-6 text-sm leading-8 text-slate-500">

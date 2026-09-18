@@ -10,11 +10,16 @@ export function translate(lang: Lang, key: string): string {
   return String(read(dictionaries[lang]) ?? read(es) ?? key);
 }
 export function localized(lang: Lang, path = '') {
-  return `${lang === 'es' ? '' : '/' + lang}/${path.replace(/^\/+|\/+$/g, '')}`;
+  const clean = path.replace(/^\/+|\/+$/g, '');
+  const spanish: Record<string, string> = {
+    projects: 'proyectos',
+    about: 'acerca-de',
+  };
+  return `${lang === 'es' ? '' : '/' + lang}/${lang === 'es' ? (spanish[clean] ?? clean) : clean}`;
 }
 export const copy = {
   es: {
-    role: 'DESARROLLADOR FRONTEND & WORDPRESS',
+    role: 'DESARROLLADOR FULL STACK & WORDPRESS',
     hero: 'Ideas que cobran',
     accent: 'vida en la web.',
     intro:
@@ -29,11 +34,11 @@ export const copy = {
     craftDesc:
       'Un conjunto de herramientas para construir soluciones completas, desde la primera pantalla hasta lo que sucede detrás.',
     aboutLabel: 'UN POCO SOBRE MÍ',
-    aboutTitle: 'Curiosidad por naturaleza. Desarrollador por vocación.',
+    aboutTitle: 'Mi trayectoria en desarrollo web.',
     aboutLink: 'Conoce mi trayectoria',
-    journal: 'Ideas, código y aprendizajes',
+    journal: 'Desarrollo web, explicado desde la práctica.',
     journalDesc:
-      'Notas sobre desarrollo web y el camino de construir para internet.',
+      'Artículos sobre frontend, backend y crecimiento profesional: conceptos, ejemplos de código y aprendizajes para seguir construyendo.',
     read: 'Leer artículo',
     cta: '¿Tienes una idea en mente?',
     ctaDesc: 'Convirtámosla en una experiencia que merezca un lugar en la web.',
@@ -44,12 +49,13 @@ export const copy = {
     back: 'Volver',
     soon: 'Próximamente',
     personal: 'Exploraciones personales',
-    workTitle: 'Trabajo que conecta.',
+    workTitle: 'Proyectos que he llevado a la web.',
     workDesc:
-      'Sitios web, aplicaciones y experiencias construidas con intención.',
+      'Explora mi trabajo en TDI y Balabox, junto con proyectos personales: sitios web, tiendas en línea y aplicaciones.',
     experience: 'Mi trayectoria',
     stack: 'Herramientas & tecnologías',
-    blogNote: 'Artículos disponibles en español.',
+    blogNote:
+      'Artículos sobre desarrollo web, disponibles en español, inglés y portugués.',
     skip: 'Saltar al contenido',
     menu: 'Abrir menú',
     close: 'Cerrar menú',
@@ -58,9 +64,11 @@ export const copy = {
     previous: 'Anterior',
     next: 'Siguiente',
     collection: 'Colección',
-    personalDesc: 'Ideas propias, experimentos y nuevas maneras de construir.',
+    personalDesc:
+      'Proyectos propios para explorar ideas, poner en práctica nuevas tecnologías y seguir aprendiendo.',
     bbxDesc: 'Proyectos desarrollados durante mi etapa en Balabox.',
-    tdiDesc: 'Una nueva selección de proyectos está en camino.',
+    tdiDesc:
+      'Sitios corporativos, tiendas en línea y aplicaciones desarrollados durante mi etapa en TDI.',
     available: 'Diseño con intención · Código con propósito',
     article: 'ARTÍCULO',
     home: 'Volver al inicio',
@@ -68,9 +76,14 @@ export const copy = {
     categories: 'Encuentra tu próxima inspiración.',
     noDemo: 'Demo próximamente',
     noRepo: 'Repositorio próximamente',
+    quote: 'Cotizar proyecto',
+    demoNotice:
+      'Ejemplo de demostración. No representa un proyecto real ni un cliente de TDI.',
+    aboutDesc:
+      'Soy Marcos González, desarrollador Full Stack especializado en WordPress. Conoce mi experiencia, los equipos con los que he trabajado y lo que he aprendido en cada etapa.',
   },
   en: {
-    role: 'FRONTEND & WORDPRESS DEVELOPER',
+    role: 'FULL STACK & WORDPRESS DEVELOPER',
     hero: 'Ideas brought',
     accent: 'to life on the web.',
     intro:
@@ -85,11 +98,11 @@ export const copy = {
     craftDesc:
       'A toolkit for building complete solutions, from the first screen to everything behind it.',
     aboutLabel: 'A LITTLE ABOUT ME',
-    aboutTitle: 'Curious by nature. A developer by vocation.',
+    aboutTitle: 'My journey in web development.',
     aboutLink: 'Discover my journey',
-    journal: 'Ideas, code & lessons',
+    journal: 'Web development, through practical experience.',
     journalDesc:
-      'Notes on web development and the journey of building for the internet.',
+      'Articles on frontend, backend and professional growth: concepts, code examples and lessons to help you keep building.',
     read: 'Read article',
     cta: 'Have an idea in mind?',
     ctaDesc:
@@ -101,11 +114,13 @@ export const copy = {
     back: 'Go back',
     soon: 'Coming soon',
     personal: 'Personal explorations',
-    workTitle: 'Work that connects.',
-    workDesc: 'Websites, applications, and experiences built with intention.',
+    workTitle: 'Projects I have brought to the web.',
+    workDesc:
+      'Explore my work at TDI and Balabox alongside personal projects: websites, online stores and applications.',
     experience: 'My journey',
     stack: 'Tools & technologies',
-    blogNote: 'Articles are available in Spanish.',
+    blogNote:
+      'Web development articles, available in Spanish, English and Portuguese.',
     skip: 'Skip to content',
     menu: 'Open menu',
     close: 'Close menu',
@@ -114,9 +129,11 @@ export const copy = {
     previous: 'Previous',
     next: 'Next',
     collection: 'Collection',
-    personalDesc: 'Personal ideas, experiments, and new ways to build.',
+    personalDesc:
+      'Personal projects to explore ideas, put new technologies into practice and keep learning.',
     bbxDesc: 'Projects developed during my time at Balabox.',
-    tdiDesc: 'A new selection of projects is on its way.',
+    tdiDesc:
+      'Corporate websites, online stores and applications developed during my time at TDI.',
     available: 'Intentional design · Purposeful code',
     article: 'ARTICLE',
     home: 'Back to home',
@@ -124,9 +141,14 @@ export const copy = {
     categories: 'Find your next inspiration.',
     noDemo: 'Demo coming soon',
     noRepo: 'Repository coming soon',
+    quote: 'Get a quote',
+    demoNotice:
+      'Demonstration example. This does not represent a real TDI project or client.',
+    aboutDesc:
+      'I’m Marcos González, a Full Stack developer specializing in WordPress. Discover my experience, the teams I have worked with and what I have learned along the way.',
   },
   pt: {
-    role: 'DESENVOLVEDOR FRONTEND & WORDPRESS',
+    role: 'DESENVOLVEDOR FULL STACK & WORDPRESS',
     hero: 'Ideias que ganham',
     accent: 'vida na web.',
     intro:
@@ -141,11 +163,11 @@ export const copy = {
     craftDesc:
       'Ferramentas para construir soluções completas, da primeira tela a tudo o que acontece por trás.',
     aboutLabel: 'UM POUCO SOBRE MIM',
-    aboutTitle: 'Curioso por natureza. Desenvolvedor por vocação.',
+    aboutTitle: 'Minha trajetória no desenvolvimento web.',
     aboutLink: 'Conheça minha trajetória',
-    journal: 'Ideias, código e aprendizados',
+    journal: 'Desenvolvimento web na prática.',
     journalDesc:
-      'Notas sobre desenvolvimento web e a jornada de construir para a internet.',
+      'Artigos sobre frontend, backend e crescimento profissional: conceitos, exemplos de código e aprendizados para continuar construindo.',
     read: 'Ler artigo',
     cta: 'Tem uma ideia em mente?',
     ctaDesc:
@@ -157,11 +179,13 @@ export const copy = {
     back: 'Voltar',
     soon: 'Em breve',
     personal: 'Explorações pessoais',
-    workTitle: 'Trabalho que conecta.',
-    workDesc: 'Sites, aplicações e experiências construídas com intenção.',
+    workTitle: 'Projetos que levei para a web.',
+    workDesc:
+      'Explore meu trabalho na TDI e na Balabox, além de projetos pessoais: sites, lojas virtuais e aplicações.',
     experience: 'Minha trajetória',
     stack: 'Ferramentas & tecnologias',
-    blogNote: 'Artigos disponíveis em espanhol.',
+    blogNote:
+      'Artigos sobre desenvolvimento web, disponíveis em espanhol, inglês e português.',
     skip: 'Pular para o conteúdo',
     menu: 'Abrir menu',
     close: 'Fechar menu',
@@ -170,9 +194,11 @@ export const copy = {
     previous: 'Anterior',
     next: 'Próximo',
     collection: 'Coleção',
-    personalDesc: 'Ideias próprias, experimentos e novas formas de construir.',
+    personalDesc:
+      'Projetos próprios para explorar ideias, colocar novas tecnologias em prática e continuar aprendendo.',
     bbxDesc: 'Projetos desenvolvidos durante minha passagem pela Balabox.',
-    tdiDesc: 'Uma nova seleção de projetos está a caminho.',
+    tdiDesc:
+      'Sites corporativos, lojas virtuais e aplicações desenvolvidos durante minha passagem pela TDI.',
     available: 'Design com intenção · Código com propósito',
     article: 'ARTIGO',
     home: 'Voltar ao início',
@@ -180,5 +206,10 @@ export const copy = {
     categories: 'Encontre sua próxima inspiração.',
     noDemo: 'Demo em breve',
     noRepo: 'Repositório em breve',
+    quote: 'Solicitar orçamento',
+    demoNotice:
+      'Exemplo de demonstração. Não representa um projeto real nem um cliente da TDI.',
+    aboutDesc:
+      'Sou Marcos González, desenvolvedor Full Stack especializado em WordPress. Conheça minha experiência, as equipes com que trabalhei e o que aprendi em cada etapa.',
   },
 };

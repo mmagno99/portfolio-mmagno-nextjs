@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  label: string;
+}
+const { title, description, label } = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden border-b border-indigo-100 bg-linear-to-br from-indigo-50 via-white to-fuchsia-50">
+  <div
+    aria-hidden="true"
+    class="animate-pulse-slow pointer-events-none absolute -right-16 -top-32 -z-10 size-96 rounded-full bg-fuchsia-200/40 blur-3xl"
+  ></div>
+  <div class="page-intro shell pt-16 pb-14 md:pt-20 md:pb-16">
+    <p class="eyebrow mb-5">Marcos Gzz / {label}</p>
+    <h1 class="heading max-w-3xl">{title}</h1>
+    <p class="mt-6 max-w-2xl text-sm leading-8 text-slate-500">{description}</p>
+  </div>
+</section>

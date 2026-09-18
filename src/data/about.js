@@ -1,19 +1,22 @@
 // helpers/listAbout.js
 const listAbout = {
-  profileImage: 'https://ik.imagekit.io/mmagnodev/profile_1.webp', // O la ruta correcta a tu imagen
+  profileImage: 'https://ik.imagekit.io/mmagnodev/professional_photo.png', // O la ruta correcta a tu imagen
   name: 'Marcos González',
   descriptionKey: 'about.description',
 
   jobs: [
     {
-      job: 'Full Stack WordPress',
+      job: 'Desarrollador Web Full Stack',
       company: 'Tierra de ideas',
       dateKey: 'about.tdi.date',
       imagejob: 'https://ik.imagekit.io/mmagnodev/Logo%20TDI.webp',
       descjobKey: 'about.tdi.description',
+      recommendationUrl:
+        'https://ik.imagekit.io/mmagnodev/Carta_Recomendacion_TDI.pdf',
+      recommendationButtonKey: 'about.button.title',
     },
     {
-      job: 'Frontend Developer',
+      job: 'Desarrollador Web Front End',
       company: 'Balabox',
       dateKey: 'about.bbx.date',
       imagejob: 'https://ik.imagekit.io/mmagnodev/balabox.webp',
@@ -23,7 +26,7 @@ const listAbout = {
       recommendationButtonKey: 'about.button.title', // Clave para el texto del botón
     },
     {
-      job: 'Freelancer',
+      job: 'Maquetador Web - Freelancer',
       company: 'SAH',
       dateKey: 'about.sah.date',
       imagejob: 'https://ik.imagekit.io/mmagnodev/sah_logo.webp',

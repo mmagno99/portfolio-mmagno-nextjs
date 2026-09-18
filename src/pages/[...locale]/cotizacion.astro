@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import QuoteCalculator from '../../features/quote/QuoteCalculator';
+import { quoteCopy } from '../../features/quote/copy';
+import { languages, type Lang } from '../../lib/i18n';
+export function getStaticPaths() {
+  return languages.map((lang) => ({
+    params: { locale: lang === 'es' ? undefined : lang },
+    props: { lang },
+  }));
+}
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const c = quoteCopy[lang];
+---
+
+<Layout lang={lang} path="cotizacion" title={c.quote} description={c.intro}>
+  <PageHeader title={c.title} description={c.intro} label={c.quote} />
+  <section class="quote-page shell section">
+    <QuoteCalculator lang={lang} client:load />
+    <noscript>
+      <p class="glass mt-6 p-6">
+        {c.contact}:{' '}
+        <a href="mailto:contacto@marcosgzz.tech">contacto@marcosgzz.tech</a>
+      </p>
+    </noscript>
+  </section>
+</Layout>

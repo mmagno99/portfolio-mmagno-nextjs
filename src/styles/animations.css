@@ -1,0 +1,128 @@
+/* Content remains visible until the observer safely prepares an offscreen block. */
+.reveal-ready {
+  transition:
+    opacity var(--reveal-duration, 700ms) ease-out,
+    transform var(--reveal-duration, 700ms) cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-ready:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.reveal-ready[data-reveal='scale']:not(.is-visible) {
+  transform: scale(0.95);
+}
+.reveal-ready.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-ready:focus-within {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.page-intro {
+  animation: intro-in 650ms ease-out both;
+}
+@keyframes intro-in {
+  from {
+    opacity: 0.3;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+.site-nav {
+  background-color: rgb(255 255 255 / 0.65);
+  transition:
+    background-color 300ms,
+    box-shadow 300ms,
+    border-color 300ms;
+}
+.site-nav.is-scrolled {
+  background-color: rgb(255 255 255 / 0.94);
+  border-color: rgb(224 231 255 / 0.8);
+  box-shadow: 0 8px 28px -18px #312e8150;
+}
+#mobile-menu:not([hidden]) {
+  animation: menu-in 180ms ease-out;
+}
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+[id] {
+  scroll-margin-top: 6rem;
+}
+/* Native page transitions: normal navigation remains the fallback, no client router. */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation: page-out 120ms ease-out both;
+}
+::view-transition-new(root) {
+  animation: page-in 180ms ease-out both;
+}
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-ready,
+  .reveal-ready:not(.is-visible),
+  .page-intro {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .animate-pulse-slow {
+    animation: none;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+.quote-page form,
+.quote-page astro-island > section {
+  animation: intro-in 250ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .quote-page button {
+    transform: none !important;
+    translate: none !important;
+    scale: none !important;
+  }
+}

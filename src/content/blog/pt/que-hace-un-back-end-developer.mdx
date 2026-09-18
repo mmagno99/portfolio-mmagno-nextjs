@@ -1,0 +1,37 @@
+---
+title: 'O que faz um desenvolvedor back-end?'
+slug: 'que-hace-un-back-end-developer'
+image: 'https://ik.imagekit.io/mmagnodev/que%20hace%20un%20back%20end%20developer_converted_compressed.webp'
+date: '2023-11-10'
+lang: pt
+seoTitle: "O que faz um desenvolvedor back-end? Servidores e APIs"
+description: "Conheça o trabalho de um desenvolvedor back-end com servidores, APIs, bancos de dados e segurança, com um exemplo simples de servidor em Node.js."
+focusKeyword: "o que faz um desenvolvedor back-end"
+imageAlt: "Capa do artigo: O que faz um desenvolvedor back-end?"
+---
+
+Um **desenvolvedor back-end** garante que tudo o que acontece por trás da interface gráfica funcione corretamente.
+
+Seu trabalho abrange desde a gestão de bancos de dados, servidores e APIs até a segurança da aplicação.
+
+- **Node.js:** Para construir servidores rápidos e escaláveis com JavaScript.
+- **Python:** Com frameworks como Django ou Flask para APIs robustas.
+- **Java:** Muito utilizado em aplicações empresariais com Spring Boot.
+- **Ruby on Rails:** Ideal para startups que buscam agilidade.
+- **Bancos de dados:** MySQL, PostgreSQL e MongoDB são essenciais no seu conjunto de ferramentas.
+
+Veja um exemplo básico de um servidor em Node.js:
+
+```javascript
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Olá do servidor!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
+```

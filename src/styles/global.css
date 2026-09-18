@@ -42,7 +42,7 @@
     @apply rounded-3xl border border-white bg-white/70 shadow-[0_12px_50px_-24px_#6366f133] backdrop-blur-xl;
   }
   .pill {
-    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 py-3 text-sm font-bold transition duration-200 hover:-translate-y-0.5 active:scale-95;
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-6 py-3 text-sm font-bold transition duration-200 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.97];
   }
   .primary {
     @apply bg-linear-to-r from-indigo-600 to-fuchsia-600 text-white shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/35;
@@ -54,7 +54,7 @@
     @apply inline-flex rounded-full border border-slate-200/80 bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-600;
   }
   .project-card {
-    @apply overflow-hidden rounded-3xl border border-white bg-white/75 shadow-[0_10px_40px_-20px_#6366f140] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_#6366f150];
+    @apply overflow-hidden rounded-3xl border border-white bg-white/75 shadow-[0_10px_40px_-20px_#6366f140] transition duration-300 motion-safe:hover:-translate-y-1 hover:border-indigo-200 focus-visible:border-indigo-200 hover:shadow-[0_20px_50px_-20px_#6366f150];
   }
   .gradient-text {
     @apply bg-linear-to-r from-indigo-300 via-purple-300 to-fuchsia-300 bg-clip-text text-transparent;
@@ -67,7 +67,7 @@
   background-size: 64px 64px;
 }
 .orb {
-  animation: drift 12s ease-in-out infinite alternate;
+  animation: pulse-slow 8s ease-in-out infinite;
 }
 .float-card {
   animation: float 7s ease-in-out infinite;

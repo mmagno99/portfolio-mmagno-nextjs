@@ -11,7 +11,7 @@ const { project, lang } = Astro.props;
 
 <a
   href={localized(lang, `${project.category}/${project.id}`)}
-  class="project-card group block"
+  class="project-card group block h-full"
 >
   <div class="relative aspect-[16/10] overflow-hidden bg-indigo-100 p-5 sm:p-7">
     <div class="absolute inset-0 bg-linear-to-br from-indigo-100 via-purple-50 to-fuchsia-100"></div>
@@ -21,14 +21,16 @@ const { project, lang } = Astro.props;
       width="800"
       height="500"
       loading="lazy"
-      class="relative h-full w-full rounded-xl object-cover object-top shadow-xl shadow-indigo-950/10 transition duration-500 group-hover:scale-105"
+      class="relative h-full w-full rounded-xl object-cover object-top shadow-xl shadow-indigo-950/10 transition duration-500 motion-safe:group-hover:scale-105 motion-safe:group-focus-visible:scale-105"
     />
   </div>
   <div class="p-6 sm:p-7">
     <p class="mb-2 text-[10px] font-bold uppercase tracking-[.18em] text-indigo-600">
-      {project.category === 'projects-bbx'
-        ? 'BALABOX · WEB DEVELOPMENT'
-        : copy[lang].personal}
+      {project.category === 'projects-tdi'
+        ? 'TDI'
+        : project.category === 'projects-bbx'
+          ? 'BALABOX · WEB DEVELOPMENT'
+          : copy[lang].personal}
     </p>
     <div class="flex items-center justify-between gap-3">
       <h3 class="text-xl font-extrabold tracking-tight">{project.name}</h3>

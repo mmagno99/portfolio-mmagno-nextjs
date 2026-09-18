@@ -18,10 +18,14 @@ const c = copy[lang];
   >
     ← {c.back}
   </a>
-  <div class="mt-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+  <div class="page-intro mt-10 flex flex-col justify-between gap-8 md:flex-row md:items-end">
     <div>
       <p class="eyebrow mb-4">
-        {project.category === 'projects-bbx' ? 'BALABOX' : c.personal}
+        {project.category === 'projects-tdi'
+          ? 'TDI'
+          : project.category === 'projects-bbx'
+            ? 'BALABOX'
+            : c.personal}
       </p>
       <h1 class="heading">{project.name}</h1>
     </div>
@@ -31,7 +35,10 @@ const c = copy[lang];
       ))}
     </div>
   </div>
-  <div class="mt-10 rounded-3xl border border-white bg-linear-to-br from-indigo-100 to-fuchsia-100 p-4 shadow-xl shadow-indigo-100/40 sm:p-10">
+  <div
+    data-reveal="scale"
+    class="mt-10 rounded-3xl border border-white bg-linear-to-br from-indigo-100 to-fuchsia-100 p-4 shadow-xl shadow-indigo-100/40 sm:p-10"
+  >
     <img
       src={project.image}
       alt={project.name}
@@ -41,6 +48,14 @@ const c = copy[lang];
       fetchpriority="high"
     />
   </div>
+  {project.isDemo && (
+    <p class="mt-8 rounded-2xl bg-amber-50 p-5 text-sm leading-7 text-amber-900">
+      {c.demoNotice}
+    </p>
+  )}
+  {project.description?.[lang] && (
+    <p class="mt-8 text-slate-600 leading-8">{project.description[lang]}</p>
+  )}
   <div class="mt-9 flex flex-wrap items-center gap-4">
     {project.livedemo ? (
       <a

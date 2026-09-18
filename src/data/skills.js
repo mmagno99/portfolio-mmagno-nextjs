@@ -3,27 +3,29 @@ export const skills = [
     title: 'Frontend',
     skills: [
       {
+        name: 'Elementor',
+      },
+      {
+        name: 'Divi',
+      },
+      {
         name: 'JavaScript',
-        image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png',
       },
       {
         name: 'React Js',
-        image: 'https://cdn.svgporn.com/logos/react.svg',
       },
       {
         name: 'Next Js',
-        image: 'https://cdn.svgporn.com/logos/nextjs-icon.svg',
       },
       {
         name: 'Bootstrap',
-        image:
-          'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
       },
 
       {
-        name: 'Sass',
-        image: 'https://cdn.svgporn.com/logos/sass.svg',
+        name: 'Tailwind CSS',
+      },
+      {
+        name: 'Astro',
       },
     ],
   },
@@ -50,34 +52,44 @@ export const skills = [
         name: 'Firebase',
         image: 'https://cdn.svgporn.com/logos/firebase.svg',
       },
+      {
+        name: 'Python',
+      },
     ],
   },
   {
     titleKey: 'home.skillCardThree',
     skills: [
       {
-        name: 'Cisco PT',
-        image: 'https://cdn.simpleicons.org/cisco/packettracer',
+        name: 'CPanel/Servidores',
       },
       {
-        name: 'Linux',
-        image: 'https://cdn.svgporn.com/logos/linux-tux.svg',
+        name: 'Apache/Gnix',
       },
       {
-        name: 'OWASP',
-        image: 'https://owasp.org/assets/images/logo.svg',
+        name: 'SSH',
+      },
+      {
+        name: 'AWS',
+      },
+      {
+        name: 'GCP',
       },
     ],
   },
   {
     titleKey: 'home.skillCardFour',
     skills: [
+       {
+        name: 'WordPress',
+        image: 'https://cdn.svgporn.com/logos/wordpress-icon.svg',
+      },
       {
-        name: 'Git',
+        name: 'Git/Github',
         image: 'https://cdn.svgporn.com/logos/git-icon.svg',
       },
       {
-        name: 'Postman',
+        name: 'Adobe',
         image: 'https://cdn.svgporn.com/logos/postman-icon.svg',
       },
       {
@@ -88,13 +100,11 @@ export const skills = [
         name: 'Figma',
         image: 'https://cdn.svgporn.com/logos/figma.svg',
       },
-      {
-        name: 'WordPress',
-        image: 'https://cdn.svgporn.com/logos/wordpress-icon.svg',
+       {
+        name: 'SEO',
       },
       {
-        name: 'Elementor',
-        image: '/assets/icons/Elementor-Logo-Symbol-Red.svg',
+        name: 'IA',
       },
     ],
   },

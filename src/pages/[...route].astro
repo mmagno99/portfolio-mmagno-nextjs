@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Home from '../components/Home.astro';
 import PageContent from '../components/PageContent.astro';
 import ProjectDetail from '../components/ProjectDetail.astro';
-import { languages, copy, translate, type Lang } from '../lib/i18n';
+import { languages, copy, translate, localized, type Lang } from '../lib/i18n';
 import { projects, type Project } from '../data/projects';
 export function getStaticPaths() {
   return languages.flatMap((lang) => {
@@ -13,10 +13,13 @@ export function getStaticPaths() {
       'projects',
       'personal-projects',
       'projects-bbx',
+      'projects-tdi',
       'about',
       'blog',
     ].map((page) => ({
-      params: { route: (prefix + page).replace(/\/$/, '') || undefined },
+      params: {
+        route: localized(lang, page).replace(/^\/+|\/+$/g, '') || undefined,
+      },
       props: { lang, page, project: undefined },
     }));
     const details = projects.map((project) => ({
@@ -32,12 +35,21 @@ interface Props {
   project?: Project;
 }
 const { lang, page, project } = Astro.props;
+const descriptions: Record<string, string> = {
+  projects: copy[lang].workDesc,
+  about: copy[lang].aboutDesc,
+  blog: copy[lang].journalDesc,
+  'projects-tdi': copy[lang].tdiDesc,
+  'projects-bbx': copy[lang].bbxDesc,
+  'personal-projects': copy[lang].personalDesc,
+};
 const titles: Record<string, string> = {
-  '': 'Marcos González — Frontend & WordPress',
+  '': 'Marcos González — Full Stack & WordPress',
   projects: copy[lang].workTitle,
   'personal-projects': translate(lang, 'projects.personalProjects.title'),
   'projects-bbx': translate(lang, 'projects.bbxProjects.title'),
-  about: translate(lang, 'navbar.nav3'),
+  'projects-tdi': translate(lang, 'projects.cardtitle3'),
+  about: copy[lang].aboutTitle,
   blog: copy[lang].journal,
 };
 ---
@@ -47,6 +59,7 @@ const titles: Record<string, string> = {
   path={page}
   title={project?.name ?? titles[page]}
   image={project?.image}
+  description={project?.description?.[lang] ?? descriptions[page]}
 >
   {page === '' ? (
     <Home lang={lang} />
